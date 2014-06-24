@@ -76,13 +76,13 @@ here.
 
 ## Older Meetings
 
-* [Meetings 2012](Meetings 2012.md)
-* [Meetings 2011](Meetings 2011.md)
+* [Meetings 2012](Meetings-2012.md)
+* [Meetings 2011](Meetings-2011.md)
 
 ## Other meetings:
 
-* [Meeting inperson 2011-04-06](Meeting inperson 2011-04-06.md) (kind system; resources; env capture)
-* [Meeting planning 2013-01-08](Meeting planning 2013-01-08.md) (0.6; 1.0)
-* [Meeting 2013-06-07](Meeting 2013-06-07.md) (dynamically sized types; closures; GC)
-* [Meeting workweek 2014-03-03](Meeting workweek 2014-03-03.md)
+* [Meeting inperson 2011-04-06](Meeting-inperson-2011-04-06.md) (kind system; resources; env capture)
+* [Meeting planning 2013-01-08](Meeting-planning-2013-01-08.md) (0.6; 1.0)
+* [Meeting 2013-06-07](Meeting-2013-06-07.md) (dynamically sized types; closures; GC)
+* [Meeting workweek 2014-03-03](Meeting-workweek-2014-03-03.md)
 
