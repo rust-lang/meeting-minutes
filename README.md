@@ -82,8 +82,9 @@ here.
 
 ## Other meetings:
 
-* [Meeting inperson 2011-04-06](Meeting-inperson-2011-04-06.md) (kind system; resources; env capture)
-* [Meeting planning 2013-01-08](Meeting-planning-2013-01-08.md) (0.6; 1.0)
-* [Meeting 2013-06-07](Meeting-2013-06-07.md) (dynamically sized types; closures; GC)
+* [Meeting RFC triage 2014-06-26](Meeting-RFC-triage-2014-06-26.md)
 * [Meeting workweek 2014-03-03](Meeting-workweek-2014-03-03.md)
+* [Meeting 2013-06-07](Meeting-2013-06-07.md) (dynamically sized types; closures; GC)
+* [Meeting planning 2013-01-08](Meeting-planning-2013-01-08.md) (0.6; 1.0)
+* [Meeting inperson 2011-04-06](Meeting-inperson-2011-04-06.md) (kind system; resources; env capture)
 
