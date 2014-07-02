@@ -5,6 +5,7 @@ here.
 
 ## Weekly meetings:
 
+* [weekly-meetings/2014-06-30](weekly-meetings/2014-06-30.md) (RFC's; prelude guidelines; 0.11 release; string indexing; cross borrowing; lifetime elision)
 * [weekly-meetings/2014-06-24](weekly-meetings/2014-06-24.md) (RFC's; removing f129; moving meeting notes; line length conventions;)
 * [weekly-meetings/2014-06-17](weekly-meetings/2014-06-17.md) (RFC's; unsafe fields; loadable lints; input macros; temporary lifetimes; partial_cmp; unsafe destructor; int inferences; cross borrowing)
 * [weekly-meetings/2014-06-10](weekly-meetings/2014-06-10.md) (RFC's; unsafe pointers; lifetime hygiene; format! i18n; stylistic lints)
