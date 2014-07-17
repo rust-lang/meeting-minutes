@@ -85,6 +85,8 @@ here.
 
 ## Other meetings:
 
+* [Meeting 2014-07-16 (macros)](Meeting-other-2014-07-16.md)
+* [Meeting API review 2014-07-16](Meeting-API-review-2014-07-16.md)
 * [Meeting API review 2014-07-07](Meeting-API-review-2014-07-07.md)
 * [Meeting RFC triage 2014-07-03](Meeting-RFC-triage-2014-07-03.md)
 * [Meeting RFC triage 2014-06-26](Meeting-RFC-triage-2014-06-26.md)
