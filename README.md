@@ -5,6 +5,7 @@ here.
 
 ## Weekly meetings:
 
+* [weekly-meetings/2014-07-29](weekly-meetings/2014-07-29.md) (Friend of the Tree; borrowck vs. Box; impls next to types; ye olde generics syntax bikeshed; lifetime elision; @-bindings problems; APIs leaking private types; unboxed closures; opt-in built-in)
 * [weekly-meetings/2014-07-22](weekly-meetings/2014-07-22.md) (Friend of the Tree; Servo reqs; Rename Share; asm!; removing special Box treatment; exposing private types in public signatures; FromLiteral; &static mut)
 * [weekly-meetings/2014-07-15](weekly-meetings/2014-07-15.md) (attrs on exprs/blocks; flexible target specs; integer inference fallback; import sugar; slice matching; import shadowing)
 * [weekly-meetings/2014-07-08](weekly-meetings/2014-07-08.md) (Friend of the Tree; removing language features; lifetime elision; ref closures; matches macro; rpath; RFC's)
