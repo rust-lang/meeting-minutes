@@ -5,6 +5,7 @@ here.
 
 ## Weekly meetings:
 
+* [weekly-meetings/2014-08-05](weekly-meetings/2014-08-05.md) (Import renaming syntax; &mut patterns; static mut; where clauses; stylistic umbrella lints; opt-in built-in; serialization; UFCS; empty struct syntax)
 * [weekly-meetings/2014-07-29](weekly-meetings/2014-07-29.md) (Friend of the Tree; borrowck vs. Box; impls next to types; ye olde generics syntax bikeshed; lifetime elision; @-bindings problems; APIs leaking private types; unboxed closures; opt-in built-in)
 * [weekly-meetings/2014-07-22](weekly-meetings/2014-07-22.md) (Friend of the Tree; Servo reqs; Rename Share; asm!; removing special Box treatment; exposing private types in public signatures; FromLiteral; &static mut)
 * [weekly-meetings/2014-07-15](weekly-meetings/2014-07-15.md) (attrs on exprs/blocks; flexible target specs; integer inference fallback; import sugar; slice matching; import shadowing)
