@@ -1,0 +1,198 @@
+# 2014-08-20 Process review
+
+- nmatsakis: There's been some desire to improve process. Not sure how this interacts with 1.0. Certainly backwards compatibility will affect the process somehow.
+- steveklabnik: Like the Go/No go meeting, for example.
+- steveklabnik: Here's an issue. There's no clear person assigned to review the doc PRs, which means they often wait around
+- brson: Right now, once a week I get a ping and just have to rubber stamp.
+- aturon: RFCs are another item to discuss.
+- nmatsakis: Also the discuss forum.
+- nmatsakis: We should assign someone to review Steve's work.
+- brson: The community is, but not from the core team
+- steveklabnik: huon will give me some feedback, but ends up not r+-ing. Then others assume that he's reviewing it
+- pnkfelix: More generally: we don't have a clear structure in place for annotating PRs with "I'm finished providing feedback" or "I'm abandoning ship" or whatever. No clear tracking of responsibility.
+- nmatsakis: For Steve, I'd like to read them more actively, and I will try to do that. The broader issue is an annoyance with github's "live feedback" style. I think we just need a convention that when you're done, you say on the PR clearly that you're done, and how serious are those things.
+- aturon: Some people follow a convention like that.
+- brson: We want to be careful about "pre-approval"
+- nrc: But saying *something* when you're done seems important.
+- nmatsakis: It also seems like Alex is doing a lot of the reviewing.
+- brson: We've definitely struggled with this in the past.
+- pnkfelix: How do people track their review requests?
+- nrc: I use an email filter
+- steveklabnik: I just get all the github email and delete the stuff I don't care about
+- acrichto: The bors interface is also pretty bad. It's hard to tell what actually needs reviewing. I also use email to track. But having a dashboard with unreviews PRs and assigned reviewers/pending actions.
+- nrc: Sounds like we need bugzilla
+- nmatsakis: bors scans for r+, but it could scan for r? and other things, and incorporate that into the state. It'd be nice to have a page grouped by person.
+- nrc: PRs without any notation?
+- nmatsakis: Go into uncategorized
+- acrichto: Some items have a clear person to review
+- nrc: Servo has a bot (high-five) that picks a core team member for each PR, and sends them email
+- nmatsakis: that could go into the bors status page
+- brson: That's the primary function?
+- pcwalton: It makes people feel good :-)
+- pcwalton: We could make it pick reviewers
+- nmatsakis: Can it ping me periodically?
+- zwarich: In Servo, we use critic for reviews, which let you subscribe to specific files. It's a very manageable level of email.
+- aturon: Need to ensure full coverage, though
+- zwarich: Just have a rotating person that catches the rest
+- nmatsakis: These seem orthogonal. If we have a bot that gives a reviewer to start, that's fine, and then if you care about a specific thing you can go and grab the PR
+- nrc: In my earlier email, I proposed something like Mozilla's module system, which works pretty well for Gecko. The idea is, we'd break Rust up into modules, each one would ahve an owner and a number of peers, all of whom are equipped to review. The responsibility of the owner (and to some degree the peers) is to ensure that reviews happen. They can ask non-peers to review, just have to make sure it gets done.
+- nrc: The module owner should also make sure that planned work doesn't interfere -- sequentializing when necessary
+- pcwalton: I was frustrated with the module system. I worked in the front end, and there were very few peers, which made it hard to get review approval
+- nrc: Need a lightweight touch. In graphics, everyone there for more than a few months became a peer
+- pcwalton: I want the path to peer to be easy.
+- nmatsakis: The nice thing is: you want to become a peer -- it's a nice feeling.
+- pcwalton: So the delta is, not everyone can review everything. And owners.
+- nmatsakis: We'd need to define the modules
+- acrichto: Right now, it's libraries and compiler
+- nmatsakis: I wouldn't mind trans, typechecker
+- nrc: The other problem is, there are very few things other than small refactorings that touch a small number of modules
+- nmatsakis: A compiler module might not be bad as a starting point
+- nrc: I think in reality it won't be too much of a problem. If you touch multiple modules, there will still be people who are peers on both modules and can review
+- brson: Under a two module system (all of rustc a module) would this actually address your problems with DST?
+- nrc: I guess for that you want smaller modules.
+- nrc: We need some hierarchy for tracking planned work. May not have to align with module system
+- nmatsakis: I feel like we are giong to have to deal with some of this pain. It will be somewhat better after 1.0
+- nrc: There are certain big projects that are high priority and long-running, and they just have to deal with rebasing. The other category is small stuff that we just take, we clearly want it and just sign off, but then it can cause huge pain to bigger items. That seems avoidable.
+- nmatsakis: Even if we had finer-grained modules within compiler, you'd be peers in most of them. But it could help for sequencing/planning. Everyone could be peers, but they could have different owners.
+- brson: Can we innovate on merge scheduling? As far as I know, nobody "schedules" PRs. But maybe we can do some analysis to schedule merges to cut down on rebasing pain
+- nrc: It seems like it's more about scheduling the work rather than the landing of the PR. If the work clashes, I don't think it matters which lands first (probably the bigger one should win). 
+- brson: That would require global planning before doing the work.
+- nrc: Yes! I think we need to do that. People don't really know what's going on, except for the core team, and even then it's loose.
+- nrc: Before starting work on a bug, you should check if it's a good thing to work on right now.
+- brson: The process there sounds difficult
+- zwarich: If someone wants to contribute, what are they supposed to do? They have to check the TODO list, check which parts of the codebase are locked down, etc
+- nmatsakis: People do ask for advice. That would be an ideal time to guide them to a good area to work on. Right now, when people ask for advice, it's hard to isolate a good task. Maybe if we had assigned owners, that would help.
+- nrc: We have a lot of open issues right now. But *if* we could sort those into a module system, then the owner for that module can prioritize, and say: "check before you start work on this". You  should also say on an issue that you're working on it.
+- brson: Has anyone talked to github about the lack of being able to assign people to issues that don't have commit rights?
+- steveklabnik: They feel like the UI would be terrible, so they're punting on it
+- dherman: We need to stay with github
+- nmatsakis: Having a bors dashboard could do the trick
+- pcwalton: We can use their API to innovate
+- brson: jack is rewriting bors right now
+- nmatsakis: We should be working well on integrating/managing consistent contributors, but want a low barrier for new contributors
+- zwarich: At the end of the day, if you're working on something like DST that touches so many things, unless you lock out most of the work that's going on, you're going to get conflicts. The way I've seen this done is: either you work incrementally, or you eat the pain
+- brson: The thing that caused nrc so much pain is a real "boil the oceans" change. That's rare, and will become more so in the future
+- nrc: One problem is planning. We went from ~ to Box during the DST work. Ordering that sequentially would've helped, and we should've seen that coming. They're both big, but probably didn't need to happen in parallel
+- pcwalton: The refpocalypse will probably be a problem
+- nrc: you just add "ref" everywhere, right? That's no problem
+- pcwalton: You can just edit the diff
+- nrc: Sometimes the pain is inevitable. But others aren't. Like, there was a bit of optimization that Luqman did (something for option / slices) should've waited for after DST. There, it's not like you rebase by just doing some trivial changes -- you have to just do the work again, because the code has substantially changed. Things like this could be less painful if they were scheduled
+- brson: What's the proposal?
+- nrc: The problem is, I'm not convinced that any system will ever work well, so I'm not sure how to balance the costs with a partial benefit
+- nmatsakis: In the short term, it might make sense to say: between now and when DST lands, we should check with nrc about stuff that interacts with trans, etc
+- nmatsakis: Maybe we don't need a general rule for this, just do it ad hoc
+- nrc: Maybe that works in general, actually; we know (or should) about big projects. If we have a way to announce it: "If you're going to change trans, ping nrc first"
+- steveklabnik: In the rapid release world, will the feature gate help with this? Like you land half of something behind a gate, so it's easier to do incremental work?
+- pnkfelix: Doesn't always work
+- zwarich: It seems like there's a concrete instance here -- DST. What would that have blocked, in practice? It's been a long-term project. 
+- nrc: People could do tons of stuff in parallel. Also, I could've changed priorities for my work to land parts earlier, so that other could get their work done
+- zwarich: I haven't seen any large open source project with a scalable process for dealing with this. It's hard to keep a large number of contributors while locking things down this way
+- nrc: Working on Firefox graphics team, we managed this much better. There were fewer outside contributors, but the same number of internals. I think one factor is that the code is more modular, whereas for us, any language change involves all parts of the compiler. Also, we don't communicate as well. The latter problem is solvable.
+- nrc: We didn't have any heavyweight process, we just seemed more aware of what people were doing.
+- brson: Now that we're aware of this case, people can just speak up/be more aware
+- nrc: The more we talk about this, the more I feel that module ownership is not going to work very well
+- nmatsakis: I'm more confident that we can make progress on managing PRs via some small changes. I don't know whether module ownership is part of that, or if we just assigned randomly and everyone needed to keep on top of it.
+- brson: Should be really easy to script that.
+- nmatsakis: And we can tune over time, like to incorporate owners
+- brson: Should we do owners now?
+- nrc: I think there's more benefit to peers than owners right now. It's useful to know who a good person to ask for review of this bit of code is.
+- nmatsakis: That would need somewhat finer-grained modules
+- brson: codegen, typechecking, libsyntax
+- nrc: what about libraries?
+- acrichto: I don't think we have as much pain there -- it's more modular
+- nrc: One advantage of doing this is that assigning people to be peers and letting them review specific areas (but not everything)
+- brson: do we want more people with r+ power?
+- nrc: Not right now, but maybe later
+- nmatsakis: Would every reviewer be a peer?
+- nrc: No, peer subsumes the concept of a "reviewer"
+- nmatsakis: If we did this, we'd just go over the r+ list and sort them into modules? There's also a set of people with some kind of permissions so that they can triage.
+- brson: They don't have r+ power, just push power!
+
+# Action items
+
+- It seems like we want a module division with peers -- probably just start as a wiki page, which gives you a place to point people to 
+- A script that will assign people PRs
+- Create github group for peers
+
+(acrichto notes: since this is just for reviewers, we could use github's assignment)
+
+- nrc: If you want to ask someone to review something, but don't want to give r+ power, just have an assigned peer who's managing this
+- nrc: Maybe at the beginning of the Rust meeting, we could give people a chance to announce that they're working on something
+- nmatsakis: Does high-five actually make an assignment, or just a comment?
+- nrc: Just a comment, but could be changed, or we could use bors
+- brson: Probably better to use bors, which already manages the group list
+- brson: One other issue: how do we remove peers? We haven't done it yet, but we'll need to.
+- nrc: We have a chance moving to peers to do a purge
+- nmatsakis: We could have a policy, e.g. if you haven't reviewed in 6 months you are removed
+- zwarich: the permissions for Rust seems pretty opaque
+- brson: somewhat intentional. The core team discusses internally.
+- nrc: The mozilla process is also opaque, the module owner manages peers
+- pcwalton: webkit has a very formal process, which seemed high overhead. I like to err on the side of giving people review power; there's not a lot of harm
+- acrichto: It has caused harm in the past. Inactivity is definitely a threshhold for removing peers, but not the only one
+- nmatsakis: It's always going to be a hard process.
+
+... some discussion about formalizing governance ...
+
+# RFCs
+
+- dherman: I think the RFC process is really good. I think we just haven't figured out exactly the right way to tune it.
+- pcwalton: I'm a bit more negative. I think it's great for nuclear reactors (things like associated types, elision), but doesn't work as well for bikesheds (like ' removal)
+- dherman: Can you be more specific?
+- pcwalton: It results in very long threads, and everyone has opinions, and people shout at each other. People don't read what's been written, anger gets built up
+- steveklabnik: It snowballs quickly.
+- dherman: People need a release valve, but it can overwhelm the thread.
+- pcwalton: If you argue too much, it becomes mozilla vs community. If you don't respond enough, it also becomes mozilla vs community. It's hard to strike the right balance, especially for issues that come down to taste.
+- dherman: I think that people are too quick to assume that there's no logical basis for arguing about syntax, but that's not actually true. 
+- dherman: Recently had a big bikeshed discussion for js stuff. I didn't respond to every single post, but rather summarized the arguments I saw in a single post. You need to keep a cool head, echo the coherent points. 
+- dherman: I do worry about creating honey pots for people to be nasty to each other. I don't worry too much about noise/jokes/bikesheds whatever. Maybe if people start getting ugly, that's where community leaders need to step up and say: this is not acceptable behavior
+- pcwalton: I think there were cases where people say things like: "You are too theoretical, you don't think enough about practice" -- where it starts getting personal
+- nmatsakis: Is this a case for moderation?
+- dherman: You can respond specifically to comments like that. If the whole thread is going that way, you can close off the topic.
+- nrc: Going back to moderation. My worry is, it's infectious at two levels: the first person loses their temper, and then it can turn a bunch of other people. But then at a higher level, if this becomes the norm, we'll start to attract people who like to argue viciously on the internet. Maybe this calls for more moderation on RFCs.
+- dherman: Steve has boundless energy and a positive tone -- maybe Steve could keep on top of it
+- dherman: People should also feel free to ping me to drop in and deal with these issues.
+- zwarich: I think there's also a misunderstanding about the RFC process, people don't really understand what their comments will mean. But most of the decision process takes place in the meeting.
+- pcwalton: RFC champions should summarize the community input. Could formalize this as part of the meeting
+- nrc: I think zwarich's assessment is not quite right. A lot of times that community members have made good points, we take it into account.
+- pcwalton: People do trust the RFC process
+- nrc: I was worried about closing all the RFCs at the triage meetings
+- pcwalton: I get a lot of questions like: "will you do X before 1.0"; we need to be clear that we're going to keep improving things, a lot, after 1.0
+- dherman: The blog post should help a lot with that. Also, people probably assume multi-year release schedules. As we finalize the release process, messaging that will help with the anxiety.
+- aturon: I have been very happy with the feedback I get as RFC author, but I am concerned that volume of RFCs being opened is overwhelming, it's very hard to keep up. 
+- brson: if volume is overwhelming now, what will happen a year from now?
+- aturon: perhaps having a clearer roadmap will help
+- dherman: it may make sense to have mid-level review
+- brson: this relates to a concern of mine. Right now we have only 5 people who have perm to touch the repo.
+- nmatsakis: There are sometimes RFCs that are (1) not a bad idea but (2) who's going to implement it? An example is Eridious's temporary lifetime RFC. Hard to fit into the schedule.
+- pnkfelix: That seems fine. The only problem I see is that other features need to take it into account.
+- dherman: Isn't it just a github issue at that point?
+- nmatsakis: Maybe it's OK.
+- nrc: I actually think it's quite good. If someone is looking for places to contribute, you can point them at these issues
+
+Conclusions:
+- work on moderating bike shed thread nastiness
+
+# discuss forum
+
+- nrc: Still gaining in popularity rapidly
+- dherman: Key question is: is it better than the mailing list?
+- pnkfelix: Think it's way better
+- brson: We need a place for users to discuss.
+- dherman: I don't think we should shut down the mailing list in the short term, but gradually migrating
+- nrc: Seems like we should advertise the discuss forum more.
+- dherman: Put a link on the main page
+- brson: We've been avoiding it to keep high signal
+- dherman: But if you want it to be official, you need to link it
+- nrc: Maybe just link from github? The README.md, say
+- pnkfelix: One downside is the number of different forums to track
+- nmatsakis: I wouldn't mind shutting down the mailing list
+- pcwalton: Same here
+- dherman: wycats said that for Ember, they explicitly put the Q&A on stack overflow, and that helped a lot
+- pcwalton: A lot of that goes on reddit, too.
+- brson: One problem is that discourse can't split out the internals discussion
+- nrc: I think reddit is a good place for user discussion.
+- brson: My only concern there is a lack of control
+- dherman: As the community scales up, control is going to be hard/impossible anyway
+- nrc: I think the reddit moderators have been doing a good job
+- dherman: Need a transition plan for the mailing list
+- nrc: I would be tempted to wait a bit until the discourse site has settled a bit -- it's still rapidly changing. We don't want to have to change our mind after a month.
