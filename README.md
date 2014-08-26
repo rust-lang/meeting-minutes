@@ -5,6 +5,7 @@ here.
 
 ## Weekly meetings:
 
+* [weekly-meetings/2014-08-26](weekly-meetings/2014-08-26.md) ('if let'; assoc items; ownership conventions; privacy; error interop; slice notation; tuple indexing; exploit mitigation; abi syntax)
 * [weekly-meetings/2014-08-12](weekly-meetings/2014-08-12.md) (Generalizing object type parameter bounds; '<' syntax; multiple subslice patterns; import shadowing; asm!; leaking private types)
 * [weekly-meetings/2014-08-05](weekly-meetings/2014-08-05.md) (Import renaming syntax; &mut patterns; static mut; where clauses; stylistic umbrella lints; opt-in built-in; serialization; UFCS; empty struct syntax)
 * [weekly-meetings/2014-07-29](weekly-meetings/2014-07-29.md) (Friend of the Tree; borrowck vs. Box; impls next to types; ye olde generics syntax bikeshed; lifetime elision; @-bindings problems; APIs leaking private types; unboxed closures; opt-in built-in)
