@@ -1,19 +1,19 @@
 # 2014-08-20 using `@`
 
-pcwalton: The tricky case is `@` identifier open paren. You parse it as a token tree first. If the first thing afterwards is an item, then it's an attribute, otherwise it's a macro.
+- pcwalton: The tricky case is `@` identifier open paren. You parse it as a token tree first. If the first thing afterwards is an item, then it's an attribute, otherwise it's a macro.
 
+```
 @foo = bar
 @foo(<token tree>) *keyword for item* --> attribute for item
 
-```
 fn main() {
     @println("Hello, {}", "World!")
 }
 ```
 
-pcwalton: Does ruby get trolled for the @ thing?
-dherman: Julia doesn't I think
-steve: In ruby you don't use @ b/c you normally use attr_accessor
+- pcwalton: Does ruby get trolled for the @ thing?
+- dherman: Julia doesn't I think
+- steve: In ruby you don't use @ b/c you normally use attr_accessor
 
 
 ```
@@ -23,17 +23,17 @@ steve: In ruby you don't use @ b/c you normally use attr_accessor
 fn main() {}
 ```
 
-acrichto: Isn't this ambiguous?
-pcwalton: Should item macros be terminated with a semicolon? I'm worried about the C++ wart of class.
-pnkfelix: We could require that item macros use curly braces.
+- acrichto: Isn't this ambiguous?
+- pcwalton: Should item macros be terminated with a semicolon? I'm worried about the C++ wart of class.
+- pnkfelix: We could require that item macros use curly braces.
 
 ...
 
-pcwalton: I don't like `@foo = "bar"`.
+- pcwalton: I don't like `@foo = "bar"`.
 
 ...
 
-niko: You could require parens for `key = value`. Perhaps just a matching delimiter. `@[foo = bar]`
+- niko: You could require parens for `key = value`. Perhaps just a matching delimiter. `@[foo = bar]`
 
 ```
 @[foo, bar(baz)]
@@ -79,10 +79,10 @@ meta_arg   : meta_call
            | ident '=' string_literal
 ```
 
-acrichto doesn't like: @foo("bar")
-acrichto doesn't like: @foo(bar = baz(bar))
+- acrichto doesn't like: @foo("bar")
+- acrichto doesn't like: @foo(bar = baz(bar))
 
-aturon: what about @deprecated("use bar instead") <- want this
+- aturon: what about @deprecated("use bar instead") <- want this
   have to do: @deprecated(text = "use bar instead") ?
   (Today: #[deprecated = "use bar instead"])
 
