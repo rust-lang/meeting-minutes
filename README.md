@@ -5,6 +5,7 @@ here.
 
 ## Weekly meetings:
 
+* [weekly-meetings/2014-09-02](weekly-meetings/2014-09-02.md) (Friend of the Tree; subslice patterns; int fallback; closures returning !; checked arithmetic; abi syntax; index traits; matches!)
 * [weekly-meetings/2014-08-26](weekly-meetings/2014-08-26.md) ('if let'; assoc items; ownership conventions; privacy; error interop; slice notation; tuple indexing; exploit mitigation; abi syntax)
 * [weekly-meetings/2014-08-12](weekly-meetings/2014-08-12.md) (Generalizing object type parameter bounds; '<' syntax; multiple subslice patterns; import shadowing; asm!; leaking private types)
 * [weekly-meetings/2014-08-05](weekly-meetings/2014-08-05.md) (Import renaming syntax; &mut patterns; static mut; where clauses; stylistic umbrella lints; opt-in built-in; serialization; UFCS; empty struct syntax)
