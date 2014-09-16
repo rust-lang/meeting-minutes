@@ -5,6 +5,7 @@ here.
 
 ## Weekly meetings:
 
+* [weekly-meetings/2014-09-16](weekly-meetings/2014-09-16.md) (Removing GC; closure sugar; public items; opt-in-built-in; enum variant namespacing; runtime system removal; collection views; parallel codegen options)
 * [weekly-meetings/2014-09-09](weekly-meetings/2014-09-09.md) (FnMut sugar; assoc types; inheritance; AST smart pointers; drop reform)
 * [weekly-meetings/2014-09-02](weekly-meetings/2014-09-02.md) (Friend of the Tree; subslice patterns; int fallback; closures returning !; checked arithmetic; abi syntax; index traits; matches!)
 * [weekly-meetings/2014-08-26](weekly-meetings/2014-08-26.md) ('if let'; assoc items; ownership conventions; privacy; error interop; slice notation; tuple indexing; exploit mitigation; abi syntax)
@@ -103,4 +104,3 @@ here.
 * [Meeting 2013-06-07](Meeting-2013-06-07.md) (dynamically sized types; closures; GC)
 * [Meeting planning 2013-01-08](Meeting-planning-2013-01-08.md) (0.6; 1.0)
 * [Meeting inperson 2011-04-06](Meeting-inperson-2011-04-06.md) (kind system; resources; env capture)
-
