@@ -5,6 +5,7 @@ here.
 
 ## Weekly meetings:
 
+* [weekly-meetings/2014-09-23](weekly-meetings/2014-09-23.md) (static v dynamic drop; fail! -> panic!; int->float inference; moving feature request issues to RFC repo; cfg syntax; newtype)
 * [weekly-meetings/2014-09-16](weekly-meetings/2014-09-16.md) (Removing GC; closure sugar; public items; opt-in-built-in; enum variant namespacing; runtime system removal; collection views; parallel codegen options)
 * [weekly-meetings/2014-09-09](weekly-meetings/2014-09-09.md) (FnMut sugar; assoc types; inheritance; AST smart pointers; drop reform)
 * [weekly-meetings/2014-09-02](weekly-meetings/2014-09-02.md) (Friend of the Tree; subslice patterns; int fallback; closures returning !; checked arithmetic; abi syntax; index traits; matches!)
