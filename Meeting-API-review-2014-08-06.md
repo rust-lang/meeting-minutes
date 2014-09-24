@@ -59,7 +59,7 @@ Resolutions: do above
 * shift_ref, pop_ref - deprecate or delete
 * slice, slice_from, slice_to - unstable
 * iter - unstable (iterator name may change, &self)
-* split - unstable (iterator name may change, &self) 
+* split - unstable (iterator name may change, &self)
 * splitn, rsplitn - unstable
 * windows, chunks - unstable (iterator ")
 * bsearch - rename 'binary_search', unstable (") return location on failure (custom enum)
@@ -163,7 +163,7 @@ Resolutions:
   - do we like this trick?
   - do we like them as free functions?
   - in this module?
-  
+
 Resolutions:
 
 * call ref_slice, etc. unstable fix name
