@@ -5,6 +5,7 @@ here.
 
 ## Weekly meetings:
 
+* [weekly-meetings/2014-09-30](weekly-meetings/2014-09-30.md) (GC removal; static/const; object safety rules; cycle time; empty struct syntax; macro syntax; while let; release builds)
 * [weekly-meetings/2014-09-23](weekly-meetings/2014-09-23.md) (static v dynamic drop; fail! -> panic!; int->float inference; moving feature request issues to RFC repo; cfg syntax; newtype)
 * [weekly-meetings/2014-09-16](weekly-meetings/2014-09-16.md) (Removing GC; closure sugar; public items; opt-in-built-in; enum variant namespacing; runtime system removal; collection views; parallel codegen options)
 * [weekly-meetings/2014-09-09](weekly-meetings/2014-09-09.md) (FnMut sugar; assoc types; inheritance; AST smart pointers; drop reform)
@@ -95,6 +96,7 @@ here.
 ## Other meetings:
 
 * [Meeting inheritance 2014-09-23](Meeting-inheritance-2014-09-23.md)
+* [Meeting inheritance 2014-09-23](Meeting-inheritance-2014-09-30.md)
 * [Meeting workweek 2014-08-18](workweek-2014-08-18/Meeting-workweek-2014-08-18.md)
 * [Meeting 2014-07-16 (macros)](Meeting-other-2014-07-16.md)
 * [Meeting API review 2014-08-06](Meeting-API-review-2014-08-06.md)
