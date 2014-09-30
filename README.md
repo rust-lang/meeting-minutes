@@ -95,8 +95,8 @@ here.
 
 ## Other meetings:
 
+* [Meeting inheritance 2014-09-30](Meeting-inheritance-2014-09-30.md)
 * [Meeting inheritance 2014-09-23](Meeting-inheritance-2014-09-23.md)
-* [Meeting inheritance 2014-09-23](Meeting-inheritance-2014-09-30.md)
 * [Meeting workweek 2014-08-18](workweek-2014-08-18/Meeting-workweek-2014-08-18.md)
 * [Meeting 2014-07-16 (macros)](Meeting-other-2014-07-16.md)
 * [Meeting API review 2014-08-06](Meeting-API-review-2014-08-06.md)
