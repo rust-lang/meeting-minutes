@@ -5,6 +5,7 @@ here.
 
 ## Weekly meetings:
 
+* [weekly-meetings/2014-10-07](weekly-meetings/2014-10-07.md) (fott; release/debug configure flags; linking to RFCs; unsafe / raw conventions; removing virtual structs; reserving keywords; uint -> uintptr)
 * [weekly-meetings/2014-09-30](weekly-meetings/2014-09-30.md) (GC removal; static/const; object safety rules; cycle time; empty struct syntax; macro syntax; while let; release builds)
 * [weekly-meetings/2014-09-23](weekly-meetings/2014-09-23.md) (static v dynamic drop; fail! -> panic!; int->float inference; moving feature request issues to RFC repo; cfg syntax; newtype)
 * [weekly-meetings/2014-09-16](weekly-meetings/2014-09-16.md) (Removing GC; closure sugar; public items; opt-in-built-in; enum variant namespacing; runtime system removal; collection views; parallel codegen options)
