@@ -1,0 +1,158 @@
+# Who gates the gatemen?
+
+- nmatsakis: 3 possibilities:
+
+- The Status Quo -- assign feature-gates/experimental tags, no distinction between channel
+- Extreme -- disallow opting into feature gate from stable/beta channel
+- Compromise -- like extreme, but allow opting in to "unstable" (not experimental) features/libraries from beta channel
+
+Should we change from status quo?
+
+Pro: current stability message is nuanced. Avoid de-facto lock-in.
+
+Con: work. opting-in is sufficient. people get to use stable build.
+
+- brson: Risk is that we release a compiler that is literally useless.
+- acrichto: Another pro: You lose guarantee that if you compile with 1.0 you compile with 1.1.
+- brson: Another con is that this is a radical idea. We're going to get backlash.
+- nmatsakis: What's radical?
+- brson: Not providing access to the libraries that exist.
+- brson: If we had done it from the beginning it'd be more palatable
+- zwarich: Since we have cargo, all it takes is one person in your feature chain to "opt in" to instability and suddently everybody else does too.
+- aturon: That's a somewhat central question. Whether we consider transitive dependencies as part of this? You could imagine that some library promises they won't break your code.
+- zwarich: It's just difficult for them to make that promise since they don't know if it will be removed. For things like macros/syntax-extensions, everybody will be relying on them.
+- nmatsakis: If we went through the more extreme/compromise varieities, then anyone that uses macros/syntax-extensions will wind up nighly builds.
+- aturon: I feel like this proposal forces us to be more honest with ourselves and our users about where we promise stability. Feature flags and attributes declare our promises but if they are not strongly enforced -- there is what we say and what people use, and if those two start to diverge, we're saying one thing and doing another. Maybe if we mark a library as unstable but expect people to use it, it's effectively stable. This approach forces the issue: if we think it's important enough that everybody use it, then it needs to be stable.
+- nmatsakis: Instructive to look at precedent.
+- nmatsakis: Haskell -- allow feature opt-in at effectively arbitrary points
+- nmatsakis: Node.js -- declare stability but don't force you to use it, at least some people say there is defacto lockin
+- nmatsakis: I think other languages mostly don't give access to unstable things
+- nmatsakis: Java: sun.misc.Unsafe basically locked into
+- pcwalton: gcc allows you to opt into wildly unstable features via -standard. In practice this has led to everything gcc permits becoming a kind of de facto standard.
+- pcwalton: I'm not sure anyone has been able to solve this very well. I think that our situation is especially difficult and its hard to look at precedent. We've got features that are very useful but we don't have time to "correct" them. Hard for us to say don't use them. Yet we don't have time to do a good job with them. To me every solution seems bad.
+- brson: It seems to me that if we do this, we probably will have to compromise. Some of the stuff we have will be grandfathered in.
+- pcwalton: Maybe the most reasonable thing is to just make some exceptions, e.g. for macro-rules.
+- nmatsakis: what do you mean by grandfather?
+- brson: basically that macro-rules is so imp't we have to let people have it
+- pcwalton: everyone should just be aware that we will have to support macro-rules forever, no matter what we do. We should just accept that we will have non-hygienic rules locked in forever.
+- zwarich: with current scoping?
+- pcwalton: right. there's a chance we'll get away with fixing it but a chance we won't.
+- pcwalton: price of success.
+- aturon: it sounds like you're making the argument that even if we grandfather macros in, there is still a risk that it's effectively stable, right? That is the point of this proposal in my mind. Those things we hope to break we can make space for -- even if we have to allow it for macro-rules.
+- pcwalton: there's a really real risk that if we go all the way with macro-rules that means nobody will use the stable build. that seems worse because if everyone uses nightly, there is effectively NO hellgating. So we shouldn't think we have more power than we do.
+- pcwalton: I think we don't have enough power to hellgate macro rules in stable.
+- brson: It seems like we also really desperately need some data here before going live, so that we have some notion about what fraction of the ecosystem can go with it. We don't have analytics to do that right now.
+- pcwalton: if we had crates.io, we could at least grep for feature gates.
+- acrichto: if macro-rules is available by default, and we basically can't change it, how is that different from just removing the feature gate?
+- pcwalton: because I think there's a chance we can break some things in it. Maybe we can make more identifiers hygienic over time. We intend to break it but we may not get away with it.
+- pcwalton: by putting it behind a feature gate we give ourselves more room
+- acrichto: that is basically what we have today, I think the signaling is totally lost. People's guides, step 1 will be "write #[feature] at the top of your file".
+- brson: We still can actually break things. We can do analysis and say "how bad will breakage be". Almost everything in the eco system is open source, we can see it, we can break things and upstream patches ourselves.
+- nmatsakis: to what extent are we talking specifically about macro-rules?
+- acrichto: I consider macro-rules to be a special case potentially but in general feature gating in standard branch seems kind of pointless.
+- nmatsakis: are there other feature gates we would want to grandfather besides macro-rules?
+- pcwalton: idk, I thought maybe globs, but I think a lot of people have stopped using them. globs is on the fence. I don't know how often people actually use it.
+- nmatsakis: it'd also be interesting to know if there are specific scenarios.
+- pcwalton: servo certainly does
+- brson: we're going to lose a lot of stuff without plugins
+- nmatsakis: that is one where I would really want to hold the line
+- pcwalton: everyone should have to accept that the current compiler API may live forever
+- nmatsakis: I think it'd be a bigger disaster to keep it
+- pcwalton: it's not impossible, we could write a shim API
+- zwarich: there is another approach. Swift seems to be shipping a 1.0 but telling people we will break the language in the future, but we're going to write a migration tool that helps make as many code changes as possible for you. Interesting approach that has worked for obj c in the past -- not necessarily forced things but things they want people to opt in to. Not sure if we can get away with this.
+- pnkfelix: It's been discussed.
+- pcwalton: Before everyone gets too excited, keep in mind that python 3 tried but it was not a panacea.
+- pcwalton: Go does have it and used it in their earlier migrations but they don't use it now.
+- nmatsakis: if a lot of people are using nightly, is that such a disastorous scenario? I guess that if EVERYBODY uses nightly, it's not good.
+- brson: I think similar to the breakage it's a situation where we have to show continuous progress
+- nmatsakis: I agree if it's still the case by 1.3 or 1.4 or whatever that's not good
+- pcwalton: I personally think we must hellgate plugins -- if we do anything, we must do plugins
+- pcwalton: There is potential to cause massive, massive damage if we don't
+- pcwalton: Plugin prevent us from changing the language etc
+- pcwalton: They can depend on anything
+- acrichto: Arguably we should just remove them period.
+- pcwalton: We need to have a stable API, stable interface to the type checker.
+- nmatsakis: when we decided to merge them, we decided the risk was acceptable, what changes opinion?
+- pcwalton: see a lot of uptake but also because people are advertising it as a main feature of rust
+- pcwalton: it may be the case that people are only using a small set of plugins and we can keep them up to date. basically the same as the firefox add-on situation.
+- pcwalton: firefox shows both potential and danger of this model.
+- nmatsakis: so one advantage of the Compromise position is that some users are on beta, so we get a spread
+- brson: I think that beta should be exactly what the next release will be
+- nmatsakis: ok, so the extreme position with macro-rules
+- acrichto: it seems like the only tenable position is macro-rules with a lot of other things grandfathered
+- nmatsakis: what beyond macro-rules?
+- acrichto: maybe unboxed features, associatd items, various things we intend to fix but may not make
+- zwarich: globs get a lot of use, especially in Piston projects
+- pcwalton: globs may be ok
+- pcwalton: I suspect we could get away with just "fixing" globs and calling it bug fixing
+- acrichto: seems like macro-rules and globs are the biggest ones
+- acrichto: actual exporting and importing of macros would have to be stable
+- brson: I think we should continue using feature gates for macros, claim we will break it, and push it as far as we can
+- nmatsakis: Nobody could ever LIKE macro-escape or whatever
+- acrichto: It's nuanced because people like macro import/export
+- nmatsakis: I just think we have a better chance of getting away with changes for things that just outright suck like macro import/export
+- acrichto: I'm really worried about the possibility that I update to Rust and a lot of my dependencies haven't updated it etc etc
+- pnkfelix: macros, in the end, can always be rewritten by manually changing the code
+- zwarich: depends if we include syntax extensions with macros
+- pnkfelix: I meant macro-rules, not syntax extensions
+- zwarich: of the poeple using macros, how many people would be opposed to a chance that fixes the scoping?
+- acrichto: that's not the problem, everybody will unanimously agree that a fix is worth it -- but if you have a production web app, and it doesn't compile now, and you have to spend days fixing your dependencies, nobody wants that either.
+- pcwalton: when you are bored, read bug 745645 -- when we took out `opacity`, some people got very angry.
+- nmatsakis: yes but we did do it. we didn't put it back.
+- zwarich: only reason we remember it is because it was funny
+- nmatsakis: at worst, we call it rust 2.0
+- brson: are there other issues around general issue of hellgating that need to be discussed?
+- acrichto: I am particularly worried about macro-rules because I want to raise the question of what features make it past the hellgate?
+- aturon: that sounds like what we've been talking about. Sounds like macro-rules and maybe globs. Pretty small set.
+- acrichto: We think.
+- nmatsakis: I don't quite know what you're arguing for Alex.
+- acrichto: I think we should not allow feature gates period and just remove macro-rules or else call it stable. Roll out period of what to do now vs 1.0 is also very important and that will not change.
+- aturon: some of the additional issues include "compromise" vs "extreme" and how this interacts with library stability attributes.
+- aturon: libraries are another imp't source of breakage. TL;DR is that it would be nice if we had a single story that was the same for language and (at least) std libraries. cargo libraries are probably another thing.
+- aturon: these two things are related because in the libraries we have this 3-way distinction, experimental, unstable, and stable, which seems to align nicely with nightly, beta, and release. Some argument for the compromise position.
+- brson: I don't like stable having different policies from beta.
+- acrichto: because our message now is "if it works on beta, it will work on stable"
+- nmatsakis: right, it'd be "if it works on beta without feature gates"
+- brson: every library author that wants to work on stable release has to publish APIs they guarantee not to break
+- nmatsakis: isn't that what semantic versioning is all about?
+- brson: but it's not possible
+- nmatsakis: but is that our fault?
+- aturon: sounds like there is a strong feeling that we'd prefer extreme over compromise
+- brson: yes
+- aturon: for libraries, we need to distinguish policy for std library where we can make/keep promises...and the mechanism for cargo
+- aturon: I believe that yehuda was suggesting that if you are using stable build, you can only use stable APIs, of any library what-so-ever, which seems awfully strong
+- aturon: advantage is that if everyone truly follows semantic versioning throughout the ecosystem, you're guaranteed to never break, but it seems implausible, and it doesn't give library authors lots of space to build unstable versions, not very flexible
+- brson: can't we have a situation where library authors opt-in to the system at all? if you don't mark anything up, you're not even opting in?
+- nmatsakis: I was assuming we wouldn't offer library authors much help here at all
+- aturon: right now we have the stability lint. we could hellgate the stability lint. that is concretely what's under discussion. yehuda's proposal was that unstable and experimental are forbid on stable releases. that would apply to wherever the library was coming from.
+- pnkfelix: how do I test code that I've written using a stable compiler?
+- nmatsakis: the weird thing that is that you'd be required to use a nightly build if you mark your library as unstable even though you are not using features from nightly
+- brson: why?
+- nmatsakis: is the lint only intra-crate?
+- aturon: yes
+- nmatsakis: ah, ok
+- pcwalton: we need to be careful to give people carrots and not sticks to use stable
+- aturon: to me this proposal feels like it's trying to tie too much to the version of the compiler. The distinction between nightly/stable is about what the rust team can control. Seems weird to tie that. We control what we control, nobody can fault us if it breaks, particularly if they get a warning.
+- brson: so what do we do about it?
+- aturon: for standard library, we do hellgate stability, meaning roughly that in beta/stable you can only use stable features of rust libstd.
+- brson: does that include satellite libs?
+- aturon: we're trying to move that out, right?
+- aturon: stdlib is most imp't
+- brson: for example we can accomplish this by having one new attribute "hellgated-crate"
+- nmatsakis: or just bake it into the lint -- it knows what libstd is, right?
+- brson: I don't think it's sufficient
+- nmatsakis: I'm not sure I want people to put this on their crates. This is about the promise that we're making.
+- brson: features not for me and not for thee are not nice.
+- nmatsakis: everybody else has version numbers and cargo. why should they tie their library to using a beta build of the compiler?
+- brson: reason we have this is so that we can merge in tree code, wouldn't other people want it?
+- nmatsakis: I'm concerned that it pushes people to nightly builds for no reason and also that it offers a kind of weird message.
+- aturon: story here is that Rust has these release channels. This applies to compiler and standard library. Rust distribution release channels. What's going on in cargo ecosystem feels different. Where stability attributes work essentially as they do today.
+- aturon: My argument is sort of 2-fold: (1) it forces same honesty about library as it does for the language. (2) we've talked a lot about what lang features we need to grandfather and I feel fairly comfortable that we can have a usable libstd at level stable for 1.0 without too much regret.
+- brson: we only have 2 minutes left. but it sounds like nobody is really opposed to the general concept at this point. felix / cameron?
+- zwarich: to which concept? opposed to the concept of making certain features unusable?
+- brson: yes -- that concept.
+- zwarich: I'm not opposed. I work on servo, we'll use things. But if we make wrong decision here you basically make entire release stability scheme useless in practice. It's hard to know what's right decision before you make it. I think we've considered it fairly well. I don't know what's going to happen in practice.
+- brson: It seems like we need to have a lot more confidence about what we're breaking before we pull the trigger here. Might need to have more data and then another discussion.
+- zwarich: I don't know best way to gather data, maybe just a perl script combined with cargo?
+- brson: I can work with alex to figure out how to make that happen
+- nmatsakis: can we maybe grep through github projects that are written in rust?
