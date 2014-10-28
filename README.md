@@ -5,6 +5,8 @@ here.
 
 ## Weekly meetings:
 
+* [weekly-meetings/2014-10-28](weekly-meetings/2014-10-28.md) (collections; cross-borrowing)
+* [weekly-meetings/2014-10-21](weekly-meetings/2014-10-21.md) (module reform; fixed size arrays and moving; pub trait items)
 * [weekly-meetings/2014-10-14](weekly-meetings/2014-10-14.md) (object safety rules; naming conventions; rfc repo changes; reflection; const tweaks; \xXX)
 * [weekly-meetings/2014-10-07](weekly-meetings/2014-10-07.md) (fott; release/debug configure flags; linking to RFCs; unsafe / raw conventions; removing virtual structs; reserving keywords; uint -> uintptr)
 * [weekly-meetings/2014-09-30](weekly-meetings/2014-09-30.md) (GC removal; static/const; object safety rules; cycle time; empty struct syntax; macro syntax; while let; release builds)
