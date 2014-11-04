@@ -5,6 +5,7 @@ here.
 
 ## Weekly meetings:
 
+* [weekly-meetings/2014-11-04](weekly-meetings/2014-11-04.md) (macros; multiple lifetime bounds; macro invocation syntax; higher-ranked trait bounds; pub trait methods; out-of-sync nightlies; struct variants; numerics)
 * [weekly-meetings/2014-10-30](weekly-meetings/2014-10-30.md) (error conventions; cargo; namespaced enums; trait-based error handling; macro unification; coercions; dynamic linking, byte literals, failing dtors)
 * [weekly-meetings/2014-10-28](weekly-meetings/2014-10-28.md) (collections; cross-borrowing)
 * [weekly-meetings/2014-10-21](weekly-meetings/2014-10-21.md) (module reform; fixed size arrays and moving; pub trait items)
