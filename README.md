@@ -5,6 +5,7 @@ here.
 
 ## Weekly meetings:
 
+* [weekly-meetings/2014-11-18](weekly-meetings/2014-11-18.md) (cmp/ops; TLS; future-proofing literal parsing; ungating tuple indexing, if/while let; naming conventions; struct variants matching; for syntax for higher-order lifetimes; macros; type parameter grammar; better shepherding)
 * [weekly-meetings/2014-11-11](weekly-meetings/2014-11-11.md) (fott; std::fmt; default typarams; rfc authors; 'coerce' vs. 'view', etc.; precent of `+` in type grammar; jemalloc)
 * [weekly-meetings/2014-11-04](weekly-meetings/2014-11-04.md) (macros; multiple lifetime bounds; macro invocation syntax; higher-ranked trait bounds; pub trait methods; out-of-sync nightlies; struct variants; numerics)
 * [weekly-meetings/2014-10-30](weekly-meetings/2014-10-30.md) (error conventions; cargo; namespaced enums; trait-based error handling; macro unification; coercions; dynamic linking, byte literals, failing dtors)
