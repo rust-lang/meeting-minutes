@@ -5,6 +5,7 @@ here.
 
 ## Weekly meetings:
 
+* [weekly-meetings/2014-12-16](weekly-meetings/2014-12-16.md) (fott; issue #s in FIXMEs; nullable extern fns; collections reform; prelude cleanup; slice syntax ambiguity)
 * [weekly-meetings/2014-12-09](weekly-meetings/2014-12-09.md) (process changes; box patterns; macros; issues in FIXMEs; placement box)
 * [weekly-meetings/2014-11-25](weekly-meetings/2014-11-25.md) (extension trait conventions; shadowed lifetimes; problems with unused type params; es6-style string escaping; int fallback redux redux)
 * [weekly-meetings/2014-11-18](weekly-meetings/2014-11-18.md) (cmp/ops; TLS; future-proofing literal parsing; ungating tuple indexing, if/while let; naming conventions; struct variants matching; for syntax for higher-order lifetimes; macros; type parameter grammar; better shepherding)
