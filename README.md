@@ -5,6 +5,7 @@ here.
 
 ## Weekly meetings:
 
+* [weekly-meetings/2015-01-06](weekly-meetings/2015-01-06.md) (fott; 1.0 alpha priorities; LLVM updates; the fate of `box`)
 * [weekly-meetings/2014-12-30](weekly-meetings/2014-12-30.md) (fott; impl trait for trait; stability attribute changes)
 * [weekly-meetings/2014-12-16](weekly-meetings/2014-12-16.md) (fott; issue #s in FIXMEs; nullable extern fns; collections reform; prelude cleanup; slice syntax ambiguity)
 * [weekly-meetings/2014-12-09](weekly-meetings/2014-12-09.md) (process changes; box patterns; macros; issues in FIXMEs; placement box)
