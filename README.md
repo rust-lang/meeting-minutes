@@ -5,6 +5,7 @@ here.
 
 ## Weekly meetings:
 
+* [weekly-meetings/2015-01-15](weekly-meetings/2015-01-15.md) (fott; homu; integer overflow; i/o; 1.0; comment rfc)
 * [weekly-meetings/2015-01-06](weekly-meetings/2015-01-06.md) (fott; 1.0 alpha priorities; LLVM updates; the fate of `box`)
 * [weekly-meetings/2014-12-30](weekly-meetings/2014-12-30.md) (fott; impl trait for trait; stability attribute changes)
 * [weekly-meetings/2014-12-16](weekly-meetings/2014-12-16.md) (fott; issue #s in FIXMEs; nullable extern fns; collections reform; prelude cleanup; slice syntax ambiguity)
