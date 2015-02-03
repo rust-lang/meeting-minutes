@@ -5,6 +5,7 @@ here.
 
 ## Weekly meetings:
 
+* [weekly-meetings/2015-02-03](weekly-meetings/2015-02-03.md) (RFC shepherd attention spans; raw pointers and lifetimes; non-zeroing drop)
 * [weekly-meetings/2015-01-27](weekly-meetings/2015-01-27.md) (autoref for closures)
 * [weekly-meetings/2015-01-20](weekly-meetings/2015-01-20.md) (goodbye view items; deref coercion; nounwind; discourse/ml changes; discriminant intrinsics; issue triage; fott)
 * [weekly-meetings/2015-01-13](weekly-meetings/2015-01-13.md) (fott; homu; integer overflow; i/o; 1.0; comment rfc)
