@@ -5,6 +5,7 @@ here.
 
 ## Weekly meetings:
 
+* [weekly-meetings/2015-02-17](weekly-meetings/2015-02-17.md) (fott; security bugs; code completion; open-ended proposals; struct syntax; alpha2; integer suffixes; overflow)
 * [weekly-meetings/2015-02-10](weekly-meetings/2015-02-10.md) (fott; unsafe_no_drop_flag; box RFC fallout; unused attribute feature gate; sizeof / alignof; array patterns)
 * [weekly-meetings/2015-02-03](weekly-meetings/2015-02-03.md) (RFC shepherd attention spans; raw pointers and lifetimes; non-zeroing drop)
 * [weekly-meetings/2015-01-27](weekly-meetings/2015-01-27.md) (autoref for closures)
