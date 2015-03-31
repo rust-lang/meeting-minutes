@@ -5,6 +5,7 @@ here.
 
 ## Weekly meetings:
 
+* [weekly-meetings/2015-03-24](weekly-meetings/2015-03-31.md) (unqualified associated items, feature-gating unsigned negation, trivial cast lint, trait variance, coherence updates, `as` and overflow, beta)
 * [weekly-meetings/2015-03-24](weekly-meetings/2015-03-24.md) (fott, unsafe_destructor, drop order, libtest)
 * [weekly-meetings/2015-03-17](weekly-meetings/2015-03-17.md) (checked overflow and casts; hyphens in crate names)
 * [weekly-meetings/2015-03-10](weekly-meetings/2015-03-10.md)
