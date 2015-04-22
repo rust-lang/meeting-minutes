@@ -116,7 +116,12 @@ here.
 * [weekly-meetings/2013-01-15](weekly-meetings/2013-01-15.md) (tree status; assert and log; #cfg conditions; function unsafe; trait bounds contexts; unsafe pointer indexing; static array bounds; removal of both type and trait impls; Eq and Ord reform)
 * [weekly-meetings/2013-01-08](weekly-meetings/2013-01-08.md) (region syntax; inherited mutability and write barriers)
 
-## Older Meetings
+## Core team meetings
+
+* [core-team/meeting-2015-04-22.md](core-team/meeting-2015-04-22.md)
+  (1.0 status, 1.1 planning, RFC discussion, minuting)
+
+## Older meetings
 
 * [Meetings 2012](Meetings-2012.md)
 * [Meetings 2011](Meetings-2011.md)
