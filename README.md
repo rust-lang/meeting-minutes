@@ -121,6 +121,9 @@ here.
 
 * [core-team/meeting-2015-04-22.md](core-team/meeting-2015-04-22.md)
   (1.0 status, 1.1 planning, RFC discussion, minuting)
+* [core-team/meeting-2015-04-29.md](core-team/meeting-2015-04-29.md)
+  (mem::forget, optimize by default, debug builders, security policy,
+  governance, release status)
 
 ## Older meetings
 
