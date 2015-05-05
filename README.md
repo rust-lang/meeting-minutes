@@ -5,6 +5,7 @@ here.
 
 ## Weekly meetings:
 
+* [weekly-meetings/2015-05-05](weekly-meetings/2015-05-05.md) (servo; --test and stability; irc floods; semver)
 * [weekly-meetings/2015-04-28](weekly-meetings/2015-04-28.md) (servo; podcasting; snapshots; transmute; static_assert)
 * [weekly-meetings/2015-04-21](weekly-meetings/2015-04-21.md) (servo licensing; iter overflow; float formatting; branching for betas)
 * [weekly-meetings/2015-04-14](weekly-meetings/2015-04-14.md) (beta; symlinks; missing stdio handles; compound assignment; rustdoc cleanup; coc enforcement)
