@@ -117,7 +117,7 @@ enum Foo {
 
 # Adding fields to a struct
 
-- acrichto: adding a private field is ok 
+- acrichto: adding a private field is ok
 - nmatsakis: I think there is a bug in autoderef that private fields shadow
 - huon: adding a private field can affect size of type
 - nmatsakis: we're not considering ABI compat for sure...
@@ -312,28 +312,10 @@ let x = foo::<int,int> // ERROR
 - acrichto: I've heard talk about a tool to test this. Hash and compare API.
 - aturon: reasonable place to start is with rustdoc metadata
 - nmatsakis: wycats was talking about this as part of cargo
-- acrichto: would go a long way towards helping 
+- acrichto: would go a long way towards helping
 - aturon: it'd be really useful just for std
 - acrichto: oh so many things I want for std
 - brson: I'm very enthusiastic about this idea of cargo checking semver rules. Maybe we can find an intern who would be interested. Doesn't seem so hard given that we have fixed rules.
 - acrichto: we'll have data avail if we have a tool that is easy
 - brson: wait so we could catalog what has changed and then cargo update could automatically patch it
 - *general astonishment at what a genius idea this is*
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
