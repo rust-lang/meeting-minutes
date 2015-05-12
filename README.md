@@ -5,6 +5,7 @@ here.
 
 ## Weekly meetings:
 
+* [weekly-meetings/2015-05-12](weekly-meetings/2015-05-12.md) (servo; crates.io; meetings and subteams)
 * [weekly-meetings/2015-05-05](weekly-meetings/2015-05-05.md) (servo; --test and stability; irc floods; semver)
 * [weekly-meetings/2015-04-28](weekly-meetings/2015-04-28.md) (servo; podcasting; snapshots; transmute; static_assert)
 * [weekly-meetings/2015-04-21](weekly-meetings/2015-04-21.md) (servo licensing; iter overflow; float formatting; branching for betas)
