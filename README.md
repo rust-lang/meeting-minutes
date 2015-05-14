@@ -126,8 +126,11 @@ here.
 * [core-team/meeting-2015-04-29.md](core-team/meeting-2015-04-29.md)
   (mem::forget, optimize by default, debug builders, security policy,
   governance, release status)
-* [core-tem/meeting-2015-05-06.md](core-tem/meeting-2015-05-06.md)
+* [core-team/meeting-2015-05-06.md](core-tem/meeting-2015-05-06.md)
   (governance RFC, forget/leak/RcGuard, subteam setup)
+* [core-team/meeting-2015-05-13.md](core-team/meeting-2015-05-13.md)
+  (1.0 announcement, subteam status report, governance web page,
+  security policy, semver for the language)
 
 ## Older meetings
 
