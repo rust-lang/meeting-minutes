@@ -132,6 +132,8 @@ here.
 * [core-team/meeting-2015-05-13.md](core-team/meeting-2015-05-13.md)
   (1.0 announcement, subteam status report, governance web page,
   security policy, semver for the language)
+* [core-team/meeting-2015-05-20.md](core-team/meeting-2015-05-20.md)
+  (TRPL translations; production user coordination; community subteam)
 
 ## Older meetings
 
