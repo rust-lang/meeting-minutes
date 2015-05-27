@@ -5,6 +5,7 @@ here.
 
 ## Weekly meetings:
 
+* [weekly-meetings/2015-05-26](weekly-meetings/2015-05-26.md) (introducing Emily; Whistler update; Servo; minor RFCs; future of meeting)
 * [weekly-meetings/2015-05-19](weekly-meetings/2015-05-19.md) (fott; servo; diversity; subteams)
 * [weekly-meetings/2015-05-12](weekly-meetings/2015-05-12.md) (servo; crates.io; meetings and subteams)
 * [weekly-meetings/2015-05-05](weekly-meetings/2015-05-05.md) (servo; --test and stability; irc floods; semver)
@@ -122,18 +123,18 @@ here.
 
 ## Core team meetings
 
-* [core-team/meeting-2015-04-22.md](core-team/meeting-2015-04-22.md)
-  (1.0 status, 1.1 planning, RFC discussion, minuting)
-* [core-team/meeting-2015-04-29.md](core-team/meeting-2015-04-29.md)
-  (mem::forget, optimize by default, debug builders, security policy,
-  governance, release status)
-* [core-team/meeting-2015-05-06.md](core-tem/meeting-2015-05-06.md)
-  (governance RFC, forget/leak/RcGuard, subteam setup)
+* [core-team/meeting-2015-05-20.md](core-team/meeting-2015-05-20.md)
+  (TRPL translations; production user coordination; community subteam)
 * [core-team/meeting-2015-05-13.md](core-team/meeting-2015-05-13.md)
   (1.0 announcement, subteam status report, governance web page,
   security policy, semver for the language)
-* [core-team/meeting-2015-05-20.md](core-team/meeting-2015-05-20.md)
-  (TRPL translations; production user coordination; community subteam)
+* [core-team/meeting-2015-05-06.md](core-tem/meeting-2015-05-06.md)
+  (governance RFC, forget/leak/RcGuard, subteam setup)
+* [core-team/meeting-2015-04-29.md](core-team/meeting-2015-04-29.md)
+  (mem::forget, optimize by default, debug builders, security policy,
+  governance, release status)
+* [core-team/meeting-2015-04-22.md](core-team/meeting-2015-04-22.md)
+  (1.0 status, 1.1 planning, RFC discussion, minuting)
 
 ## Older meetings
 
