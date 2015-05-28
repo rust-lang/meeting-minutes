@@ -123,6 +123,8 @@ here.
 
 ## Core team meetings
 
+* [core-team/meeting-2015-05-27.md](core-team/meeting-2015-05-27.md)
+  (book reviewing; RustCamp; community subteam; semantic versioning)
 * [core-team/meeting-2015-05-20.md](core-team/meeting-2015-05-20.md)
   (TRPL translations; production user coordination; community subteam)
 * [core-team/meeting-2015-05-13.md](core-team/meeting-2015-05-13.md)
