@@ -123,6 +123,8 @@ here.
 
 ## Core team meetings
 
+* [core-team/meeting-2015-06-3.md](core-team/meeting-2015-06-3.md)
+  (RustCamp status; Community subteam; language terminology; Whistler work week; security bugs)
 * [core-team/meeting-2015-05-27.md](core-team/meeting-2015-05-27.md)
   (book reviewing; RustCamp; community subteam; semantic versioning)
 * [core-team/meeting-2015-05-20.md](core-team/meeting-2015-05-20.md)
