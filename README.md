@@ -123,6 +123,8 @@ here.
 
 ## Core team meetings
 
+* [core-team/meeting-2015-06-17.md](core-team/meeting-2015-06-17.md)
+  (Subteam reports; Default object lifetime bounds; Report from class using Rust; 1.1 release)
 * [core-team/meeting-2015-06-3.md](core-team/meeting-2015-06-3.md)
   (RustCamp status; Community subteam; language terminology; Whistler work week; security bugs)
 * [core-team/meeting-2015-05-27.md](core-team/meeting-2015-05-27.md)
