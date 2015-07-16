@@ -123,6 +123,8 @@ here.
 
 ## Core team meetings
 
+* [core-team/meeting-2015-07-15.md](core-team/meeting-2015-07-15.md)
+  (Regression testing; Servo breakage; Connect to join; Specialization + dropck)
 * [core-team/meeting-2015-06-17.md](core-team/meeting-2015-06-17.md)
   (Subteam reports; Default object lifetime bounds; Report from class using Rust; 1.1 release)
 * [core-team/meeting-2015-06-3.md](core-team/meeting-2015-06-3.md)
