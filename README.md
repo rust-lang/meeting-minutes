@@ -123,6 +123,8 @@ here.
 
 ## Core team meetings
 
+* [core-team/meeting-2015-08-10.md](core-team/meeting-2015-08-10.md)
+  (Non-zeroing moves; Duration stabilization; RustCamp; -O1; Trademark)
 * [core-team/meeting-2015-07-15.md](core-team/meeting-2015-07-15.md)
   (Regression testing; Servo breakage; Connect to join; Specialization + dropck)
 * [core-team/meeting-2015-06-17.md](core-team/meeting-2015-06-17.md)
