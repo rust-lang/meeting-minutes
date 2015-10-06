@@ -123,6 +123,8 @@ here.
 
 ## Core team meetings
 
+* [core-team/meeting-2015-10-06.md](core-team/meeting-2015-10-06.md)
+  (nightly/beta regressions; broken crates.io crates; new IRC channels; crates.io outage; recover; tier1/tier2 platforms)
 * [core-team/meeting-2015-08-10.md](core-team/meeting-2015-08-10.md)
   (Non-zeroing moves; Duration stabilization; RustCamp; -O1; Trademark)
 * [core-team/meeting-2015-07-15.md](core-team/meeting-2015-07-15.md)
