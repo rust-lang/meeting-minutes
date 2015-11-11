@@ -123,6 +123,8 @@ here.
 
 ## Core team meetings
 
+* [core-team/meeting-2015-11-10.md](core-team/meeting-2015-11-10.md)
+  (moving rustfmt into rust-lang; wiki; liblibc/winapi breakage; pattern matching updates; multirust plans)
 * [core-team/meeting-2015-11-03.md](core-team/meeting-2015-11-03.md)
   (1.5 release during work week; cargo check; const patterns; std::time; ffi)
 * [core-team/meeting-2015-10-06.md](core-team/meeting-2015-10-06.md)
