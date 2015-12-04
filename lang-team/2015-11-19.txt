@@ -1,0 +1,51 @@
+# Agenda
+
+- custom panic handlers (aturon)
+	https://github.com/rust-lang/rfcs/pull/1100
+	https://github.com/rust-lang/rfcs/pull/1328
+- cyclic trait impls (aturon)
+- fast track amendment https://github.com/rust-lang/rfcs/pull/1384 (pnkfelix)
+
+# Cyclic trait
+
+```
+trait Magic {
+    type T: Copy;
+}
+
+impl<X: Magic> Magic for X {
+    type T = X;
+}
+```
+
+# pub extern crate
+
+```
+pub extern crate foo;
+
+// becomes in HIR
+
+pub mod foo {
+    extern crate foo;
+    pub use self::foo::*;
+}
+```
+
+http://is.gd/rrRcwJ
+
+```
+mod a {
+    pub use self::B;
+    struct B;
+}
+
+fn main() {
+    let _ = a::B;
+}
+```
+
+http://is.gd/JKYoEg
+
+http://is.gd/WW63WH
+
+http://is.gd/WjicUc
