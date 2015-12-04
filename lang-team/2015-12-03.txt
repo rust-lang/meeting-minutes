@@ -1,0 +1,97 @@
+# RFC 1196
+
+http://is.gd/ntdsM8
+
+```
+fn foo<T, U=u8>(x: U) -> T { unimplemented!() }
+
+fn main() {
+    foo::<()>("foo") // error
+}
+```
+
+We might like to support a change like this:
+
+```
+fn foo(x: u64) { }
+==>
+fn foo<T>(x: T) { }
+```
+
+But that can affect inference (except maybe with defaults):
+
+```
+foo(22) --> was foo(22_u64) becomes foo(22_i32)
+```
+
+Other related cases might be if the type requires inference:
+
+```
+foo(HashMap::new())
+```
+
+But the current design of fallback is problematic. You could imagine
+that if we moved to a "stricter" notion of fallback, then you might
+have a function like:
+
+```
+    fn foo<T=u64>(x: T) { } // where this works like defaults in types
+	foo("str") // => error
+```
+
+Here `foo` acts as if it were still `foo(u64)` unless user explicitly
+specifies a type parameter:
+
+```
+foo::<_>("str") // ok
+```
+
+What about the `Borrow` example? Some noodling to try and
+think about more complex interactions where difficulties might
+arise (ed. I can't remember if we found anything good here. --nmatsakis):
+
+```
+HashMap<Box<u64>>
+h.get(Box::new(22))
+//              ^^
+
+h.get(HashMap::new()) // HashMap<HashMap<...>>
+```
+
+Still, there is a solid evolution example with Vec adding allocators:
+
+```
+    struct Vec<T> ==> Vec<T,A>
+    fn foo<T>(v: Vec<T>) ==> fn foo<T,A>(v: Vec<T,A>)
+```
+
+# RFC #1129
+
+This syntax is ambiguous in the case where the `map` stores a placer as its key:
+
+```
+map[k] <- v
+```
+
+It might be that we should not do `vec <- v` but rather `vec.back() <-
+v` just to try and eliminate this sort of confusion, though obviously
+it still wouldn't permit a `PlacerAssign` sort of trait:
+
+```
+vec.back() <- v
+```
+
+For maps the proper syntax would probably be:
+
+```
+map.entry(k) <- v
+```
+
+* Aaron asks if we could disallow types from implementing both, but that is desired because you want to be able to `&mut map[k]` and `map[k] = v`.
+* General concern about adding more "if-else-if" style logic into the type checker.
+* But: if we do not have `IndexAssign`, then map should never implement `IndexMut`, because otherwise `map[k] = v` is a total footgun
+* Unfortunately, experimentation will be difficult:
+    - lacking unstable impls, we cannot implement IndexMut on HashMap without IndexAssign
+    - we could maybe #[cfg(nightly)]
+* Aaron points out that a better error message `map[k] = v` might sway his opinion
+* Unclear what will change except maybe unstable impls
