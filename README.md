@@ -123,6 +123,8 @@ here.
 
 ## Core team meetings
 
+* [core-team/meeting-2016-01-05.md](RFC 1214; FAQ; backcompat issues)
+* [core-team/meeting-2015-12-15.md](The Rust book; crates.io design; regression worries)
 * [core-team/meeting-2015-11-10.md](core-team/meeting-2015-11-10.md)
   (moving rustfmt into rust-lang; wiki; liblibc/winapi breakage; pattern matching updates; multirust plans)
 * [core-team/meeting-2015-11-03.md](core-team/meeting-2015-11-03.md)
