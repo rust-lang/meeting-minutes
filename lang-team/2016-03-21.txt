@@ -1,0 +1,56 @@
+## Prelude in general
+
+Option 1:
+	- Leave `#[no_implicit_prelude]` stable
+	- Do not deprecate until `#[no_prelude]` is stable
+
+Option 2:
+	- Feature-gate `#[no_implicit_prelude]` with warning cycle
+	- And eventually remove
+
+## 
+
+```
+trait Dom {
+    ..DomFields
+}
+
+struct DomFields {
+}
+
+trait Element {
+    ..ElementFields
+}
+
+struct ElementFields {
+    ..DomFields,
+}
+
+TextElement {
+   name: foo,
+   ..element_fields // get the dom fields too
+}
+
+
+trait Dom {
+    let dom: DomFields;
+}
+
+impl Dom {
+    let dom = self.a.b.c;
+}
+
+// The following is *NOT* allowed:
+
+struct Bar { f: u32 }
+struct Baz { f: u32 }
+
+struct Foo {
+    ..Bar,
+    ..Baz,
+}
+
+trait Foo {
+    struct { f: u32 }
+}
+```
