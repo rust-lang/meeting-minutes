@@ -1,0 +1,228 @@
+10:01 AM <•erickt> hello everyone!
+10:02 AM <•bstrie> can someone link today's agenda?
+10:02 AM <•erickt> bstrie: was that the diversity meeting?
+10:02 AM <aturon> bstrie: https://github.com/rust-community/team/issues/13
+10:03 AM <•erickt> so, the first, most important-est agenda item: welcome carols10cents!
+10:03 AM <•erickt> once again, thanks for joining the team!
+10:03 AM <•bstrie> carols10cents: you're here!
+10:03 AM <aturon> \o/
+10:04 AM <•erickt> carols10cents: we will do great things together!
+10:04 AM <carols10cents> bstrie: you're here too! it's amazing! ;)
+10:04 AM <•bstrie> almost wasn't due to misreading misleading email subject lines :P
+10:04 AM <carols10cents> you're welcome everyone, I'm happy to be here to do great things with yinz!
+10:05 AM <•erickt> second most important item. Apparently time zones are dumb, and they've inconveniently shifted an hour back for skade_. How does everyone feel about starting our meeting at 4pm UTC?
+10:06 AM <•Manishearth> sgtm
+10:06 AM <•brson> it's fine
+10:06 AM <aturon> fine for me
+10:06 AM <carols10cents> aye
+10:06 AM <•bstrie> all good
+10:06 AM <•erickt> which works out to 9am PST, 12pm EST, 9:30pm Mumbai, 6pm berlin?
+10:06 AM <•erickt> steveklabnik: good for you?
+10:07 AM <carols10cents> that works out to be ??? on steveklabnik standard time ;)
+10:07 AM <steveklabnik> what's good for carol is probably good for me
+10:07 AM <steveklabnik> but my time sonzs are always all over the place
+10:07 AM <•erickt> heh :) who knows what timezone steveklabnik is ever in any given day of the week
+10:07 AM <steveklabnik> yeah
+10:07 AM <steveklabnik> hehe
+10:08 AM <steveklabnik> you all should do what makes sense and i'll just deal
+10:09 AM <•erickt> third, we talked about doing an video call last time, but I forgot to get that all setup. Is everyone interested in that, and having next week be our call?
+10:09 AM <•bstrie> sure, we need to pick a service though
+10:09 AM <•bstrie> as long as it doesn't require flash to be installed I'm fine with it
+10:09 AM <carols10cents> i think it would still be nice to be public, either during or after... google hangout on air type thing?
+10:09 AM <•Manishearth> I'm fine with ... anything but vidyo
+10:10 AM <•erickt> yeah. Manishearth has trouble with vidyo. I'm fine with hangouts / skype / hello or whatever
+10:10 AM — frewsxcv wonders if non-members can observe/spectate the video call
+10:10 AM <•erickt> carols10cents: yes definitely
+10:10 AM <frewsxcv> Manishearth: I imagine WebRTC wouldn't work for you either?
+10:10 AM <steveklabnik> i also have weird vidyo issues, i end up calling in via phone
+10:10 AM <•erickt> frewsxcv: +1
+10:10 AM <•Manishearth> frewsxcv: I don't know
+10:11 AM <frewsxcv> e.g. https://appear.in
+10:11 AM <•Manishearth> frewsxcv: appear.in works
+10:11 AM <•erickt> bstrie: are you okay with hangouts? I think that allows for spectators
+10:11 AM <aturon> erickt: i have mixed feelings; for this team in particular, it's possible that IRC is actually a very good match. (for many of the other teams, video helps for high bandwidth technical discussion etc)
+10:11 AM <•erickt> aturon: true
+10:11 AM <aturon> erickt: (so i think it's probably worth trying some of both)
+10:11 AM — carols10cents does the why not both shrug
+10:12 AM <aturon> erickt: sorry, IRC could be a good match in particular to open it up to non-team members like myself :)
+10:12 AM <•erickt> I throught I typed this before, I want most of our meetings here unless we find a good venue that lets folks like frewsxcv join in too
+10:12 AM <•erickt> but even then it might be much to ask people to install a plugin, or pay for bandwidth to watch a video
+10:14 AM <carols10cents> transcribe the video to text after the fact? that doesn't help with realtime involvement though
+10:14 AM <•bstrie> I'm willing to try video, but I suspect I'll tend to prefer IRC
+10:14 AM <carols10cents> what if we try video once, or like.. once a month or something
+10:14 AM <•Manishearth> with servo someone always keeps notes in an etherpad
+10:14 AM <•Manishearth> realtime
+10:14 AM <•erickt> yeah
+10:14 AM <aturon> carols10cents: +1 on once a month
+10:14 AM <•Manishearth> In more than one occasion I've participated through IRC (when both video and phone aren't possible) by reading the notes :p
+10:15 AM <•Manishearth> ocne a month sounds good
+10:15 AM <•erickt> ok, so does anyone have a tech beyond vidyo they can't use?
+10:16 AM <•bstrie> IRC will always be a fallback, if so :P
+10:16 AM <•erickt> I'm thinking just do google hangouts next week because it's easy to set up, and I have no experience with the other projects :)
+10:17 AM → jeffdb joined (JeffDB@moz-fp3.7hu.21.199.IP)
+10:17 AM <carols10cents> i second that motion to try hangouts next week
+10:17 AM <carols10cents> (do we do robert's rules here? ;) ;) ;))
+10:17 AM <•bstrie> note that hangouts has a cap on 10 talking participants at once, so broadcasting to listeners is probably fine enough but actually participating will get more difficult
+10:18 AM <•erickt> bstrie: yeah. I think it'll be okay for us at first.
+10:19 AM <•erickt> we can revisit when we have more participants
+10:19 AM <aturon> (i think if it's just a monthly thing, limiting speakers to the actual community team is probably fine; IRC meetings allow for broader participation)
+10:19 AM <•erickt> ok. next up
+10:20 AM <•bstrie> next up, oscon stuff
+10:20 AM <•erickt> stuff from last week. aturon: anything you want to call out?
+10:20 AM <•erickt> bstrie: forgot to insert ^ in the agenda :)
+10:20 AM <•bstrie> icic
+10:21 AM <aturon> erickt: i've got my list, but it doesn't have to get priority :)
+10:21 AM <•erickt> I just wanted to make sure we closed as much from last week before we add new things this week :)
+10:22 AM <•erickt> we're talking diversity this friday with skade driving that conversation. Not sure if there's much to say at this moment
+10:22 AM <aturon> yeah, i'm sad to have to miss that meeting, but i hope there will be lots of actionable stuff to work on
+10:23 AM <•erickt> skade's been playing with tooling, but since he's not here, we should comment on https://github.com/rust-community/team/issues/10
+10:24 AM <•erickt> ok, conferences?
+10:25 AM <•erickt> we have oscon coming up in a bit, with steveklabnik, bstrie, and edunham speaking
+10:25 AM <steveklabnik> :D
+10:25 AM <steveklabnik> i will be presenting rust next week at ancient city ruby
+10:25 AM <•erickt> the oscon organizers asked us for help to see if we can help organize people to visit
+10:25 AM <steveklabnik> next month, i am doing a three-country tour
+10:26 AM <•erickt> and have offered to give us discount coupons to spread around
+10:26 AM <•skade_> (I'm half listening in, but I have basically made my opinion clear on the issue tracker. I like something lightweight)
+10:26 AM <•Manishearth> they also have an interesting "contribute to open source rust things" (AIUI) event which we might be able to help with
+10:26 AM <edunham> (oscon has also asked me to do my "rust from a scripting background" talk for an emerging languages webcast in may)
+10:26 AM <•bstrie> apart from oscon itself, I was thinking that we could try to contact the broader rust community in austin and try to do some sort of thing with them
+10:26 AM <•erickt> so, how should we approach oscon?
+10:27 AM <•erickt> Manishearth: +1 yeah
+10:27 AM <•erickt> they even asked us if we want to organize a rust conference
+10:27 AM <aturon> erickt: what do you mean by "organize people to visit"?
+10:27 AM <•skade_> I have a meeting tomorrow with people interested in running rustconf EU and we have some person asking if someone could represent Rust at the ada workshop in June (I can do that, but I don't know if I'm the best person).
+10:27 AM <•Manishearth> I didn't notice if core is on that thread, but they mentioned something about hoping rust team folks could come
+10:27 AM <•erickt> it's not, I'll cc core
+10:28 AM <aturon> hm, ok, i'm getting a bit confused, it seems like there are a lot of moving parts with OSCON
+10:28 AM <•Manishearth> yep
+10:28 AM <aturon> so we already have several speakers lined up
+10:28 AM <•Manishearth> 3 talks, one contribution thingy
+10:29 AM <aturon> erickt: can you clarify about "organize people to visit" and in general what additional things they're requesting?
+10:29 AM <•erickt> aturon: cc-d you on the thread
+10:29 AM <aturon> what does it mean that they asked if we want to "organize a rust conference"?
+10:30 AM <•erickt> aturon: they had two asks. first, they want to organize a Rust Hackathon as oscon, where people just contribute to a project
+10:31 AM <aturon> (for reference, this is about 1.5 months away)
+10:31 AM <•erickt> where it sounds like they carve out 8 small projects and work on them over 2 days
+10:31 AM <•erickt> the second ask was that they felt they weren't getting enough people signed up for steveklabnik's 2 day workshop, and asked us to help spread the word on it
+10:32 AM <aturon> ok, thanks for clarifying
+10:32 AM <•Manishearth> erickt: you missed the third :)
+10:32 AM <•Manishearth> they have an idea for a Rust Intensive (not sure what that means) and wanted input on that
+10:32 AM <•erickt> yeah me neither
+10:32 AM <aturon> the second ask seems straightforward -- certainly we can hit up all the usual channels (@rustlang on twitter, our discourse forums, our subreddit)
+10:32 AM <•Manishearth> oh. I thought Intensive was some tech conf community shibboleth that y'all would know
+10:33 AM <•erickt> aturon: yeah, we did hit up our channels
+10:33 AM <•Manishearth> I'll ask, in that case
+10:34 AM <•erickt> on (2), the question(s) I have is how should we distribute OSCON ticket coupons
+10:34 AM <•erickt> and if there's anything we can do to help recruit non-rust people to go to these talks
+10:34 AM <flaki> erickt badboy I'm running around with my head cut off, basically, could you keep me posted on any new developments plz? thx <3
+10:34 AM <•erickt> because I think most of them are relatively introductory
+10:35 AM <•erickt> and so we're not the target audience for these talks
+10:35 AM <•erickt> flaki: will do!
+10:35 AM <badboy> flaki: sure, we need to talk anyway ;)
+10:36 AM <•erickt> I think skade_  has dealt with these kinds of offers. has anyone else?
+10:37 AM <aturon> not really :-/ i will say that this kind of thing can be a good way to create opportunities for underrepresented groups, like the free tix for RustCamp
+10:37 AM <•Manishearth> +1
+10:38 AM <steveklabnik> it's already tough with how damn expensive OSCON is
+10:40 AM <•erickt> hm. this requires more thought then. I'll start a separate thread on rust-community and the core team on how we should approach this
+10:40 AM <carols10cents> yeah, how much are the coupons for? are the coupons likely to get people to attend oscon that aren't already, or is a better audience people who are already going to try and get them to add these workshops?
+10:40 AM <•Manishearth> 20
+10:40 AM <•erickt> 20%
+10:41 AM <•Manishearth> it sounds like a better fit for the latter :/
+10:41 AM <aturon> erickt: for the first ask, i think the answer is we should definitely go for it -- we want to organize good starter projects throughout the ecosystem anyway; this seems like a good forcing function
+10:41 AM <steveklabnik> so only $1800 to attend my workshop then! :(
+10:41 AM <•Manishearth> carols10cents: do you have access to the rust-community google group?
+10:42 AM <•erickt> steveklabnik: !
+10:42 AM <•Manishearth> steveklabnik: whoa
+10:42 AM <•erickt> Manishearth: carols10cents been invited to the group
+10:42 AM <carols10cents> Manishearth: yes
+10:42 AM <steveklabnik> https://conferences.oreilly.com/oscon/open-source-us/public/register <- gotta click 'training'
+10:42 AM — •Manishearth thinks of all the sandwiches he could make and consume with that money
+10:42 AM <•Manishearth> erickt: cool
+10:43 AM <•erickt> ok, so for the agenda, we could gather a list of a few interesting small tickets for people to peel off
+10:44 AM <•erickt> I think they're also hoping that we'd have some people helping out at this event
+10:45 AM <•erickt> I'm not able to go though
+10:45 AM <aturon> i can talk to folks on the mozilla team to see if anyone is interested
+10:45 AM <aturon> this would be for guiding the hackathon?
+10:46 AM <•erickt> I think so.
+10:46 AM <•bstrie> last year oscon gave all speakers the ability to have people get a free badge to the expo hall (normally costs like $50 or so), I'm hoping they'll do that again this year
+10:46 AM <•erickt> I don't know how big this OSCON Contribute will be. Does anyone else?
+10:46 AM <•bstrie> I hadn't even heard of it before yesterday
+10:47 AM <aturon> erickt: i imagine mozilla can send somebody out for a couple days of community hacking :)
+10:47 AM <•Manishearth> erickt: seems like a week long
+10:47 AM <edunham> (there's often a code available a couple weeks before OSCON for free expo hall access, though a lot has changed this year so I wouldn't count on it)
+10:47 AM <aturon> (if the community team as a whole thinks this is a worthwhile investment)
+10:47 AM <edunham> (oscon has also historically provided passes in the speaker lounge for getting a limited number of friends into regular talks if they have expo-hall-only badges)
+10:48 AM <•bstrie> I would like to see the different tasks broken out into their own to-do lists, it seems like there's a lot of concerns getting tangled up in here
+10:48 AM <•Manishearth> yep
+10:48 AM <•erickt> ok, so we need more info gathering. Lets shift this over to an email thread
+10:49 AM <•bstrie> that, or open an issue for each thing on the gh repo
+10:49 AM <•erickt> carols10cents: anything we can help out with on RustBelt?
+10:49 AM <•erickt> same ^ for badboy / flaki
+10:50 AM <badboy> as mentioned before: not at the moment. we're still not over the "hey, would be cool"-stage, so nothing to act on. we might talk about it tomorrow in a call. I'll keep you informed
+10:50 AM <•erickt> are you setup for taking request-for-proposals, need help finding people to review talks?
+10:50 AM <•bstrie> erickt: asking mozilla for sponsorship dough is something that carol has tasked me with doing, which dovetails with the stuff that skade_ has been asking for
+10:50 AM <•erickt> badboy: thanks!
+10:50 AM <carols10cents> erickt: I saw on one of the emails you mentioned offering the application rustcamp used for CFPs, and i don't need that (i'm close to getting one i've used before set up)
+10:51 AM <carols10cents> i would love to have core team members attend+speak
+10:51 AM <•erickt> just make aturon send someone over. that's what I do with meetups ;)
+10:51 AM <carols10cents> idk if yinz would rather submit to the cfp or be invited speakers, a status upon which i would be happy to bestow yinz
+10:52 AM <aturon> carols10cents: that should be totally doable; we even have people relatively local
+10:52 AM <carols10cents> also i'm not really counting steveklabnik since i already expect him to show up ;)
+10:52 AM <aturon> :)
+10:52 AM <•erickt> carols10cents: do you have a keynote speaker lined up?
+10:52 AM <carols10cents> erickt: nope! 
+10:53 AM <carols10cents> so who wants to be my keynote? :)
+10:53 AM <carols10cents> dON'T ALL JUMP AT ONCE
+10:53 AM <flaki> skade_: did you meet w/ Emma about the Berlin Rust Conf stuff? I think I haven't heart anything back of that since the initial communication
+10:53 AM <•Manishearth> heh
+10:53 AM <•erickt> lol
+10:53 AM <aturon> the tricky thing will be managing overlap with rustcon
+10:53 AM <•skade_> flaki: tomorrow
+10:53 AM <carols10cents> does rustcon have a date?
+10:53 AM <•erickt> aturon: yeah
+10:53 AM <aturon> carols10cents: plan is september
+10:53 AM <aturon> we don't have a firm date yet
+10:53 AM <flaki> Sweet!
+10:54 AM — •Manishearth wants to attend, but not sure if he'll be able to. I'm not clear on what country I'll be in in october and september :p
+10:54 AM <aturon> carols10cents: sorry, i mean overlap not in terms of time,
+10:54 AM <aturon> but rather topical coverage etc if we have core team people talking at rust belt rust
+10:54 AM <aturon> but i'm sure we can manage it
+10:54 AM <carols10cents> aturon: i'd be totally fine if someone wanted to do the same talk at rust con and rust belt rust
+10:54 AM <carols10cents> my target audience is people who find it difficult to travel to the west coast
+10:55 AM <•erickt> carols10cents: how many people are you budgeting to attend your con?
+10:55 AM <aturon> OK cool -- why don't you start up a direct email thread with me, and we can start to hash out some of the details more. but certainly we can get at least one other core member speaking beyond steve
+10:55 AM <flaki> skade_: I'm looking forward to that stuff! 😍 +I'm thinking on dropping by Berlin, we may get to discuss stuff further in person
+10:55 AM <carols10cents> erickt: i'm hoping for 200 paying attendees, 250 including speakers/sponsorship comps/volunteers etc
+10:56 AM <carols10cents> aturon: sounds good! will start that right now :)
+10:56 AM <•Manishearth> carols10cents: approx # of talks/workshops/thingies?
+10:56 AM <•erickt> aturon: do you have numbers in mind for Rust{Con,Camp}?
+10:56 AM <aturon> erickt: a bit higher, more like 250 paid
+10:57 AM <•erickt> oh hey it's getting late. aturon / carols10cents, can you cc rust-community on your email threads?
+10:57 AM <carols10cents> Manishearth: 1st day will be 1/2 day or whole day workshops, 2nd day single track talks. i have max 8 breakout rooms for 1st day, so somewhere between 8-16 workshops, then maybe 7 or 8 talks on day 2
+10:57 AM — frewsxcv has been meaning to ping carols10cents about speaking at RustBeltRust
+10:58 AM <carols10cents> erickt: will do!
+10:58 AM <frewsxcv> (or for any other misc. assistance in planning it)
+10:58 AM <•erickt> last thing, anyone have a blog post they want to write up for the rust lang blog?
+10:58 AM <•erickt> ^ https://github.com/rust-community/team/issues/8
+10:58 AM <carols10cents> frewsxcv: hi! <3 want to be in the rust belt rust slack?
+10:58 AM <aturon> carols10cents: hah, that sounds remarkably similar to rustcon plans :)
+10:58 AM <frewsxcv> carols10cents: sure :)
+10:58 AM <carols10cents> frewsxcv: msg me your email address?
+10:58 AM <frewsxcv> carols10cents: coreyf@rwell.org is my email
+10:58 AM <•Manishearth> carols10cents: nice!
+10:59 AM <aturon> erickt: re: blogging, the rust-lang blog is managed directly by the core team
+10:59 AM <•erickt> aturon: maybe the community team should start it's own blog then!
+10:59 AM <aturon> erickt: i've been planning a major push starting soon
+10:59 AM <aturon> yes, i think that's a good idea
+10:59 AM <•erickt> so there :p
+10:59 AM <carols10cents> aturon: hah! yeah the workshops are to address some feedback i heard from talking to some ppl at rustcamp, that they weren't sure that they knew enough rust to get something out of the conference
+11:00 AM <carols10cents> so i think workshops make people feel better about that, so i'm glad rustcon is planning to do something similar!
+11:00 AM <aturon> like, i think there's probably room for multiple blogs here -- the rust-lang blog is *incredibly* high profile
+11:00 AM <aturon> and so we are very careful with it
+11:00 AM <•erickt> fair enough
+11:00 AM <•erickt> and that's time!
+11:00 AM <aturon> wow that went fast
+11:00 AM <aturon> thanks erickt!
+11:00 AM <•erickt> it always does
+11:01 AM <•erickt> I'll add the todos to https://github.com/rust-community/team/issues/13
