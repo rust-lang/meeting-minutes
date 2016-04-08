@@ -1,0 +1,23 @@
+# Some thoughts on #1563
+
+- could be a (specialized) plugin
+- is this urgent enough to add now
+- can do now with `#[cfg] const X: usize = "you can't run this in that configuration";`
+- I see @alexcrichton was positive, did we plan for some deeper cargo integration?
+
+# Nominated issues
+
+https://github.com/rust-lang/rust/issues/32796
+
+- RFC said no, but PR accepts 
+- Should we make an amendment RFC specifying a behavior?
+- Yes!
+
+Some finer points of MIR translation
+
+- how are bindings in pattern guards handled
+- which pattern guard effects are visible from which other pattern guards
+  - add extra edges to be conservative?
+- precise execution order
+
+
