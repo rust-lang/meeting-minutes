@@ -1,0 +1,154 @@
+9:07 AM <•erickt> hello everybody! I'm terribly sorry for being late, and also thinking I had an extra hour to prep for the meeting :/
+9:07 AM ⇐ jdm quit (jdm@moz-3eu2pc.cpe.teksavvy.com)
+9:07 AM <•skade> :)
+9:08 AM <•erickt> lol @carols10cents
+9:08 AM <carols10cents> <3 <3 <3
+9:08 AM <•erickt> so beyond moving the calendar invite time, anyone have anything pressing they want to talk about first?
+9:09 AM <•skade> Nope, just to repeat it in the meeting: I won't be available for the next 2 weeks, due to holidays. Don't wait for me :)
+9:09 AM <•erickt> ok, have a lovely holiday skade :)
+9:10 AM <•erickt> skade: want to give a quick update on the european foundation meeting?
+9:10 AM <•erickt> and if there's been any progress since the meeting?
+9:10 AM <•skade> so, the meeting was very nice, I'm still collecting opinions from a few people that couldn't come
+9:11 AM <•skade> so, I'll have another call tomorrow with someone who wanted to assist with all legalities, so it's moving forward 
+9:11 AM <•skade> I'll see that I'll set up the github repos tonight
+9:12 AM <•erickt> great. How long did it take for you in the past to get it setup?
+9:12 AM <•skade> it usually takes 3-4 weeks after handing in the paper work
+9:12 AM <•skade> so I expect late may
+9:12 AM <•skade> non-profit status in germany is luckily independent of the formation, so this won't block anything
+9:13 AM <•erickt> speaking about the github repo, all, skade was intending on creating repos for the foundation under github.com/rust-community. I'm personally fine with that, but do any of you have any concerns?
+9:13 AM <•erickt> that's nice
+9:14 AM <•erickt> ok no concerns :)
+9:14 AM <•erickt> carol, any luck getting proposals?
+9:14 AM <•skade> I also met Emma Tracey last week, who was interested in helping out with a Rust conference and general outreach, also diversity. She's a journalist and runs a job board company for developers and has some people using rust.
+9:15 AM <•skade> I'll send around a mail
+9:15 AM <carols10cents> i got one within a few days, let me check how many we have now, 1 sec
+9:15 AM <•erickt> skade: nice!
+9:15 AM <•erickt> skade: what's the job board company?
+9:15 AM <carols10cents> 2 now! :) 
+9:15 AM <•erickt> \o/
+9:16 AM <•skade> erickt a company handling job postings and recruiting. 
+9:16 AM <carols10cents> and aturon has been awesome coordinating with the core team, we will have a core team keynoter :)
+9:16 AM <•skade> carols10cents i found that some of the people I know to be conf regulars hadn't heard of the CFP
+9:16 AM <•skade> \o/
+9:16 AM <•erickt> carols10cents: do you need a review board for the proprosals, or have you already organized one?
+9:16 AM <•erickt> s/proprosals/proposals
+9:16 AM <carols10cents> skade: do you have any suggestions for places to promote it? i hit twitter, the users forum, reddit
+9:17 AM <carols10cents> erickt: i have about 5 people interested in reviewing, i wouldn't turn down additional volunteers though :)
+9:17 AM <carols10cents> oh and it was in TWiR this past week :)
+9:18 AM <•Manishearth> (sorry, had to pop out for something urgent. going through the backscroll)
+9:18 AM <carols10cents> thank you for letting people know about it though!! that's definitely something I could use anyone's help with :)
+9:18 AM <•skade> carols10cents yep, basically that, but regularly
+9:18 AM <•skade> also, write to people you know personally
+9:18 AM <•Manishearth> skade: (re: Emma) wow! We should definitely follow up here
+9:19 AM <•Manishearth> skade: I'd also love to hear more about the "some people using rust"
+9:19 AM <carols10cents> skade: good point! i will send out some personal emails this week :)
+9:20 AM <•Manishearth> AFAICT most rust using companies convert their employees to the dark arts of Rust internally, instead of hiring rustaceans. If possible it would be nice to know why these companies didn't do that.
+9:20 AM <•skade> Manishearth well, only as a hobby as far as i understood
+9:20 AM <•Manishearth> oh ok
+9:20 AM <•Manishearth> when you said "some people" I thought you meant job-offering companies :)
+9:20 AM <•skade> ah, no
+9:21 AM <•erickt> Manishearth: one big worry I've heard a few times are that companies don't want to hire people who just want to do rust stuff
+9:21 AM <•erickt> since their experiments with rust might fail
+9:21 AM <•Manishearth> right
+9:21 AM <•erickt> and they might need to switch to something else.
+9:21 AM <•Manishearth> I don't think many such people exist though?
+9:22 AM <•skade> well then, why not externalise that :)
+9:22 AM → •brson (opped) joined  
+9:22 AM <•Manishearth> Students who are rustaceans, probably, but I assume all the other rustaceans know some other programming language which they use as a day job or otherwise hobby program in
+9:22 AM <carols10cents> that's why shepmaster and i are starting a rust consulting company, to help with companies' rust experiments :)
+9:23 AM <•skade> I'm a bit surprised why there are not more companies that let such an experiment be implemented by freelancers.
+9:23 AM <•erickt> well, it's a risk thing. it costs a bunch to train up someone new, and if there's a chance the rustacean employee leaves if the rust project fails then it makes the project more expensive
+9:23 AM <•erickt> carols10cents: +1
+9:23 AM <carols10cents> (we're working on incorporating, that's why i haven't publicized this much)
+9:23 AM <•Manishearth> carols10cents: ooo TIL. keep us updated on how this works!
+9:23 AM <carols10cents> soooo maybe if we do well with some experiments we'll create more rust jobs ;)
+9:23 AM <•Manishearth> skade: not many rust freelancers? though I see postings on  elance
+9:24 AM <•Manishearth> erickt: right
+9:24 AM <steveklabnik> i see people post on HN jobs threads that they're interested in doing rust
+9:24 AM <•erickt> like jwilm :)
+9:24 AM <•erickt> for our hypothetical blog series, it'd be great to have some demo micro web services
+9:25 AM <•skade> Manishearth other way around, I don't see anyone searching
+9:25 AM <•erickt> to demonstrate just how simple it is to experiment with rust without showing CTOs you need to rewrite the world
+9:25 AM <•skade> like developers for their project
+9:26 AM <•Manishearth> skade: no that is what I'm talking about.
+9:26 AM → annodomini joined (lambda@moz-hceqmj.hfc.comcastbusiness.net)
+9:26 AM <•Manishearth> erickt: https://clippy.bashy.io/docs/main.html
+9:27 AM <•erickt> Manishearth: yeah. Now we just wrap that up in, say, something that'll setup a AWS instance and go from there :)
+9:28 AM <•skade> does anyone have experience with building contacts in the enterprise world?
+9:28 AM <•erickt> skade: well, I work at an enterprise company ;)
+9:29 AM <•skade> I have a bit, but not a lot :D
+9:29 AM <•skade> erickt well, that's a start :)
+9:30 AM <•skade> it would be quite interesting to find companies that would like to experiment in that direction. there must be some company that wants to get rid of C++ for future development
+9:30 AM <•erickt> yeah. i am giving a talk (finally) here on the wonders of Rust this Friday
+9:30 AM <carols10cents> \o/
+9:31 AM <•erickt> some of the troubles we've had is that (1) most of our stack is open source and in java (hadoop), so it'd be non-trivial to get the community to adopt rust
+9:32 AM <•erickt> (2) it's scary throwing new unknown tech over the wall to customers
+9:32 AM <carols10cents> clearly someone just needs to replace hadoop with something in rust ;)
+9:32 AM <steveklabnik> makes sense
+9:32 AM <•erickt> (3) our builds are a mess, and it's always a pain to introduce new things
+9:32 AM <•erickt> carols10cents: I know, right?
+9:32 AM <•Manishearth> erickt: compile rust to JVM, and everyone will be falling over each other to try it :p
+9:32 AM <•skade> yep, it's probably not the best thing for customer software currently
+9:33 AM <•erickt> Yeah. I think for enterprise it needs to be on the service side, either for internal developer tooling, or for "easily" replacable services
+9:34 AM <•skade> or on devices
+9:35 AM <•erickt> I don't know much about the device space
+9:35 AM <•skade> I heard a few IoT companies are interested, but there, Rust not quite there yet.
+9:35 AM <•skade> I have someone at my meetup who knows a couple of things, might try to get a chat with him again
+9:36 AM <•Manishearth> It's the same situation here, bunch of embedded folks are experimenting
+9:36 AM <•erickt> back, sorry, had to change rooms
+9:37 AM <•Manishearth> but this is people experimenting o nthe side with the intention of some point pitching it to their bosses
+9:37 AM <•skade> still, I'd be interested on how we get teams to people that want to try stuff out. I know at least 4 development companies that would take a Rust project immediately
+9:37 AM <•skade> anyways, do we have other agenda items before we turn this into open discussion?
+9:37 AM <•erickt> skade: I was an hour behind and didn't put together an agenda ;)
+9:38 AM <•skade> :D
+9:38 AM <carols10cents> anything to discuss about the survey?
+9:38 AM <•skade> what is "the survey"? :)
+9:38 AM <•erickt> carols10cents: +1
+9:38 AM <•erickt> skade: https://github.com/rust-community/team/issues/15
+9:38 AM <•skade> ah, I remember
+9:39 AM <carols10cents> there were emails going around about it this week
+9:39 AM <carols10cents> oh or i guess i'm watching the repo and those were github comments :-X
+9:39 AM — carols10cents knows how to internets
+9:39 AM <•erickt> please add any questions you might want to ask on it, and if you know of any good examples of surveys people have run before
+9:40 AM <•skade> perfect, I didn't have the repos on watch...
+9:41 AM <•erickt> this also seems like it could be a good opportunity to get a baseline for our diversity efforts and see if we can help drive outreach, assuming we could ask about it appropriately
+9:42 AM <carols10cents> yes, imo demographics should be optional, and gender should be a text box
+9:42 AM <carols10cents> adding that comment now
+9:43 AM <•erickt> cool. any other major categories we're missing?
+9:44 AM <•skade> I don't think so. We should fill it out ourselves and with a few friends before giving it out
+9:45 AM <•skade> we caught quiet some unclarities in the last CouchDB survey with that
+9:46 AM <•erickt> Ok. Anyone have a preferred survey tool? Google questionarie thing work well enough? or would a custom app like https://askr-prod.firebaseapp.com/ruby be better?
+9:46 AM <•skade> the baruco organisers used a really good one...
+9:46 AM <•skade> I'll ask them
+9:48 AM <•erickt> ok the last thing I think I have is that nrc offered up ownership on rustaceans.org in https://github.com/rust-community/team/issues/12
+9:48 AM <•skade> that would be great
+9:48 AM <•erickt> anyone opposed to us taking it over and working on it?
+9:49 AM <•erickt> We just need to actually find the time to work on it :)
+9:49 AM <•skade> taking over: yes, working on it: welll....
+9:49 AM <•erickt> that's always the tricky one :)
+9:50 AM <•skade> let's take it over first and see from there
+9:50 AM <•erickt> I'll pass that along
+9:50 AM <•erickt> I think that's all off my impromptu list, does anyone else have anything?
+9:51 AM <•skade> concerning usage of rust: does anyone know someone who is trying to build useful components for mobile phones?
+9:51 AM <•skade> having a memory-safe language that can be shared between most OSes seems really interesting
+9:52 AM <•erickt> skade: I know https://twitter.com/rpcraig was trying to do some OS stuff in Rust a long time ago, but her company got bought and now I'm not sure if she's doing any rust stuff
+9:52 AM <•skade> everyone's getting bought these days
+9:52 AM <•erickt> I'll reach out and see how they're doing
+9:53 AM <•erickt> see, we should spin rust out so we can get bought and retire on our rust boats
+9:54 AM <•erickt> anyone have anything else? shall we close early, or get back into the open ended discussion about getting rust into enterprise?
+9:55 AM <•skade> well, I think five minutes is not enough for an enterprise topic :)
+9:55 AM <•skade> ah
+9:55 AM <•skade> we should talk to @hannelita at some point on how things are on the south american continent
+9:55 AM <•skade> we also have one contact in south africa whose name i forgot...
+9:56 AM <•erickt> skade: great idea
+9:56 AM <•erickt> want to start an email thread with them and invite them to an upcoming meeting?
+9:59 AM <•erickt> Ok, I'll add that as a todo to reach out to the meetups from around the world to see what we can do to help
+9:59 AM ⇐ •brson quit (brson@moz-9sf.crj.56.172.IP) Quit: leaving
+9:59 AM <•skade> I would prefer to invite them to a meeting
+9:59 AM <•erickt> I'm closing this meeting a minute early since there's nothing left :)
+10:00 AM <•erickt> skade: yeah that's what I want to do
+10:00 AM <•skade> okay :) see you all in three weeks and on the mailing list :)
+10:00 AM <•erickt> first just mail all the meetup organizers and give them an open ended invite
+10:00 AM <•erickt> skade: see ya skade!
+10:00 AM <•skade> yep!
+10:01 AM <•erickt> thanks everyone
