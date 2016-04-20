@@ -1,0 +1,146 @@
+08:59 <@brson> How do we call these IRC meetings to order? Do we need a role call to see who's here?
+09:00 <@brson> erickt and steveklabnik aren't going to be here
+09:01 < SimonSapin> brson: for CSSWG everyone types "Present+ <nickname>" on IRC, and there’s a bot that makes a list for the minutes
+09:01  * carols10cents waves
+09:01  * jntrnr waves
+09:01 <@brson> Do we publish minutes for these?
+09:01 <@brson> brson: yep https://github.com/rust-lang/meeting-minutes
+09:02 < Manishearth> o/ brson
+09:02 < Manishearth> I am not here
+09:03  * frewsxcv waves
+09:03 <@brson> OK, let's get started. Our agenda is super light so far
+09:04 <@brson> Check in on conference status first?
+09:04 <@brson> carols10cents: how is rustbelt going?
+09:04 <@brson> oh hey here's an agenda issue https://github.com/rust-community/team/issues/18
+09:04 < carols10cents> it's great! we've got 10 proposals now :)
+09:05 <@brson> how many do you need?
+09:05 < carols10cents> as many as possible ;)
+09:05 <@brson> the rust team has been sufficiently pressured to submit proposals, so I assume you will get a flood toward the deadline
+09:05 < badboy> carols10cents: I opened a thread at the german rust forum and I am about to send a mail to my meetup group
+09:05 < carols10cents> i could make a conference out of what i have
+09:05 < carols10cents> but i'd like choice obviously
+09:05 < carols10cents> and yes, i fully expect to get a whole bunch right at the deadline :)
+09:06 < badboy> (if only I would fine my group in that mess of meetup.org)
+09:06 < carols10cents> thank you so much to everyone for publicizing!
+09:06 < carols10cents> i've done a bit of outreach to individuals who i like
+09:07 <@brson> carols10cents: besides proposals is there anything else to be done right now?
+09:07 < carols10cents> mostly to people underrepresented in tech... could always use more outreach there, of course
+09:07 <@brson> more outreach i guess
+09:07 < carols10cents> brson: nope-- I'm working on getting a bank account, after that sponsorship will be up next
+09:08 < carols10cents> and i think i have enough reviewers to get a good variety of perspectives.
+09:09 <@brson> carols10cents: for my own curiousity, do you know yet how many people to expect at the big workshops?
+09:09 <@brson> i was wondering how many sbc's would be needed for something hands on
+09:09 < carols10cents> the "friends of rust" page you're working on is going to be very useful when looking for sponsors ;)
+09:09 < carols10cents> sbc?
+09:09 <@brson> rasberry pi's etc
+09:09 <@brson> single-board computer
+09:09 < carols10cents> ooooh
+09:10 < carols10cents> i mean, for something like that we could limit it
+09:10 < carols10cents> i'm limiting the whole conf at 250 people and i have up to 8 breakout rooms to work with
+09:10 < carols10cents> i wouldn't want workshops to get bigger than 50 if i can help it
+09:11 <@brson> i wonder if we can make a deal with someone to get 50 boards cheap
+09:11 < carols10cents> but if there are limiting factors, we could make smaller limits
+09:11 < carols10cents> to some of them
+09:11 < carols10cents> or we could make people pair
+09:12 < carols10cents> or be like "limited to 10 people who need raspberry pi's, if you bring your own you can come too"
+09:12 <@brson> i'd rather give away 50 tessels
+09:12 < carols10cents> up to you :) sounds awesome!
+09:13 < carols10cents> that's all i've got
+09:13 <@brson> cool. does anybody here represent rustcamp eu?
+09:13 <@brson> skade is not going to make it today
+09:13 < badboy> uhm, *hides*
+09:13  * carols10cents shines spotlight on badboy
+09:14 <@brson> badboy: haha. is that the extent of the status update today?
+09:14 < johannh> I'm also around but I'm not sure if we can answer questions yet
+09:14 < badboy> so we got a call next week I guess.
+09:14 < johannh> yup
+09:14 <@brson> ah right. i'll try to be there
+09:14 < badboy> I guess by then we have more to tell if and how
+09:15 <@brson> that's going to be at 11 AM PST on 4/27?
+09:15 <@brson> sorry i don't know eu timezones
+09:15 < johannh> brson: you have a calendar invite on your mozilla mail
+09:15 < badboy> looks about right, yes
+09:15 < johannh> and yes, that's correct
+09:15 < badboy> 11am pst, 6pm utc, 8pm cest
+09:15 <@brson> is this the same as the "rustu europe foundation meeting"?
+09:15 < badboy> of course not
+09:16 < johannh> nope
+09:16 <@brson> are you two involved in that as well?
+09:16 < badboy> I need to get that sorted out as well, but we wanted to make it happen next week as well
+09:16 <@brson> i have that on my calendar for next too
+09:16 < badboy> I am
+09:16 < badboy> yes, so it's not happening on the 26th
+09:16 <@brson> Ah, ok. that's when I have it down for
+09:17 <@brson> Is there an updated time yet?
+09:17 < johannh> it'll be my first foundation meeting but I'll try to be involved
+09:17 < badboy> yes, skade can't attend that time, so we need to reschedule
+09:17 < badboy> No new date yet, but probably tomorrow, I will make sure to send it here as well
+09:17 <@brson> ok
+09:18 <@brson> as far as rustcamp us, there's no new news that i'm aware of
+09:19 <@brson> so that's it for conference updates
+09:19 <@brson> only other agenda item is anniversary plans
+09:19 < badboy> so we're in cologne are getting a cake for birthday :)
+09:20 < badboy> *we
+09:20 < johannh> birthday is 15th, right?
+09:20 <@brson> yes
+09:21 <@brson> rust bay area has a meetup scheduled for the 12th that we'll probably use for some sort of birthday party
+09:21 <@brson> i've also started this, which may be ready to talk about http://brson.github.io/rust-www/users.html
+09:21 <@brson> (it's got some rendering issues right now)
+09:22 < johannh> yay I'll be in the bay area on 12th
+09:22 < carols10cents> yeah we might celebrate in pgh at our normal wednesday hangouts before or after the 15th
+09:22 < carols10cents> https://users.rust-lang.org/t/1-year-anniversary-of-1-0-coming-up-how-should-we-celebrate/5381?u=carols10cents
+09:23 <@brson> it's too late for shirts probably, but maybe other swag could be pulled together
+09:23 < carols10cents> i would love to try to get something going that anyone around the world could participate in
+09:23 < carols10cents> twitter? the users forum? both?
+09:23 < carols10cents> post your favorite thing about rust?
+09:24 <@brson> post your worst error message about rust
+09:24 < carols10cents> hahaha
+09:24 <@brson> like that c++ contest to generate the longest template error
+09:24 <@brson> a contest generally maybe
+09:24 < carols10cents> nothing that needs more work than having steveklabnik retweet something
+09:24 < carols10cents> ooo
+09:25 <@brson> erickt had a underhanded rust idea
+09:25 <@brson> tweet something get a limited sticker
+09:26 < carols10cents> or we could have everyone vote by "liking" posts on the forum, person with most votes gets some swag
+09:26 <@brson> i like the idea of using the like button for something gamey
+09:26 <@brson> i like generally reusing our tools for creative purposes
+09:26 < carols10cents> then we only have to mail 1 package instead of a whole bunch :)
+09:29 <@brson> could do some kind of awards
+09:29 <@brson> easy to do, but also real easy to alienate people
+09:29 <@brson> best PR of the year, etc.
+09:30 < carols10cents> yeah
+09:30 < edunham> "most PRs reviewed in the past year" "most lines of tests added"
+09:30 < carols10cents> could do a random draw of someone who made their first commit to rust in the past year
+09:30 <@brson> it is a great opportunity to recognize people
+09:30 < carols10cents> most code deleted!
+09:31 < badboy> for our meetup we planned a quick (15min) talk about what happened in the past year on Rust
+09:31 < badboy> I might as well just change that to all the things you just mentioned :D
+09:32 < carols10cents> rfc with the most comments
+09:32 <@brson> i'm pretty keen on doing some kind of generous recognition of contributors along these lines
+09:33 <@brson> i like that carols10cents's suggestions are concrete and measurable
+09:33 <@brson> unbiased
+09:33 < carols10cents> well, some of them are biased towards those who have lots of time to contribute, of course ;)
+09:34 -!- mode/#rust-community [+o Manishearth] by ChanServ
+09:35 <@brson> so we need to move on these ideas soon if they're going to happen
+09:35 < carols10cents> pick someone who submitted their first bug report this year
+09:35 <@brson> i like at least two of these ideas: some kind of contest; and some awards and recognition
+09:35 <@brson> we don't have a solid idea for a contest so far though
+09:35 <@brson> except erickt's underhanded rust contest
+09:35 < carols10cents> yeah. think on it for next week?
+09:35 < carols10cents> that doesn't need much lead time
+09:36 <@brson> ok
+09:36 < carols10cents> if we're going to announce it day/week of
+09:36 < carols10cents> the stats gathering might take a while
+09:38 <@brson> carols10cents: are you interested in, and do you have the time to dig up some of those stats, put together some plausible awards?
+09:38 < carols10cents> yes, i think i can do that :) will make a github issue for myself right now
+09:39 < carols10cents> and another issue for the contest
+09:39 <@brson> sweet. thank you <3
+09:39 <@brson> ok. that's the end of today's agenda. any further matters to discuss
+09:42 <@brson> we should get a special sticker for prizes. I'll take an action item to think about it
+09:42 <@brson> Manishearth: do you have any topics to discuss today?
+09:45 <@brson> ok. let's call this one done. thanks for coming everyone. i'll post the minutes in a bit
+09:45 < carols10cents> \o/
+09:47 < bstrie> brson: agh, I still had my alerts set for a 1:00 meeting rather than a 12:00 meeting :P
+09:47 <@Manishearth> brson: (it's late, at home, so not part of the meeting today :) )
+09:47 <@Manishearth> I do want to mention that I intend to try bootstrapping a Mumbai rust meetup again
+09:48 <@Manishearth> but that's it
