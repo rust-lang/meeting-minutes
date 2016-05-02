@@ -1,0 +1,172 @@
+9:00 AM <•erickt> aloha everyone!
+9:00 AM — carols10cents hulas
+9:01 AM <•erickt> so here's my extensive agenda: https://public.etherpad-mozilla.org/p/rust-community-team
+9:02 AM <•erickt> work has gotten quite busy these past few weeks, so I apologize for not being able to dedicate as much of my time as I want to this :/
+9:02 AM → •skade (promoted to owner, opped) joined  ← bjorn3 left  
+9:02 AM <•erickt> to mix things up, how about we start with the survey? brson, I saw you added some rustup stuff
+9:02 AM <•erickt> anything else you're intending to add?
+9:03 AM <•skade> ohai
+9:03 AM <•skade> call or IRC?
+9:03 AM <•brson> erickt: nope
+9:03 AM <•erickt> skade: IRC, I have continued to fail to create a hangout room with enough heads up to make it worthwhile
+9:03 AM <•erickt> :)
+9:03 AM <•skade> perfect
+9:03 AM <•skade> now I've got a phone booth booked :D
+9:04 AM <bstrie> are we waiting on anything else for the survey?
+9:05 AM <carols10cents> ship it ship it
+9:05 AM <•erickt> bstrie: nope, all we need to do is actually sit down and work through the comments. Does anyone want to volunteer to help get it done?
+9:05 AM <•erickt> I didn't get a chance to incorporate the comments from 2 weeks ago yet
+9:05 AM <•erickt> since the agenda is pretty light today, perhaps we could work on it once we wrap up
+9:05 AM <•erickt> I'd really like to ship it
+9:06 AM <•brson> erickt: i'm not sure what to do. i know where the issue is
+9:06 AM <bstrie> where are the comments listed?
+9:06 AM <•brson> erickt: wasn't there a prototype survey all ready to go a week or two ago?
+9:06 AM <•erickt> bstrie: https://github.com/rust-community/team/issues/15
+9:07 AM <carols10cents> i can help after the meeting
+9:07 AM <•erickt> brson: I didn't incorporate the feedback from the test users and the core team
+9:07 AM <•erickt> did someone else?
+9:07 AM <•brson> no
+9:08 AM <•brson> can you link to the previous survey? i don't see the link on the issue
+9:08 AM <•erickt> brson: sure
+9:09 AM <•brson> do we have time to get it out and get results in before the birthday, or are we going to publish the survey in conjunction with birthday?
+9:09 AM <•erickt> brson: https://github.com/rust-community/team/issues/15#issuecomment-215133637
+9:09 AM <•brson> thanks
+9:10 AM <bstrie> we should probably run the survey for at least a month, birthday is in less than a month
+9:10 AM <•erickt> brson: that's a good question. we definitely should get it out before or during the birthday
+9:10 AM <carols10cents> birthday would be a good reminder if we want to run it anually
+9:10 AM <•skade> I would try to promote it during the birthday and collect the results until the week after
+9:11 AM <•skade> that ensures all meetups can promote it on their events
+9:11 AM <•erickt> skade: definitely
+9:11 AM <bstrie> I like the idea of using the birthday to boost the survey visibility
+9:12 AM <•erickt> it could be fun for the community, but I don't want to get it lost in the announcement
+9:12 AM <•erickt> maybe it's worth getting it out beforehand, then highlighting it in the birthday events
+9:12 AM <•skade> yep, I wouldn't announce it together with the birthday
+9:13 AM <•skade> get it out before, promote it in all messages that come after
+9:13 AM <•erickt> ok. we can try to get another draft done today, pass it around for some more testing
+9:14 AM <•brson> to be clear carols10cents is going to take that?
+9:14 AM <carols10cents> hi yes
+9:14 AM <bstrie> let's aim to launch the survey before next week
+9:14 AM <•erickt> carols10cents: I'll try to help out as best as I can, I think google lets us modify the survey at the same time
+9:15 AM <carols10cents> sounds good erickt :)
+9:15 AM <bstrie> speaking of time-sensitive things, carols10cents, how is the call for proposals going?
+9:15 AM <•erickt> bstrie: seconded
+9:15 AM <carols10cents> is it conference time?
+9:15 AM <•erickt> and nice transition
+9:15 AM <•erickt> carols10cents: sure!
+9:15 AM <carols10cents> i've got 18 proposals!!
+9:15 AM <carols10cents> i have been reaching out to individuals 
+9:16 AM <•erickt> nice!
+9:16 AM <•brson> i know there are still some people planning to submit who haven't
+9:17 AM <carols10cents> so yeah my bet is that we have double that by the deadline
+9:17 AM <•erickt> when does the deadline end?
+9:17 AM <carols10cents> please bug everyone you know :)
+9:17 AM <carols10cents> april 30
+9:17 AM <bstrie> carols10cents: can you put that in perspective of what you were expecting? how many did you get with steel city ruby?
+9:17 AM <•erickt> we should do a round of advertisement
+9:17 AM <•erickt> give a heads up of the deadline
+9:17 AM <carols10cents> steel city ruby we got like 100. 
+9:17 AM <bstrie> yes, I'll do another reddit post
+9:18 AM <carols10cents> but ruby is way more popular than rust atm
+9:18 AM <•erickt> lies
+9:18 AM <carols10cents> so this is pretty good i think-- we will have to make some choices since we've gotten more proposals than slots :)
+9:18 AM <carols10cents> i forget how many rustcamp got
+9:18 AM <•erickt> bstrie: I can get urlo
+9:19 AM <carols10cents> and i'm super excited about https://diversitytickets.org/
+9:19 AM <carols10cents> definitely submitting to that today
+9:19 AM <•skade> carols10cents ruby conferences are travel tickets to many, so you have people that just submit to all the places they want to visit :)
+9:20 AM <•erickt> pittsburgh is quite lovely
+9:20 AM <carols10cents> INDEED
+9:20 AM <steveklabnik> can confirm
+9:21 AM <carols10cents> ohai steveklabnik :)
+9:21 AM <•skade> pittsburgh conferences steal my speakers. just joking. 18 proposals is a good number, there will be more on the deadline date
+9:22 AM <•erickt> carols10cents: it'd be wonderful if rust belt was the first diversitytickets conference :)
+9:23 AM <•erickt> anyone else have any conference related things?
+9:23 AM <steveklabnik> i just got back from 3 confs, dunno if it's worth talking about :)
+9:23 AM <steveklabnik> tl;dr people really like rust
+9:23 AM <•erickt> heh
+9:24 AM <•erickt> well OSCON is coming up soon, right?
+9:24 AM <steveklabnik> found a new production user, appsignal
+9:24 AM <•erickt> nice!
+9:24 AM <steveklabnik> yeah, i have emailed them to ask about the latest numbers for my workshop
+9:24 AM <•erickt> bstrie: weren't you talking about planning an austin meetup as well?
+9:25 AM <•erickt> https://github.com/rust-community/team/issues/19
+9:25 AM <bstrie> erickt: that's a set of emails that I intend to send out today
+9:25 AM <•erickt> great
+9:25 AM <•erickt> we also need to organize a london meetup to synchronize with the mozilla allhands
+9:26 AM <bstrie> steveklabnik edunham: would either of you be interested in helping out with the Contribute workshop at OSCON, which is all about onboarding new people into projects by mentoring them through easy bugs?
+9:26 AM <•erickt> I'll ping aturon if we know a good evening yet
+9:27 AM <•erickt> if there's nothing else on this topic...
+9:28 AM <•erickt> how about birthday party planning?
+9:28 AM <•skade> I have something about OSCON london
+9:28 AM <•Manishearth> skade: oh, that moved forward!
+9:28 AM <carols10cents> erickt: what's needed to kick off the underhanded rust contest?
+9:28 AM <•erickt> skade: cool. When is it?
+9:28 AM <•skade> Manishearth did it?
+9:28 AM <•Manishearth> er, ?
+9:28 AM <•Manishearth> skade: I'm asking :)
+9:28 AM <•skade> ah!
+9:29 AM <•skade> johannh would be interested in helping out with a workshop and I'd be okay with running it as well
+9:29 AM <•erickt> nice!
+9:29 AM <•skade> we can definitely find some volunteers for running around and help with little things if we try, but that's also a budget question
+9:29 AM <•skade> i'll push that to mail then.
+9:29 AM <steveklabnik> bstrie: i'd be interested, yeah
+9:29 AM <•skade> birthday party?
+9:30 AM <•erickt> birthday party! so on the underhanded rust contest
+9:31 AM <•erickt> the main thing we need to pick the theme and the time window to compete
+9:31 AM <•erickt> and if we should try to find sponsors for a prize of some sort
+9:31 AM <•brson> seems a complex event to arrange in three weeks
+9:32 AM <•erickt> brson: there's not really much for us to actually organize. we just need a writeup of the challenge
+9:32 AM <•erickt> brson: here's one of the underhanded c contest proposals: http://www.underhanded-c.org/_p_26.html
+9:34 AM <•erickt> I wouldn't be terribly upset if we missed the birthday announcement, but it'd be nice to get it started soon
+9:35 AM <•skade> yep
+9:35 AM <•erickt> do you all think it's too much of a risk? should we try for something else?
+9:35 AM <•skade> well, I don't know if we have to fold everything into the birthday announcement anyways
+9:36 AM <•brson> i feel like it's a potentially big enough event on its own that it could clash with the birthday
+9:36 AM <•skade> I'd be rather conservative with the announcement itself: an overview of how the ecosystem changed, adoption and opportunities.
+9:36 AM <•skade> Maybe even failures, if some want.
+9:36 AM <•erickt> brson / skade: how about a separate announcement that we could do either leading up to or after the birthday?
+9:36 AM <•skade> and then we could hint to more interesting things to come
+9:37 AM <•skade> and then make sure that we deliver on that
+9:37 AM <•erickt> skade: as in the birthday annoucnement suggests more things to come after, such as the survey and this contest?
+9:37 AM <•erickt> I can get behind that
+9:38 AM ⇐ japaric quit (japaric@moz-eqo.3uu.234.190.IP) Ping timeout: 121 seconds
+9:38 AM <•brson> erickt: either way works for me. prefer to get the survey started sooner though
+9:38 AM <•erickt> ok
+9:39 AM <•skade> erickt exactly
+9:39 AM <bstrie> let's not get hung up on trying to perfectly coordinate everything with the birthday. we can have plenty of events and announcements
+9:39 AM <•skade> I think we shouldn't get to amazed by _our_ motivation about the date, the danger is pushing all info into one spot :)
+9:40 AM <•skade> so just having something proper to communicate on the date and have the rest cluster around it works best with volunteers schedules anyways
+9:40 AM <•erickt> :) so another thing on the birthday, I'm not sure if I'm planning on much at my may 12th meetup
+9:40 AM <bstrie> erickt: are you planning a bay area meetup on the birthday, to have an excuse for people to get together and eat cake?
+9:40 AM <•erickt> maybe a cake
+9:40 AM <•erickt> heh
+9:40 AM <•erickt> brson: do you know if the core team has plans on speaking about anything?
+9:41 AM <•brson> erickt: i have not heard any such plans. the core team plans to publish a blog post
+9:41 AM <•brson> several
+9:41 AM <•skade> we've got a use-case talk and will maybe try to get some fancy food in a nicer venue then usual
+9:41 AM <•erickt> ok. I'll check at the core team meeting just to make sure if they do want to speak about anything, we should try to seed that info to the other meetup birthday parties as well
+9:41 AM <•erickt> skade: nice!
+9:42 AM <•erickt> anything else birthday party wise, or anything else?
+9:42 AM <•brson> fwiw the mir-themed stickers i was going to attempt to procure are definitely not happening. not enough time to get decent artwork together right now
+9:43 AM <•erickt> shucks. we need an on staff sticker designer
+9:44 AM <•erickt> well so that's all I got
+9:44 AM <bstrie> brson: mir-themed? is there a logo for it? :)
+9:44 AM <•brson> bstrie: lack of a logo is the problem :(
+9:45 AM <•brson> last week carols10cents was going to think about awards
+9:45 AM <•brson> any updates?
+9:45 AM <carols10cents> nope :(
+9:46 AM <carols10cents> maybe a few tweaks https://github.com/rust-community/team/issues/22
+9:46 AM <•brson> we basically just have to do the work to find a dozen or so interesting numbers then coordinate a forum post i guess
+9:47 AM <•brson> i wonder how late we can delay this. i don't think i can put in the time in the next 2 weeks
+9:47 AM <•skade> doesn't mozilla have this achievement site? :D
+9:47 AM <bstrie> brson: no sweat, focus on what you need to do
+9:47 AM <carols10cents> i was going to pull the stats like the day before
+9:47 AM <•erickt> brson: we could make a request on urlo for help
+9:48 AM <carols10cents> but i'll work on making sure they are easily gatherable before then :)
+9:48 AM <carols10cents> so if anyone has any ideas, please add them to that issue
+9:48 AM <•erickt> will do
+9:48 AM <•brson> i'll brainstorm some ideas
+9:49 AM <•erickt> anything else?
+9:49 AM <•brson> not for me
+9:50 AM <•erickt> alrighty then, I'm going to call this meeting closed. 10 minutes to work on the survey :)
+9:50 AM <•erickt> thanks everyone!

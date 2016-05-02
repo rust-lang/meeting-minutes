@@ -1,0 +1,250 @@
+9:01 AM <•erickt> meeting time!
+9:01 AM <•erickt> hello everyone new and old!
+9:02 AM <•Manishearth> o/
+9:02 AM <•erickt> I've written up some agenda items in https://github.com/rust-community/team/issues/17#issuecomment-209461494
+9:02 AM <•erickt> but we tend to be a little loose here
+9:02 AM <•erickt> before we begin, is anyone new here?
+9:02 AM → placrosse joined (Mibbit@moz-rtucsb.mi.comcast.net)
+9:03 AM — jntrnr raises hand
+9:03 AM — hjr3 raises hand
+9:03 AM — peschkaj raises hand, but is "just lurking"
+9:03 AM <•erickt> aloha! jntrnr, you're the new mozilla rust person, right?
+9:03 AM <jntrnr> erickt: that’s me :)
+9:04 AM — vladimir-sn raises hand
+9:04 AM <•erickt> great! nice to meet you all. Feel free to add any agenda items to https://github.com/rust-community/team/issues/17, or just bring them up whenever :)
+9:05 AM <•erickt> so first thing I wanted to talk about is the survey we've been working on
+9:05 AM <•erickt> lemme grab a link
+9:06 AM <•erickt> https://docs.google.com/forms/d/1KCl0ahI79toAOjUJEbRdlUf98ZJoryUjXZ8G8zHGIco/viewform
+9:06 AM <•erickt> has everyone had a chance to go through it?
+9:06 AM <•erickt> anyone have any comments? I couldn't figure out how to get commenting to work on the form designer
+9:06 AM <•Manishearth> yep!
+9:06 AM <•Manishearth> +1
+9:06 AM <carols10cents> i read through it and i think it looks good-- someone mentioned we should have people try filling it out
+9:07 AM <•erickt> good idea
+9:07 AM <•erickt> any volunteers?
+9:07 AM — peschkaj is clicking madly
+9:07 AM <hjr3> sure, i can fill it out right now
+9:08 AM <jntrnr> for volunteers
+9:08 AM <jntrnr> can you time yourself?
+9:08 AM <jntrnr> so we get a sense of if it’s too big?
+9:08 AM <carols10cents> and let us know if any of the questions don't make sense :)
+9:08 AM <•erickt> cool. lets revisit later on in the meeting then after you're done
+9:09 AM <•erickt> next up, carols10cents  and rust belt. I hear you got 4 proposals!
+9:09 AM <carols10cents> indeed!
+9:09 AM <•erickt> you happy with the turnout so far? need any help encouraging others to speak?
+9:09 AM <carols10cents> we haven't started reviewing yet, i'm going to set up reviewer accounts this week hopefully
+9:10 AM <carols10cents> i mean i'd love more but everyone always waits til the last minute
+9:10 AM <carols10cents> so i'm expecting a bunch right before the deadline :)
+9:10 AM <•erickt> as is tradition
+9:10 AM <carols10cents> i would love any help anyone could give to promote the cfp (hint hint meetup organizers, we're covering speaker travel costs)
+9:10 AM <carols10cents> <3
+9:10 AM <badboy> 30. April is the deadline?
+9:11 AM <carols10cents> badboy: yup!
+9:11 AM <badboy> alright.
+9:11 AM — badboy marks his calendar
+9:11 AM <•erickt> have you reached out beyond the normal rust crowd?  I know julia evans and lidsay kuper (sp?) run an interesting conference in nyc, I wonder if we can get some cross over with them
+9:11 AM <carols10cents> i have not sent out personal emails to people i'd like to have speak... i need to do that this week too, oops :)
+9:12 AM <•erickt> carols10cents: http://bangbangcon.com/
+9:12 AM <carols10cents> lol i think you got kuper right but lindsey wrong ;)
+9:12 AM <•erickt> lol
+9:12 AM <carols10cents> that is a great idea, i will definitely reach out to them this week!
+9:13 AM <•erickt> have you met them? they haven't done rust stuff in a while, but they're still family
+9:13 AM <carols10cents> i've met lindsey :)
+9:14 AM <jntrnr> something else I noticed is that “rust belt convention” doesn’t have enough google juice
+9:14 AM <jntrnr> was trying to find the site
+9:14 AM <carols10cents> jntrnr: yes, it's not great :-/
+9:14 AM <jntrnr> maybe we could link to it more from other things?
+9:14 AM <jntrnr> hmmm
+9:15 AM <•erickt> yeah. we need to get a proper community blog up
+9:15 AM <carols10cents> actually rust belt rust conference on DDG has it #1... google has it #4
+9:15 AM <•erickt> so we can spread some nice PageRank around
+9:15 AM <carols10cents> but yeah if you don't get the conference name exactly right....
+9:15 AM <vladimir-sn> also doesn't help that google translates convention to conversion
+9:16 AM <•erickt> vladimir-sn: I'm guessing conversion isn't the british spelling
+9:16 AM <jntrnr> heh
+9:17 AM <hjr3> just glancing at the source, there are a few SEO things we can do as well to have google rank it higher. i am happy to help
+9:17 AM <•erickt> +1!
+9:17 AM <carols10cents> yeah ooh i need to bug the designer i'm trying to hire agan
+9:17 AM <carols10cents> hold on idk if i have the source on github yet
+9:17 AM <hjr3> im viewing page source ;)
+9:17 AM <vladimir-sn> erickt: it's not but google is biased based on popularity
+9:18 AM <carols10cents> oh wait it totally is!! https://github.com/rustbeltrust/2016
+9:18 AM <carols10cents> i would love pull requests :)
+9:18 AM <hjr3> carols10cents ok ill see what i can do
+9:18 AM <•erickt> vladimir-sn: yeah :)
+9:18 AM <hjr3> also, having a link from rust-lang.org/community.html would be a huge boon
+9:19 AM <carols10cents> hjr3: yeah i mentioned the designer because i was hoping to have a nice logo before i put more effort into the site :)
+9:19 AM <carols10cents> hjr3: thank you in advance for any help!!!
+9:20 AM <•erickt> hjr3 / carols10cents: speaking of which, you should get a semi-permanent spot in https://this-week-in-rust.org/
+9:20 AM <carols10cents> that would be awesome, with the cfp deadline
+9:20 AM <•erickt> carols10cents: should be able to submit a PR to https://github.com/cmr/this-week-in-rust
+9:21 AM <carols10cents> erickt: will do!!
+9:21 AM <•erickt> ^ this goes the same for the rest of the meetup organizers
+9:21 AM <booyaa> erickt: new here too (sorry was travelling)
+9:21 AM <•erickt> (me too because I always forget with my meetup)
+9:21 AM — •erickt waves hello
+9:21 AM <hjr3> i forget to add to the calendar too ; /
+9:21 AM <•Manishearth> carols10cents: will you be able to fund international speakers (not me)
+9:22 AM <•Manishearth> carols10cents: and if so, what's the range of topics you're looking for? Can it be tangential?
+9:23 AM <carols10cents> Manishearth: i'm committing to, yes, and yes, tangential proposals are welcome, i'd love a wide range :)
+9:23 AM <•Manishearth> cool. I know some folks who might be interested then.
+9:25 AM <•bstrie> erickt: I'm here!
+9:25 AM <•erickt> morning!
+9:25 AM <•bstrie> almomst :P
+9:26 AM <•erickt> carols10cents: have you approached other groups, like Women who Code?
+9:26 AM <carols10cents> bstrie: almost?? you missed morning :P i know what time zone you're in :P
+9:27 AM <carols10cents> erickt: i reached out to @callbackwomen but not women who code
+9:27 AM <•erickt> nifty, didn't know about that group
+9:28 AM <•erickt> hm. carols10cents: anything else for you?
+9:28 AM <•Manishearth> carols10cents: also, skade seems to know a lot of diversity/outreach groups in europe, so he might be able to get you some more contacts
+9:28 AM <•Manishearth> not in today's meeting though
+9:28 AM <•erickt> or next week
+9:28 AM <carols10cents> erickt: i think i'm good :)
+9:28 AM <•erickt> wunderbar
+9:28 AM <•erickt> bstrie / steveklabnik / OSCON folks: how are you all doing?
+9:29 AM <•erickt> anything we can help there too?
+9:29 AM <steveklabnik> lol that's next month like i'm even thinking about that now
+9:29 AM <steveklabnik> :(
+9:29 AM <•erickt> haha
+9:29 AM <steveklabnik> my brain is more like "i need to be in belarus in two weeks and i don't have a visa yet", better do that tomorrow and not today
+9:29 AM <•erickt> stop being so busy
+9:29 AM <steveklabnik> but yeah, i appreciate it, but nothing right now
+9:29 AM <•erickt> don't know how you do it
+9:30 AM <vladimir-sn> steveklabnik: rust in belarus? :D
+9:30 AM <steveklabnik> vladimir-sn: at the ruby conference!
+9:30 AM <vladimir-sn> cool
+9:30 AM <steveklabnik> i'm giving a talk about using them together
+9:30 AM <steveklabnik> also, in about... 4 hours i'm giving a talk at the UPenn Rust class
+9:30 AM <steveklabnik> i'm excited to see how it's going for them
+9:31 AM <jntrnr> would love to hear a report back :)
+9:31 AM — jntrnr is also curious
+9:31 AM <steveklabnik> yeah, will let you all know
+9:31 AM <•bstrie> erickt: I want to organize an out-of-con meetup in austin for those who can't attend oscon
+9:31 AM <•erickt> steveklabnik: nice. Got a slide on #rust-beginners and our other resources?
+9:31 AM <steveklabnik> i am not sure i am using slides
+9:31 AM <•erickt> bstrie: nice
+9:31 AM <steveklabnik> but i will be mentionig it, yes
+9:31 AM <•erickt> steveklabnik: great
+9:32 AM <carols10cents> steveklabnik: could you mention rust belt rust conference if you remember too plz? <3
+9:32 AM <steveklabnik> carols10cents: yes!
+9:32 AM <steveklabnik> absolutely
+9:32 AM <carols10cents> \o/ thank you!!!
+9:32 AM <•erickt> bstrie: http://www.meetup.com/Austin-Rust-Meetup/
+9:33 AM <•erickt> bstrie: want to sent them a heads up?
+9:33 AM <•bstrie> erickt: yes, I should
+9:33 AM <•bstrie> maybe I will do that now so I don't forget
+9:33 AM <•erickt> bstrie: https://github.com/rust-community/team/issues/19
+9:33 AM <•erickt> :)
+9:34 AM <•erickt> anything else OSCON-wise?
+9:34 AM <•bstrie> agh, a paper trail :P this makes it so much less convenient to shirk my responsibilities!
+9:34 AM <•erickt> muwahahah
+9:35 AM <•bstrie> oh hey, there's a release tomorrow
+9:35 AM <•erickt> @carols10cents: one for you too: https://github.com/rust-community/team/issues/20
+9:35 AM <•erickt> :)
+9:35 AM <•erickt> bstrie: indeed there is
+9:35 AM <carols10cents> erickt: <3 <3 <3 <3 thank you!!!
+9:36 AM <•erickt> bstrie / steveklabnik: guess that means you're on reddit / HN duty ;)
+9:37 AM <•erickt> anything else we can do for the launch?
+9:37 AM <•bstrie> mostly I was remarking because it means we know what version of stable we'll all be using for oscon
+9:37 AM <•erickt> cool
+9:38 AM <•erickt> lets check back in with our surveyers. How did it go / is it going?
+9:38 AM <carols10cents> wasn't someone talking about something to celebrate the 1 yr anniversary of 1.0? i'm going to put that on the agenda for next week
+9:39 AM <•erickt> jntrnr / peschkaj / hjr3: ^
+9:40 AM <•erickt> carols10cents: oh right. I do have a meetup on 5/12 that I figured we'd do something. maybe get a cake
+9:40 AM <carols10cents> (unless we'd rather talk about it now, but i dont' want to add)
+9:40 AM <•bstrie> carols10cents: oh yeah, good idea
+9:40 AM <peschkaj> The survey was painless and I submitted my info. I don't remember seeing a box for my email address at the end, though.
+9:40 AM <•erickt> carols10cents: we should start a thread on https://users.rust-lang.org/c/community
+9:40 AM <hjr3> erickt completed. took less than 5 minutes. only minor feedback is that the "If ..." questions are phrased as yes/no when a N/A might be sufficient. People will probably just choose "No" in the N/A case.
+9:41 AM <booyaa> re: survey - is that the final form? we can ask people to fill out out in the london  meetup messageboard w/ reminder for our may meetup
+9:41 AM <•erickt> carols10cents et al: anyone want to volunteer creating said rust birthday party planning thread?
+9:41 AM <carols10cents> erickt: i can do that
+9:41 AM <•erickt> peschkaj: eek
+9:41 AM <•erickt> carols10cents: +1
+9:41 AM <•erickt> thanks
+9:41 AM <jntrnr> peschkaj: makes me think we should have them put their email in right then instead of waiting to the end...
+9:42 AM <•erickt> booyaa: not quite final form yet
+9:42 AM <•erickt> core team wanted to sign off on it before it goes out
+9:42 AM <peschkaj> That makes sense - first thing should be "Your email (optional, but we want to get to know you)"
+9:42 AM <•bstrie> which survey is this?
+9:42 AM <•erickt> bstrie: https://docs.google.com/forms/d/1KCl0ahI79toAOjUJEbRdlUf98ZJoryUjXZ8G8zHGIco/viewform
+9:43 AM <jntrnr> peschkaj: or a “if you are using Rust at work (or thinking about it) and would like to talk with a Rust community or core team member, put your email here:"
+9:43 AM <carols10cents> erickt: https://users.rust-lang.org/t/1-year-anniversary-of-1-0-coming-up-how-should-we-celebrate/5381
+9:43 AM <booyaa> erickt: kk
+9:44 AM <•erickt> (carols10cents: another one for you on getting into this-week-in-rust: https://github.com/rust-community/team/issues/21)
+9:44 AM <peschkaj> jntrnr: +1
+9:45 AM <•erickt> how was the length? did 5 minutes feel right? or too long?
+9:45 AM <booyaa> it was fine
+9:45 AM → •brson (opped) joined  
+9:45 AM <peschkaj> length was good
+9:45 AM <•erickt> morning brson!
+9:45 AM <•brson> yo
+9:45 AM <hjr3> length was fine
+9:46 AM <•erickt> beyond the missing email, are we missing any useful questions?
+9:47 AM <hjr3> i did see the email address input box at the bottom. so if it is missing, it is not for everyone
+9:47 AM <•erickt> hjr3: maybe we should make it more prominent
+9:48 AM <hjr3> yep
+9:48 AM <peschkaj> I see it now on the question "If your company uses rust... blah blah blah"
+9:48 AM <vladimir-sn> yeah length and questions were good
+9:48 AM <peschkaj> that should be more prominent
+9:49 AM <•Manishearth> erickt: should we have a separate optional section for "if your company uses rust"?
+9:49 AM <•bstrie> erickt: I'm wondering how you chose the list of books under "have you read"
+9:49 AM <•Manishearth> erickt: or perhaps two sections, which show up depending on you ticking "I use rust for hobby" and work
+9:49 AM <jntrnr> peschkaj: I tweak wording
+9:49 AM <jntrnr> +ed
+9:50 AM <•erickt> Manishearth: there is a "Rust at Work" section
+9:51 AM <•erickt> bstrie: arbitrarily. We should have at least a link to the book
+9:51 AM <•erickt> bstrie: I put that in there because ruby did in their survey. Not "quite" sure the value
+9:52 AM <•erickt> I guess it can help us gauge how useful the community is finding the books
+9:52 AM <•bstrie> erickt: I ask because the rustonomicon is unfinished, and the manning book has a dodgy reputation, and TRPL is being totally rewritten :P
+9:52 AM <carols10cents> if we get more books over time, that might be useful
+9:52 AM <•erickt> Manishearth: any questions that would make sense for hobby rust that wouldn't for rust at work?
+9:53 AM <jntrnr> are we saying we should take that section out?
+9:53 AM <•bstrie> erickt: if you're linking to unfinished books, then might as well link to the oreilly book too
+9:53 AM — jntrnr was also wondering about it
+9:53 AM <•brson> can i have a link?
+9:53 AM <•erickt> steveklabnik: any documentation questions you want to ask?
+9:53 AM <jntrnr> it’s useful information but it’s going to change
+9:53 AM <•erickt> brson: https://docs.google.com/forms/d/1KCl0ahI79toAOjUJEbRdlUf98ZJoryUjXZ8G8zHGIco/viewform
+9:53 AM <•brson> thanks
+9:53 AM <•erickt> brson: I sent out a link to the form builder to rust-community
+9:54 AM <•Manishearth> erickt: yes, but it's not optional iirc. unless that change
+9:54 AM <•Manishearth> erickt: no, I mean that I'd like separate data for hobby and work rust
+9:54 AM <•Manishearth> erickt: (when I say optional, I mean -- does the form skip showing that section altogether if you don't tick a box? docs lets you do that)
+9:55 AM <•erickt> Manishearth: yeah I think we could skip the Rust at Work if you don't check off the box
+9:55 AM <•brson> erickt: i also don't see much point to the "have you read" section
+9:56 AM <•brson> but it all looks good
+9:56 AM <•erickt> maybe we also need a "how concerned are you about the quality of your rust crate dependencies?"
+9:56 AM <•Manishearth> erickt: basically, I want to see what companies are using Rust for without the noise of what hobbyists are using Rust for
+9:56 AM <•Manishearth> well, it's not noise, it's useful data
+9:56 AM <•Manishearth> but we already have a rough idea of that
+9:56 AM <•erickt> it'd be nice to get a sense how worried production users are about our ecosystem
+9:57 AM <•brson> "how many times has rust broken your code?"
+9:57 AM <•erickt> that's a good one
+9:57 AM <•brson> "do you feel like you have recourse when rust sucks?"
+9:58 AM <jntrnr> brson: as in “how many times has a Rust upgrade broke your code?"
+9:58 AM <•brson> jntrnr: yeap
+9:58 AM <carols10cents> *since 1.0
+9:58 AM <•erickt> brson / jntrnr: also adding a similar question for a dependency breaking change
+9:58 AM <•brson> "do you need production suppert?"
+9:58 AM <•brson> but worded better
+9:58 AM <vladimir-sn> "are you worried about compilation times?"
+9:58 AM <jntrnr> brson: might be nice to capture “how many times has an upgrade broke you in an annoying way"
+9:59 AM <jntrnr> since sometimes it’s a simple search/replace and you’re going again in a minute or two
+9:59 AM <•brson> perhaps, yeah, but we do try to promise no breakage
+9:59 AM <•brson> at all
+9:59 AM <•brson> and fail badly
+9:59 AM <jntrnr> understood
+10:00 AM <jntrnr> the perceived benefit vs the perceived frustration
+10:01 AM <•erickt> I've added these comments to https://github.com/rust-community/team/issues/15
+10:01 AM <•erickt> please look it over and add any that I might have missed
+10:02 AM <jntrnr> “complication time” is an awesome typo
+10:03 AM <•Manishearth> erickt: "Borrow check. Swipe left, or swipe right?"
+10:03 AM <carols10cents> Manishearth: LOL
+10:03 AM <•erickt> hehe
+10:03 AM <•Manishearth> I have honestly not seen any ambivalent opinions about borrowck. folks hate it or love it
+10:03 AM <jntrnr> Manishearth: and I’m guessing you have a captive audience of people taking a Rust survey
+10:03 AM <jntrnr> you probably like it if you’re here
+10:04 AM <•erickt> so that brings us past the end of our hour. once again we managed to get past the 10 minute mark 
+10:06 AM <•erickt> thank you all for participating! I need to run, but please feel free to keep working this all out
+10:06 AM <•erickt> just add any items you figure out to that issue
