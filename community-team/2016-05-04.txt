@@ -1,0 +1,122 @@
+10:05 AM <•Manishearth> frewsxcv: we seem to be moving towards having rfcs repos everywhere :p (there's a proposed style-team and style-rfcs repo for bikeshed madness :p)
+10:05 AM <•erickt> frewsxcv: hehe
+10:05 AM <bstrie> well in some sense the team is functioning at all now, so that's a start :P
+10:05 AM <•skade> carols10cents aturon I wouldn't know of that? Mozilla officially doesn't want to be involved in Rusts community.
+10:05 AM <aturon> we've gone through a similar bootstrapping process on all the subteams
+10:05 AM <•Manishearth> carols10cents: the official-ness . ish.
+10:05 AM <•erickt> bstrie: we're not quite functioning yet. we haven't figured out the community swim lanes yet
+10:05 AM <frewsxcv> Manishearth: not immediately convinced that's a bad thing
+10:05 AM <aturon> skade: carols10cents: the trademarks are owned by mozilla as a legal organization, but the policy at https://www.rust-lang.org/legal.html is from the core team
+10:05 AM <frewsxcv> Manishearth: also not suggesting you think it's a bad thing :)
+10:05 AM <carols10cents> "The Rust programming language is an open source, community project governed by a core team. It is also sponsored by the Mozilla Foundation (“Mozilla”), which owns and protects the Rust and Cargo trademarks and logos (the “Rust Trademarks”). "
+10:05 AM <•Manishearth> frewsxcv: I'm not saying it is :)
+10:06 AM <•Manishearth> heh
+10:06 AM <•skade> aturon carols10cents that was my understanding as well and it was set up during my time as community team member
+10:06 AM <•skade> carols10cents I'm fighting for more, proper communication by core and for less trying to keep taps on all things
+10:06 AM <bstrie> carols10cents: btw, get-together tonight?
+10:06 AM <carols10cents> bstrie: i can't make it
+10:06 AM <bstrie> :(
+10:06 AM <frewsxcv> So clearly we need to start the Rust Software Foundation and take control of our selves legally
+10:07 AM <•skade> frewsxcv: oh, sore topic :)
+10:07 AM — frewsxcv prints out the 501 c.3. papers
+10:07 AM <carols10cents> skade: currently "tabs on all the things" encompasses "the use of the rustcamp name"
+10:07 AM <carols10cents> what else is there?
+10:08 AM <•erickt> lets figure that out later. Eventually we might want to at least have an independent owner of the rust source code to protect ourselves from mozilla getting bought by oracle
+10:08 AM <aturon> Mozilla is basically not relevant here -- for all practical purposes, Rust is governed by the core team, as the legal doc says
+10:08 AM <•skade> I proposed a foundation last year and I don't really want to get into that discussion again.
+10:08 AM <•erickt> but so far Mozilla Corp hasn't been imposing their will on us yet
+10:08 AM <•skade> We've got a legal non-profit coming up here.
+10:08 AM <•Manishearth> erickt: stop scaring me before I even start working :p
+10:08 AM <•erickt> hehe
+10:08 AM <•erickt> Manishearth: your first task is to port Servo to Java
+10:09 AM <•skade> carols10cents I have a list of at least 10 similar situations, maybe erickt and steveklabnik want to fill you in, I'm not really in the mood.
+10:09 AM <•erickt> anyway, can we codify this discussion into some action items
+10:09 AM <•Manishearth> erickt: http://www.nooooooooooooooo.com/
+10:09 AM <•skade> So I'd appreciate some care about making that whole thing seem like just a pet peeve.
+10:10 AM <carols10cents> skade: I'm sorry, the only thing you've brought up during this meeting is the rustconf name, so that's all i know of
+10:10 AM <steveklabnik> and it's also the only one really pertient to this particular situation
+10:10 AM <•Manishearth> he hasn't
+10:10 AM <•erickt> so first thing, we have ambiguity about the this whole Rust{Camp,Conf} franchise model
+10:10 AM <•Manishearth> that's why i asked for clarification
+10:10 AM <steveklabnik> and, saying "in the past there was trouble" and perpetually bringing it back up is not great
+10:10 AM <•erickt> I'll start a urlo thread on that
+10:11 AM <•skade> carols10cents that's not true, I also brought up the general core structure and access to information
+10:11 AM <steveklabnik> especially since there's been so much effort put into making it better
+10:11 AM <steveklabnik> it's really unfair
+10:11 AM <•Manishearth> +1
+10:11 AM <carols10cents> skade: i don't think we've even moved on to those items yet since the name hasn't been resolved
+10:11 AM <carols10cents> and the meeting is officially over
+10:11 AM <•erickt> two, we should start a thread on sketching out what we should be doing conference wise in 2017 so we can address issues early
+10:12 AM <aturon> erickt: both sound good
+10:12 AM <•erickt> three, we need to finish the survey and get a flow in for new users
+10:12 AM <aturon> yep, and you've set deadlines on those
+10:13 AM <•erickt> where there any other action items we need to pursue?
+10:14 AM <•skade> steveklabnik would you prefer for me to write them down publicly? I appreciate that there has been work done, I also appreciate that we have those meetings, but I find it unfair that I should just leave the past rest.
+10:14 AM <•erickt> skade: I'd love to help you resolve this whole RustConf question as soon as possible so you can figure out what you're actually going to call your conference
+10:14 AM <aturon> it doesn't seem like there's much more actionable here, but i will say on behalf of the whole core team that we are really eager to find better ways to communicate and work together
+10:14 AM <•skade> I don't want to dwell on things, but I also don't want to pretend it hasn't happen
+10:14 AM <aturon> i feel like we are making strides, but there's more room for improvement
+10:14 AM <badboy> So to keep the community informed: greetings from the Rust Cologne meetup, we're doing the birthday party a bit early: http://tmp.fnordig.de/dsh/Photo-2016-05-04-19-13.jpg
+10:14 AM <aturon> so help figuring out what lines of communication are missing is appreciated
+10:14 AM <•erickt> badboy: omg
+10:14 AM <aturon> bstrie: yay!
+10:15 AM <carols10cents> erickt: i'm working on getting interesting stats out of github for the birthday thing, made a little progress but not much. I put an update on the issue, would love help from anyone who'd like to.
+10:15 AM <aturon> err badboy*
+10:15 AM <•skade> I would prefer to just note that things have happened and not rehash things, to make clear that the dynamics are a little more complex.
+10:15 AM <•erickt> carols10cents: that'd be great!
+10:15 AM <aturon> carols10cents: oh, btw, huon has also been collecting a different set of stats, like his 1.0 in numbers post
+10:15 AM <carols10cents> aturon: cool, yeah, this was more like awards or something. i dunno
+10:16 AM <aturon> yeah
+10:16 AM <•erickt> carols10cents / aturon: I cc'd huon on the thread
+10:16 AM <•erickt> err, ticket
+10:16 AM <•skade> okay, i'm off to Rust Berlin, see you later
+10:16 AM <steveklabnik> skade: all i cay say is that "core hasn't been communicitive" when i know that at least me personally have spent _hours_ talking about and through all points of this feels extremely terrible
+10:16 AM <aturon> enjoy! ttyl skade
+10:16 AM <•erickt> thanks skade!
+10:16 AM <bstrie> wait, is huon moving to the US?
+10:16 AM <steveklabnik> and it makes me feel really bad
+10:17 AM <aturon> bstrie: he's getting eaten by the Apple machine 
+10:17 AM <bstrie> noooooooo
+10:17 AM <carols10cents> om nom nom
+10:17 AM <bstrie> first gankro, then huon 
+10:17 AM <•erickt> bstrie: but allegedly is allowed to keep working on rust
+10:17 AM <jntrnr> yeah, sad :(
+10:17 AM <•skade> steveklabnik oh, I see that. I'm very sorry.
+10:18 AM <•skade> let me rephrase this: the whole community-team/core relationship has history, and the whole representation topic isn't new and I think I'm not alone with that reading
+10:19 AM <•skade> especially sorry for misrepresenting steveklabnik's work, I'm really sorry for that :(
+10:19 AM <•erickt> skade: I think this story isn't over yet. I think we can keep improving our relationship with core
+10:20 AM <steveklabnik> "representation topic"
+10:20 AM <steveklabnik> ?
+10:20 AM <steveklabnik> well, whatever, you said you have to go
+10:20 AM <•skade> steveklabnik about how remote communities are represented in the whole project structure. for me, that's the core of the issue.
+10:20 AM <aturon> erickt: agreed, and i think a big part of that is working to develop process and policy around questions that are going to come up regularly
+10:20 AM <•erickt> skade: thanks for sticking through this too, I can understand how this has been difficult and confusing for you too
+10:21 AM <•erickt> hjr3: oh! thanks!
+10:21 AM <frewsxcv> In the future for these meetings, would it make sense to move some of these extended discussions to a GitHub issue?
+10:21 AM <frewsxcv> (https://github.com/rust-community/team/issues)
+10:22 AM <frewsxcv> Some of this post-hour discussions seems somewhat important
+10:22 AM <•skade> okay, see you later
+10:22 AM — frewsxcv disclaims he is obviously not part of the rust-community team, just making a comment
+10:23 AM <•erickt> hjr3: you got lost in the traffic. On city/country, we are trying to get a sense of where people are using Rust. If it turns out there's a large community in, say China, that we don't know about, we can't emphasize getting our documentation translated for them
+10:24 AM ⇐ •skade quit (skade@moz-49vvke.pools.vodafone-ip.de) Quit: My MacBook Pro has gone to sleep. ZZZzzz…
+10:24 AM <•erickt> hjr3: we also want to support people that want to organize meetups/conferences to have a sense of how large the local community is, and potentially have a mailing list of interested attendees
+10:25 AM <•erickt> frewsxcv: you're here, you're in the community so everything is working as planned ;)
+10:25 AM <hjr3> @erickt makes sense. it was the lack of "state" that was odd to me. if we think that city/country is sufficient, then that is good for me
+10:25 AM <•erickt> frewsxcv: and yes, I did mention we should transition these conversations to https://users.rust-lang.org/c/community. We're erring on that for more open ended conversations
+10:26 AM <•Manishearth> frewsxcv: feel free to participate moar
+10:26 AM <•erickt> hjr3: we could throw in State
+10:26 AM <•erickt> Manishearth / frewsxcv: +1
+10:26 AM <•Manishearth> frewsxcv: I was in fact going to PM you to say the same thing, since you're clearly interested :)
+10:26 AM <•erickt> we're holding these meetings in public for this very reason
+10:26 AM <frewsxcv> I do watch the rust-community/team repo, though I should probably follow the forums closer
+10:26 AM <•erickt> come to the next one! it's every 9am UTC
+10:27 AM <•erickt> frewsxcv: to be honest we need to have more conversations in urlo
+10:27 AM <carols10cents> erickt: you mean 4pm UTC? 
+10:27 AM <•erickt> ACK
+10:28 AM <•erickt> yes
+10:28 AM <•erickt> 9am PST
+10:28 AM <frewsxcv> 9am Silicon Valley Time
+10:28 AM <•erickt> since it's all about my timezone
+10:28 AM <carols10cents> erickt: there's your US centrism again ;)
+10:28 AM <•erickt> San Francisco Bay Area centrism, thank you very much
+10:29 AM <•mbrubeck> erickt: "MVTime" in Mozilla parlance.
