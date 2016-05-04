@@ -1,3 +1,418 @@
+9:00 AM <•erickt> Meetin time, meetin time, doin the meetin time dance
+9:00 AM <•erickt> Hello my fine and fancy friends! it's meeting time!
+9:00 AM <•Manishearth> o/
+9:00 AM <aturon> \o
+9:00 AM <bstrie> grumble grumble
+9:01 AM <•erickt> agenda for the meeting: https://github.com/rust-community/team/issues/24
+9:01 AM <hjr3> o/
+9:01 AM <•erickt> feel free to add to it
+9:02 AM <•erickt> so I'd like to start off with the survey. I swear it's like nearly done thanks to you all
+9:02 AM <carols10cents> \o/
+9:02 AM <•erickt> +10 exp to carols10cents for her pass last week
+9:02 AM — frewsxcv waves
+9:02 AM <carols10cents> <3
+9:03 AM <•erickt> so do we have any volunteers that would like to beta test it during the meeting?
+9:03 AM — •erickt waves at frewsxcv
+9:03 AM <•skade> well, the diversity question could be a little more clarified, but I'd post that on the topic
+9:03 AM <•erickt> skade: jntrnr actually did a rephrasing of it
+9:03 AM <hjr3> i can beta test. i did it a few meetings back as well
+9:03 AM <•erickt> hjr3: thanks!
+9:03 AM <•brson> erickt: can i test?
+9:04 AM <•brson> how do i test?
+9:04 AM <hjr3> can i get a link please? i do not have it saved from last time
+9:04 AM <•erickt> hjr3 / brson: http://goo.gl/forms/5fX6IFZdSv
+9:04 AM <•skade> erickt, yeah, i'll just post my comment later :)
+9:05 AM <•erickt> skade: jntrnr phrased it as "Do you self-identify as an underrepresented demographic in technology? (Optional)". How does that sound?
+9:05 AM <•erickt> with a series of check boxes that lets people fill in whatever they want
+9:05 AM <jntrnr> (I totally stole that from Ember, btw :) )
+9:05 AM <aturon> erickt: so here's a couple thoughts -- as i've mentioned before, the core team plans an anniversary blog post, and i'd like to link to the survey there
+9:05 AM <•erickt> steal from the best
+9:06 AM <•erickt> aturon: I would like that
+9:06 AM <aturon> erickt: but the current survey is slanted toward the existing Rust community, and doesn't give us as much insight into people who haven't yet gotten on board
+9:06 AM <jntrnr> +1
+9:06 AM <aturon> i was wondering how best to address that; it'd be great to use that high profile post to get more insight *beyond* the current community
+9:06 AM <aturon> (but it might want to be an entirely different, and much shorter, survey?)
+9:06 AM <jntrnr> aturon: there’s a little bit of the new user stuff at the end… we could move things around and expand for new users
+9:06 AM <•Manishearth> erickt: I'm a bitr concerne that that wording will skew the results but I guess its okay
+9:06 AM <•erickt> aturon: what kinds of questions would you like to ask those people?
+9:07 AM jdm_ → jdm|f00ding
+9:07 AM <jntrnr> (it was unclear at the time the vehicle for the survey)
+9:07 AM <nmatsakis> might also be interesting .. yes, that.
+9:07 AM <•erickt> aturon: google forms does let us have conditional flow in the survey
+9:07 AM <•erickt> so we could ask "do you use rust" go to these questions, and skip them if not
+9:07 AM <aturon> erickt: abstractly, i'm thinking about questions gauging overall perception of Rust, as well as specific things that block them from getting into Rust, or specific things that would draw them to Rust
+9:07 AM <aturon> erickt: ooh, that'd be great
+9:08 AM <carols10cents> are we looking for new users, potential non-users, users that have abandoned rust, all of the above...?
+9:08 AM <carols10cents> (potential users who are currently non-users)
+9:08 AM <nmatsakis> presumably all of the above...
+9:08 AM <jntrnr> love this :)
+9:08 AM <aturon> potentially all of the above, if we can make it work
+9:08 AM <•erickt> carols10cents: can't forget about us old timers. I want to know what versions of rust I should be supporting :)
+9:08 AM <aturon> btw, the post is planned for May 16
+9:09 AM <aturon> i'm sorry i haven't raised this before, i've been away the last few weeks
+9:09 AM <•Manishearth> 0.7 of course. RIP @T
+9:09 AM <steveklabnik> ol
+9:09 AM <steveklabnik> lol
+9:09 AM <•erickt> Manishearth: <3 sigils
+9:09 AM <•skade> well, would it help to just not call i the "rust community survey", but more the "rust survey"?
+9:09 AM <carols10cents> do we have the same questions for each of those groups or different questions?
+9:09 AM <•skade> i miss classes :D
+9:09 AM <aturon> carols10cents: different questions for at least some of those groups
+9:09 AM <aturon> but we don't want to make it too complicated
+9:09 AM <aturon> something as simple as "Do you use Rust?" as erickt suggested seems reasonable
+9:10 AM <•skade> +1 to that
+9:10 AM <carols10cents> should we make what we currently have "the rust community survey" and make another for "the potential rust community survey"...?
+9:10 AM <jntrnr> I like the idea of the conditional on “do you currently use Rust?"
+9:10 AM <aturon> i'm not sure if that's needed, if we can have the conditional flow that erickt mentioned
+9:11 AM <•Manishearth> ^ agreed
+9:11 AM <jntrnr> and if they say no, we could probe into how they think about Rust and what they use these days
+9:11 AM <aturon> we can just be very clear in the post that this is designed for everyone, that we're interested in hearing from people inside and outside the community
+9:11 AM <carols10cents> just wondering if we should possibly delay the whole survey if it takes time to make new questions for this group
+9:11 AM <•erickt> aturon: well the name is important. I probably wouldn't go and fill out the "Ember Community Survey"
+9:11 AM <aturon> :-/
+9:11 AM <aturon> erickt: agreed
+9:11 AM <jntrnr> “whether you use Rust or not, we’ve love to hear from you!"
+9:11 AM <SimonSapin> I stopped using Rust about 20 minutes ago. I may start again later today :)
+9:11 AM <•erickt> aturon: but the birthday post could say ^
+9:11 AM <carols10cents> given how long it took to iterate through the existing questions :-/
+9:11 AM <aturon> SimonSapin: lol
+9:12 AM <aturon> carols10cents: so a possible saving grace is that i'd expect a far shorter survey for this group
+9:12 AM <•erickt> SimonSapin: get back to it! Rust might disappear if people aren't using it constantly!
+9:12 AM <aturon> carols10cents: in part because we don't want to ask as much from them
+9:12 AM <aturon> (since they're not in the community, they have less incentive to fill it out)
+9:12 AM <nmatsakis> I sort of imagine it'd just be a few questions?
+9:13 AM <aturon> was there a timeline for launching the current one?
+9:13 AM <carols10cents> aturon: you just said the blogpost on the 16th ;)
+9:13 AM <aturon> yes
+9:13 AM <aturon> i was wondering what the existing plans were, if you had planned to launch sooner
+9:13 AM <•brson> erickt: "What title do you believe matches your role most closely?" -> "Programmer" and "Software Developer" are too similar for me to guess at the difference
+9:13 AM <•erickt> jntrnr: I added your sentence to the header description
+9:13 AM <•erickt> brson: yeah I wanted to ask about that one
+9:14 AM <aturon> if we're ok delaying the launch until the blog post, that gives us two weeks, which seems doable?
+9:14 AM <aturon> well, not quite two weeks :)
+9:15 AM <carols10cents> and the existing survey has been in the works for a month :)
+9:15 AM <aturon> what do people think? worth trying for this?
+9:15 AM <•brson> last time i thought the idea was to release it about now to not interfere with the birthday news
+9:15 AM <•erickt> brson: I'll cut "programmer"
+9:15 AM <aturon> carols10cents: nothing like a deadline :)
+9:16 AM <carols10cents> aturon: yep just as long as all the stakeholders have time to weigh in before the deadline! :)
+9:16 AM <carols10cents> have time/make time
+9:16 AM <•erickt> aturon: I was hoping to launch before the birthday post
+9:16 AM <jntrnr> I’m totally game to try for this
+9:16 AM <aturon> erickt: say more?
+9:17 AM <•brson> erickt: "Do the Rust compiler error messages have enough information in them to help you find the problem?" I expected to find "usually" as a stronger option than "sometimes"
+9:17 AM <carols10cents> the birthday post would be good publicity, and the absolute latest deadline, but if we can get it done earlier, that would be better imo
+9:17 AM <•erickt> aturon: I don't want the survey to get lost in the birthday post
+9:17 AM <bstrie> we can publish before the birthday post, give the survey its own round of publicity, and then mention it during the birthday post as well
+9:17 AM <jntrnr> erickt: interesting point
+9:17 AM <•erickt> aturon: so we need to get it out before so it gets enough attention, then it can be referred to by the birthday post
+9:17 AM <•erickt> to direct newbies at it
+9:18 AM <aturon> erickt: OK, makes sense
+9:18 AM <jntrnr> ahhh
+9:18 AM <aturon> so shall we set a deadline for drafting new questions, and a deadline for review?
+9:18 AM <•erickt> brson: changed
+9:18 AM <jntrnr> but we’d still want to rev it so make newbie questions more visible (including the choice at the beginning for new users)?
+9:18 AM <nmatsakis> +1 to two rounds of publicity
+9:18 AM <aturon> hm, here's a question: can you change a survey after it is launched?
+9:18 AM <jntrnr> aturon: generally not a good idea
+9:18 AM <jntrnr> will skew results
+9:19 AM <aturon> i.e., can we launch the "Rust Community" portion now, and add the conditional flow for the birthday post?
+9:19 AM <carols10cents> aturon: you can, but then you get different answers in different responses
+9:19 AM <•erickt> aturon: yeah. How about we close this survey this Sunday, and launch on Monday?
+9:19 AM <aturon> ok. and worst case, we can launch basically as-is and make a separate survey for newcomers (and link to both in birthday post)?
+9:19 AM <•erickt> that'll give us some slop time for those of us that keep getting busy with work...
+9:19 AM <aturon> yep
+9:19 AM <carols10cents> erickt: you should stop that ;)
+9:20 AM <•erickt> carols10cents: if only it were that easy!
+9:20 AM <jntrnr> hmmm - I’d hope to catch the new users that happen upon the community survey also
+9:20 AM <•erickt> I think my schedule is getting a bit saner after a month of chaos :)
+9:20 AM <jntrnr> would be great to be ready for them if we can
+9:20 AM <•skade> okay, we crossed the 20 minute line for this topic
+9:20 AM <•erickt> jntrnr: I think we can get the new user flow done in time
+9:20 AM <aturon> jntrnr: right, this is a plan B
+9:21 AM <bstrie> skade: offtopic, did you have a location selected for a european conference? someone is asking about it in another channel
+9:21 AM <jntrnr> k
+9:21 AM <•skade> is there any way we can move some of that to the ticket?
+9:21 AM <•erickt> skade: yes good point. If anyone has anything else, please post to https://github.com/rust-community/team/issues/24
+9:21 AM <•skade> bstrie we contacted 13 venues in berlin
+9:22 AM <•skade> which channel, btw?
+9:22 AM <bstrie> ok, for some reason I thought it was set to be in poland. #rust on freenode
+9:22 AM <steveklabnik> skade: the ##rust on freenode
+9:22 AM <•brson> After taking the survey I have no doubt my answers could be used to uniquely identify me
+9:22 AM <•brson> not sure that's a concern
+9:22 AM <•brson> lot of text answers
+9:22 AM <•Manishearth> brson: I think that's true for most community members
+9:23 AM <•Manishearth> er, most prominent commiunity members
+9:23 AM <•erickt> ok next topic, skade wanted to talk about the core and community team relationships
+9:23 AM <•erickt> regarding the upcoming conferences
+9:23 AM <•brson> Manishearth: yeah, probably
+9:23 AM <•Manishearth> i don't think that's an issue
+9:23 AM <•Manishearth> (that=identification)
+9:23 AM <•skade> well, many things collapsing into one again
+9:23 AM <•erickt> skade: want to lead this discussion?
+9:24 AM <•skade> i don't need to
+9:24 AM <•skade> :)
+9:24 AM <•skade> I can make my case, though
+9:24 AM <•erickt> please do
+9:24 AM <•skade> I don't feel like communication works well beyond the personal circle that knows each other anyways or has ample time to spend anyways (by being fully employed on the project)
+9:25 AM <jntrnr> skade: for what it’s worth, as the new guy, I feel ya
+9:25 AM <•skade> also, I don't feel - although that's constantly denied - that there is much interest in assisting community work outside of the US, either by getting relaxed about people wanting to build thing there or though actual action
+9:26 AM <•erickt> skade: can you give some context for those that weren't on the thread?
+9:26 AM <•skade> the current case is that RustConf is a taken name for _exclusive use for conferences produced by the core team_
+9:27 AM <•skade> and that decision or wish was neither discussed nor communicated to the community team
+9:27 AM <•skade> which means, that people not striving to be involved in core project development, but into community building, the community team is both the right and to wrong place to be in
+9:28 AM <•erickt> aturon: is the RustConf explicitly called out on the trademark/naming page?
+9:28 AM <SimonSapin> it is
+9:28 AM <•skade> yes, but only as an obviously taken name
+9:28 AM <SimonSapin> https://www.rust-lang.org/legal.html " the words “RustCamp”, “RustCon” or “RustConf” cannot be used without explicit permission. "
+9:28 AM <•erickt> thanks SimonSapin 
+9:29 AM <•skade> also, that means, because core is (soon) purely US-based, all efforts are by the very nature of this "US first, everyone else later"
+9:29 AM <aturon> yes, in particular, the point is made that we're happy for people to use names involving Rust in conferences, but those names in particular are reserved by the core team
+9:29 AM <•skade> aturon how much experience does core have in running conferences?
+9:30 AM <•brson> skade: that's not to say that the core team has to 'run' rustconf
+9:30 AM <•skade> brson " those names in particular are reserved by the core team"
+9:30 AM <carols10cents> leah has literally written a book on running tech conferences, and she's done most of the work for rustcamp and most for rustconf, correct?
+9:30 AM <SimonSapin> rustconf.com seems to be run by Tilde
+9:30 AM <aturon> for a bit more detail about the rationale on the policy, here's what i wrote to skade yesterday: https://gist.github.com/aturon/3047b1d99879b666155d499462f509ac
+9:30 AM <aturon> yes, we work closely with Tilde
+9:31 AM <•erickt> carols10cents: yes that's correct
+9:31 AM <nmatsakis> I think the point brson was making is that we were working with Leah Silber
+9:31 AM — nmatsakis a bit behind, sorry
+9:31 AM <•brson> nmatsakis skade: rather, the core team controls the name, not the conference itself
+9:31 AM <•erickt> :)
+9:31 AM <•skade> aturon well, but tilde is US only, that means (we're taking circles around US first)
+9:31 AM <aturon> while skade probably has more to say, i want to reply to a few points just to keep things simple
+9:31 AM <•skade> brson that's not what was communicated to me
+9:31 AM <•skade> so, what level of experience does a parner for RustConf have to have?
+9:32 AM <•erickt> I think skade is right though that since the core team is in US, it's leaning on hosting things in the US because it's easier to organize
+9:32 AM <aturon> i disagree --
+9:32 AM <•skade> aturon the fact that tilde is a commercial vendor involved in Rust also make that thing a bit of a problem
+9:32 AM <aturon> as i've mentioned a few times before, we were strongly considering not doing RustConf this year, but instead another RustCamp, in Berlin
+9:32 AM <aturon> we talked to Tilde about this -- they also have international experience --
+9:33 AM <•skade> aturon sure, but why don't you just ask people _already present at the place with ample track record_?
+9:33 AM <aturon> but basically determined that on the timeline, core team bandwidth, finances, and so on, we were better off going to RustConf here, and pursuing RustCamp in Europe next year
+9:33 AM <aturon> skade: had we decided to head to Europe, that was very much the plan!
+9:33 AM <•skade> I think that shows a fundamental lack of trust and unwillingness to work with people beyond your circle.
+9:33 AM <aturon> the whole idea would be to support the European community
+9:34 AM <•brson> skade: there's budget for 1 conference this year
+9:34 AM <•Manishearth> what's the objection to Rust EU having a RustConf Europe or something?
+9:34 AM <•Manishearth> er, Rust Community Europe
+9:34 AM <•skade> brson no one is asking for money
+9:34 AM <•brson> there had to be a choice between locations
+9:34 AM <aturon> but, OTOH, we have a working relationship with Tilde, and a successful RustCamp under our belt with them
+9:34 AM <bstrie> aturon: I can understand wanting to be defensive about the trademark, but is there a reason not to extend permission to use the name to skade, who seems to have quite a bit of experience organizing conferences? especially if you're not planning an "official" conference in europe this year
+9:34 AM <aturon> so, there are a couple issues here -- one is the name RustConf, the other is supporting conferences in Europe
+9:34 AM <•skade> so, the necessarily qualification is "have a job in core"
+9:35 AM <•skade> if not, take a break for a year
+9:35 AM <aturon> Manishearth: bstrie: the thinking is laid out here: https://gist.github.com/aturon/3047b1d99879b666155d499462f509ac
+9:35 AM <nmatsakis> it is certainly possible to organize a conference that is not named RustConf
+9:35 AM <bstrie> aturon: at a certain point it seems like micromanagement, to get the core team so personally involved in something as intensive as running multiple conferences on multiple continents. delegation is necessary
+9:35 AM <•skade> it _is_ micromanagement
+9:35 AM <•erickt> Manishearth: I think part of it is just the amount of focus time that the core team has for things
+9:36 AM ⇐ skade_ quit (skade@moz-5etant.3loo.q5uh.b0c0.2a03.IP) Ping timeout: 121 seconds
+9:36 AM <aturon> we are happy to have and support conferences everywhere
+9:36 AM <•skade> last year, teams were announced without involving people running parties, then the last summer event had issues getting in touch with _anyone_
+9:36 AM <•erickt> I'm not sure if they (we?) have figured out to delegate this focus
+9:36 AM <aturon> the question is just about the RustConf brand
+9:36 AM <•skade> core is extremely protective about handing stuff out
+9:36 AM <aturon> we've been trying to be careful here --
+9:37 AM <•brson> skade: that's true
+9:37 AM <•skade> aturon you haven't even tried talking to people
+9:37 AM <aturon> note that we were not even willing to use the RustConf brand the first time around -- we deliberately started under the RustCamp monker
+9:37 AM <aturon> moniker*
+9:37 AM <•skade> that's not protective
+9:37 AM <•erickt> aturon / skade: how much involvement would it take for the core team to launch a conference?
+9:38 AM <carols10cents> skade: can you elaborate on why the use of the RustConf name for an event in europe is important?
+9:38 AM <•skade> carols10cents can you explain me why keeping it in the US is important? :)
+9:38 AM <•skade> simple: it's the most basic way to express "It's a conf, it's about Rust"
+9:38 AM <aturon> in terms of communication in general, this is something we've been trying to work harder on, which was the impetus for the recent reboot of the community team
+9:39 AM <•Manishearth> > Aside from overall quality, another factor in the RustConf naming is having explicit support by the core team, 
+9:39 AM <•Manishearth> hm
+9:39 AM <•erickt> skade: I don't think it is important to keep the conference in the US, and it's very much the intention of everyone here to take it internationally
+9:39 AM <•Manishearth> this sort of makes sense, but I'm not sure of the value of this
+9:39 AM <frewsxcv> why not always just call it "RustConf <city>"
+9:39 AM <bstrie> aturon: I think the rationale of wanting to start with a RustCamp and only then move the RustConf the next year is overly conservative, I think it is safe to say that europe has people interested in rust who would enjoy a conference
+9:39 AM <frewsxcv> namespace the conferences!
+9:39 AM <steveklabnik> bstrie: anyone can make a conference and call it anything _but_ "rustconf"
+9:40 AM <bstrie> aturon: and in case you're wedded to RustCamp -> RustConf, what would it take to convince you to let skade organize a RustCamp this year?
+9:40 AM <•skade> so, if the intention is running it using local people is there anyway, wha'ts the holdup?
+9:40 AM <•erickt> frewsxcv: I think that's what we'd end up doing
+9:40 AM <jntrnr> frewsxcv: Rust::Conf :)
+9:40 AM <•erickt> lol
+9:40 AM <frewsxcv> Rust::Conf<Portland>
+9:40 AM <•erickt> even better
+9:40 AM <jntrnr> love
+9:40 AM <steveklabnik> good thing specialization landed
+9:40 AM <•skade> aturon the reboot was also never discussed with the people in the team
+9:40 AM <hjr3> love that frewsxcv 
+9:40 AM <•skade> but that's a different topic
+9:40 AM <jntrnr> we’re at the 20 minute mark
+9:41 AM <nmatsakis> we've certainly been discussing the idea of some kind of strategy for what it takes to go to RustCamp vs RustConf;
+9:41 AM <jntrnr> (but I want to keep going)
+9:41 AM <•erickt> jntrnr: yeah, this is an important topic to resolve
+9:41 AM <nmatsakis> that is, I think the best way to summarize, is that yes, we've been trying to be careful, slow, and deliberate,
+9:41 AM <•skade> nmatsakis that means you have discussed it without involvement of the community team
+9:41 AM <nmatsakis> well, we were discussing it in prep for this meeting :)
+9:41 AM <•skade> and without asking people that might be interested about their opinions
+9:41 AM <bstrie> nmatsakis: I guess I would like to hear the rationale behind the continued carefulness and deliberation
+9:41 AM <nmatsakis> that is, with the intention of bringing it up
+9:41 AM <jntrnr> nmatsakis: I think maybe the question here is “is it necessary to go so slow?"
+9:42 AM <jntrnr> or at least *a* question
+9:42 AM <nmatsakis> I agree, that is the question. There is certainly value in going faster;
+9:42 AM <•brson> bstrie: personally, i don't have confidence it's possible to pull off a quality conference in eu this pear
+9:42 AM <nmatsakis> otoh there is also the possibility of organizing a family of rust conferences
+9:42 AM <nmatsakis> with their own distinct identity
+9:42 AM <nmatsakis> which also makes a lot of sense to me
+9:42 AM <•skade> brson I'm sorry?
+9:42 AM <bstrie> brson: why not? skade seems to think otherwise
+9:42 AM <steveklabnik> so, one other organization that uses this kind of model is jsconf: http://jsconf.com/i-want-to-run-a-jsconf.html <- people talk about how good they are, and also that they're good specifically because of these rules
+9:42 AM <•skade> why is that so?
+9:43 AM <•brson> skade: there's no venue, date or money
+9:43 AM <•skade> I'm sorry, but I have 10 conferences under my belt and steveklabnik can vouch for the quality?
+9:43 AM <•erickt> brson: I'd caution about that
+9:43 AM <jntrnr> it depends on the scale you’re trying to go for
+9:43 AM <•erickt> skade has been working on that
+9:43 AM <•skade> one of them was a 5 day exhaustion fest?
+9:43 AM <jntrnr> there’s a lot of choice in how big to go
+9:43 AM <•Manishearth> nmatsakis: steveklabnik IIRC JSConf had some issues with one of the confs messing up badly?
+9:43 AM <•skade> and someone in core is just like "well, we have no people over there"?
+9:43 AM <carols10cents> devops days is similar http://www.devopsdays.org/pages/organizing/
+9:44 AM <•Manishearth> something about the code of conduct or something
+9:44 AM <jntrnr> haha, I love “exhaustion fest” :)
+9:44 AM <steveklabnik> Manishearth: right, and their answer was to remove the jsconf brand from that conference
+9:44 AM <•skade> Manishearth yes, but that's the way things hapen
+9:44 AM <•Manishearth> I like the idea of a family of confs, but not so much at the JSConf level
+9:44 AM <steveklabnik> Manishearth: which is the point of having the control in the first place
+9:44 AM <•Manishearth> right
+9:44 AM <aturon> as a general point about communication and community team, basically i see this as an iterative process. the original charter certainly didn't include organizing confs (see https://internals.rust-lang.org/t/announcing-the-community-subteam/2248). we are still trying to figure out the best roles for the various teams to play, and the best way to communicate
+9:44 AM <•skade> sure, but that's overdoing things
+9:44 AM <steveklabnik> (and yes, i have enjoyed skade's conferences)
+9:45 AM <•skade> frankly, that whole thing feels very condescending on so many levels
+9:45 AM <•erickt> fyi, we're 15 minutes left and skade I believe needs to go then
+9:45 AM <aturon> in terms of Camp -> Conf, i want to mention that we're working from Leah's literal playbook
+9:45 AM <•skade> I hate to say it as harshly
+9:45 AM <bstrie> aturon: the way I see it, the reason for RustCamp -> RustConf is to bootstrap a core of local support and prove that a conference is viable, but skade has already done that in germany
+9:45 AM <nmatsakis> skade: sorry, what whole thing?
+9:45 AM <bstrie> aturon: which is to say, we should be willing to short-circuit the usual process and cut to the chase :)
+9:46 AM <nmatsakis> skade: the idea of evolving in an iterated way? the post that aturon linked to? having critera etc? rustcamp->rustconf? 
+9:46 AM <•skade> the whole interaction of the last months and the apparent inability of core to make use of skills already present 
+9:46 AM <•skade> nmatsakis the whole reasoning behind this often comes down to "we (core), cannot do this, but we (core) must"
+9:47 AM <bstrie> aturon: and unless you have someone specific in mind to run RustCamp EU next year (how many conferences can leah organize in a year?), skade is your best bet for that, unless you alienate him right here and now
+9:47 AM <•brson> it's not clear what to do to make skade happy
+9:47 AM <•erickt> bstrie / skade: I really hope we don't alienate skade, I've been wanting to attend that european conference for a while now
+9:48 AM <nmatsakis> skade: I see. I think it often comes down to a question fo whether something must be the "Official Rust Such-and-such" or whether it can be an independent concept
+9:48 AM <jntrnr> seconded
+9:48 AM <•skade> the problem is: unless mozilla changes hiring strategy changes to "core" is distributed, we have to find a way to make sure communities spring up without a literal member having time
+9:48 AM <•erickt> brson: I think we need to establish whether or not we want to enable franchising the Rust{Camp,Conf} name
+9:48 AM <steveklabnik> there is a way
+9:48 AM <•skade> I'm fully okay with core having expectations
+9:48 AM <steveklabnik> again, anyone can run anything
+9:48 AM <steveklabnik> and name it anything other than rustconf, under the current model
+9:48 AM <bstrie> brson: one-year provisional use of the RustConf brand, with the blessing of the core team. if you want to take the reins yourself next year, that option's still on the table
+9:48 AM <•skade> quite frankly, I'm more then welcoming it
+9:49 AM <•Manishearth> skade: what does core have to do with hiring strategies? core can evolve without mozilla hiring anyone
+9:49 AM <•skade> but this will never scale
+9:49 AM <nmatsakis> (it's really not about mozilla, in my view)
+9:49 AM <•Manishearth> same
+9:49 AM <•skade> okay, I'll take that one back
+9:49 AM <•erickt> skade: I think it's now a third of us that are non-mozilla in the core team
+9:49 AM → kecors joined (kecors@moz-qi3ia3.fios.verizon.net)
+9:49 AM <aturon> carols10cents: i'm curious to get your thoughts, given that you're running Rust Belt Rust
+9:50 AM <carols10cents> so i personally want my own brand for my conference
+9:51 AM <carols10cents> i dont' necessarily want to conform to core's event standards
+9:51 AM <carols10cents> and i don't feel the need to call my event "rust conf"
+9:51 AM <•skade> well, the standards aren't defined, and that's my issue there
+9:51 AM <aturon> (to be honest, i'm sort of at a loss. we've been trying to reach out and work with skade and others, support their local initiatives; we attended meetings, offered to help out in attending, speaking, organizing, etc; the one thing we're being conservative about right now is the name)
+9:51 AM <carols10cents> and i asked if "rust belt rust" was an acceptable name given the trademark policy, and yinz said it was
+9:52 AM <•erickt> carols10cents: how would you feel if we started a RustConf NYC? Would that end up hurting your conference?
+9:52 AM <•skade> and for europe, it's a major loss for being second player, again
+9:52 AM <carols10cents> erickt: as long as it wasn't the same dates, i don't think it would :)
+9:52 AM <•erickt> skade: so we need to define those standards
+9:52 AM <•Manishearth> aturon: skade I guess the question is, for both sides, "Why is the name important to you?"
+9:52 AM <carols10cents> i don't feel like core is making my event second class
+9:52 AM <•skade> i made my case clear, I want Europe to be a first-class citizen
+9:53 AM <•Manishearth> skade: that doesn't make it clear why the name is important though
+9:53 AM <carols10cents> in fact, yinz have been more than helpful with my requests for a core team member keynote and multiple submissions to the cfp from core team members
+9:53 AM <aturon> for the core team, the issue is that as the official conference, we want to ensure a level of overall quality, being "on message", control over the keynotes etc
+9:53 AM <carols10cents> and publicity through the twitter account, etc
+9:54 AM <•skade> I made that clear further up: {*}Conf usually shows there's something happening
+9:54 AM <•erickt> aturon: probably a similar branding of imagery and other media too
+9:54 AM <aturon> erickt: yes
+9:54 AM <bstrie> aturon: I suppose my issue is that it feels like there exist criteria beyond which the core team would offer their blessing to use the name, but it's not clear what those criteria are, so people who want to use the name feel strung along
+9:54 AM <aturon> a consistent experience, etc
+9:54 AM <carols10cents> skade: there are many conferences that are not called {lang}Conf and they do just fine
+9:55 AM <aturon> bstrie: yep, there's a definite lack of clarity here; as i mentioned to skade on email, i'd love to have an RFC on this topic
+9:55 AM <•erickt> bstrie: yeah. I'm going to start a https://users.rust-lang.org/c/community thread after this so we can hash out what, if any are those standards
+9:55 AM <•skade> carols10cents oh sure
+9:55 AM <•erickt> that could lead to an RFC
+9:55 AM <•Manishearth> skade: ah, exactly. And it has an official aura behind it. I guess the contention here is that EU wants to be able to hold first-class "official" events, Core wants to have more control over these but does not have the bandwidth for that. Sound correct aturon ?
+9:55 AM <nmatsakis> so, it's getting on 1pm, and I'm going to have to go, but I want to kind of share my 2 cents. Roughly speaking, I am open to the idea of opening up the "RustConf" or "RustCamp" brand more, assuming we worked out some guidelines (I think I'd prefer for things to start at RustCamp), but I also like (and continue to like) the idea of a diversity of Rust events
+9:55 AM <nmatsakis> with their own identity, versus having people feel the need for their event to be going through "Rust Central"
+9:55 AM <•skade> the problem here is: core has delayed taking up that discussion, so now it's too late to fulfill any standards
+9:56 AM <aturon> Manishearth: basically yes -- and i mentioned to skade by email that we were open to doing a RustCamp EU this year if we can work this out quickly, but i'm a bit worried about the current timeframe
+9:56 AM <•Manishearth> hm
+9:56 AM <•Manishearth> aturon: how much involvement are you looking for, exactly?
+9:56 AM <•skade> core has delayed _multiple_ things
+9:56 AM <•skade> I just want to point to my wish to create formal structures here last year 
+9:56 AM <steveklabnik> bootstrapping is hard
+9:56 AM <•erickt> skade: what's the timeline for your conference? Last we talked about this a few meetings ago I thought you said you didn't think you'd get it organized this year
+9:56 AM <•skade> September, around ViewSource from Mozilla
+9:56 AM <•skade> flaki came up with that
+9:57 AM <•skade> Also, just for the record, I'd veto "control of the keynotes" on reasons of diversity
+9:57 AM <•erickt> one thing for sure, skade / aturon, lets start planning out 2017 sooner rather than later
+9:57 AM <aturon> skade: formal structures being the foundation?
+9:57 AM <•skade> aturon yes
+9:57 AM <•Manishearth> aturon: We know that skade can hold a conf without needing help from core. So it's about how much involvement core feels the need for, and how much bandwith it has to do so.
+9:58 AM <•skade> erickt i'm not currently committing on anything for 2017
+9:58 AM <aturon> Manishearth: it depends to what degree we are shooting for consistency across the multiple confs
+9:58 AM <•skade> and the proper moment to speak about that would have been last year
+9:58 AM <•erickt> skade: not committing to anything, just starting the discussion
+9:58 AM <•skade> aturon consistency is the most boring thing to have anyways, community-wise
+9:58 AM <bstrie> Manishearth: we should also not expect core to have any more bandwidth this year than they do next, so I'd like some acknowledgment that delegation is the way to go :P
+9:58 AM <•erickt> skade: making sure we're all aligned
+9:58 AM <•Manishearth> aturon: I believe that that should get worked out by core sooner rather than later then :)
+9:58 AM <•skade> different places have different resources
+9:58 AM <•erickt> skade: since as you say, the best time to have talked about this was a year ago
+9:59 AM <•Manishearth> bstrie: yes, agreed.
+9:59 AM <carols10cents> skade: so be inconsistent and use a different name
+9:59 AM <bstrie> erickt: you have nobody but yourself to blame, you weren't holding meetings a year ago! take the blame!!
+9:59 AM — •erickt blames that erickt. what a jerk
+9:59 AM <carols10cents> a different name would be more interesting
+9:59 AM <•skade> one of my core issues there is that anytime I raise such an issue, cores response is "we have no bandwith", yet I see no movements towards making sure there is, e.g. by moving stuff out
+10:00 AM <bstrie> anyway, we should also likely move towards putting *something* about conferences in the community team's charter
+10:00 AM <•erickt> bstrie: we should
+10:00 AM <•skade> carols10cents I think that's a bit shortening the argument
+10:00 AM <•erickt> all, it's 5pm UTC and some people have to go
+10:00 AM <bstrie> also, if part of the problem is that the community team is literally half composed of core team members, and thus consuming their bandwidth, then we need to start growing the community team
+10:00 AM <aturon> bstrie: we've been using the team to at least coordinate planning
+10:00 AM <•erickt> y'all are welcome to keep talking, but some people need to go
+10:01 AM <aturon> e.g. the conf checkins we've been doing weekly
+10:01 AM <•erickt> so any formal decisions / proposals should be done through urlo or on github
+10:01 AM <•Manishearth> skade: This is also sort of the point of the community teams and subteams in general, too, core won't have bandwidth to do all the things, they should delegate. But for that we need to spend some core bandwith bootstrapping, keeping community up to date on how core wants things done. Which isn't happening so far.
+10:01 AM <hjr3> erickt feedback on the survey: Survey took me roughly 15 minutes to get through. What city and country do you live in? ---> what we are hoping for here? city names are duplicated in countries. if specification is an issue, we should include state.
+10:02 AM <•skade> carols10cents point being that I would have liked to be informed of those decisions and involved as a member of the community team.
+10:02 AM <bstrie> anyway yes, time's up, let's serialize our argumentativeness and save it till next week
+10:02 AM <•skade> Manishearth yes, but that issue has been raised before.
+10:02 AM <•Manishearth> bstrie: can't, nightly broke serde. that erickt 
+10:02 AM <•erickt> bstrie: I'm all for more team members :) but really, i just see people being on the community team to incentivize them to come to our meetings
+10:02 AM <•erickt> Manishearth: it's fixed!
+10:02 AM <•Manishearth> skade: i know, but it's a recurring theme in these discussions
+10:02 AM <bstrie> erickt: jntrnr is here and isn't on the core team, invite him to the community team :P
+10:03 AM <•skade> carols10cents I'm not necessarily fighting for the name, but I would have liked to be involved in a discussion of what would be necessary for it. Suddenly I know there's a ruleset around it.
+10:03 AM <aturon> I think this is largely a bootstrapping problem -- how in general do we want to deal with various things like conference planning, funding, meetups, outreach, etc
+10:03 AM <carols10cents> skade: the current ruleset is you can't use it
+10:03 AM <•erickt> bstrie: I've thought about it :)
+10:03 AM <aturon> part of this too should be moving toward the RFC process
+10:04 AM <bstrie> aturon: I'm certainly sympathetic to your time constraints, I just want to make sure this is a problem that gets resolved, and not a perpetual one
+10:04 AM <•skade> carols10cents i'm not sure that is helping 
+10:04 AM <frewsxcv> github.com/rust-community/rfcs
+10:04 AM <aturon> which is how we've been able to successfully build consensus in other subteams
+10:04 AM <carols10cents> and afaik mozilla owns the trademarks and decided on this policy before the community team existed
+10:04 AM <aturon> bstrie: i'm not talking so much about bandwidth here, as iteration
+10:04 AM <aturon> like, i think this team is already functioning much better than it was two months ago
+10:04 AM <aturon> and with better connectivity to core
+10:05 AM <aturon> as we work through these issues, we'll start to develop more process and lines of communication
+10:05 AM <carols10cents> skade: if you're not fighting for the name, what are you fighting for?
 10:05 AM <•Manishearth> frewsxcv: we seem to be moving towards having rfcs repos everywhere :p (there's a proposed style-team and style-rfcs repo for bikeshed madness :p)
 10:05 AM <•erickt> frewsxcv: hehe
 10:05 AM <bstrie> well in some sense the team is functioning at all now, so that's a start :P
