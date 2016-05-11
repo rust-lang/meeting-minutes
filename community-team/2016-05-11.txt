@@ -1,0 +1,598 @@
+12:00 <@erickt> And we're off! or on rather!
+12:00 < vladimir-sn> (that would explain why i know nothing about it)
+12:00 <@erickt> johannh: no prob
+12:00 < skade> vladimir-sn yeah, next week :D
+12:00 <@erickt> hello everyone! welcome to the meeting
+12:00 < skade> so, let's get the party started, last week before birthday
+12:00 < steveklabnik> wooo
+12:00 <@erickt> here's the agenda: https://github.com/rust-community/team/issues/26
+12:00 < jntrnr> woohoo!
+12:00 < johannh> :tada:
+12:01 < aturon> hello!
+12:01 <@erickt> let's start with the survey. omg we got 1600 responses
+12:01 < jntrnr> yessss
+12:01 < jntrnr> and some good data, too
+12:01 < carols10cents> *so far*
+12:01 < carols10cents> when are we closing it?
+12:01 <@erickt> carols10cents: in a month
+12:01 <@erickt> I expect we're going to be hitting some dropoff soon
+12:02 < skade> well, we haven't fully announced it over here, yet
+12:02 <@erickt> but the official rust birthday blog post should hopefully bump those numbers
+12:02 < aturon> the core team also plans to re-link from the anniversary blog post
+12:02 < steveklabnik> amd o
+12:02 < bstrie> erickt: present!
+12:02 <@erickt> skade: yeah, I'm going to bring it up tomorrow at the meetup
+12:02 < steveklabnik> i'll probably tweet a few more times beofr ethe close
+12:02 <@erickt> bstrie: morning!
+12:03 <@erickt> does anyone know if any of the local meetups pushed it out to their communities?
+12:03 < hjr3> i think there will be a long tail of people still taking it
+12:03 < bstrie> erickt: I figure that next week or so we'll sticky the survey on the subreddit, to give it some persistent exposure
+12:03 < hjr3> i pushed it out to my meetup
+12:03 < jntrnr> when we tweet, can we be sure to have a wording of something like “rather you use Rust or not, we’d love to hear from you"
+12:03 < hjr3> and will be verbally talking about it tonight at the meetup
+12:03 < skade> we will on the birthday
+12:03 <@erickt> nice!
+12:03 < jntrnr> though we’ve been getting like 30% response rate for non-users, would love to see even more
+12:04 < skade> I'll also ask OpenTechSchool if I can spam them once :)
+12:04 < skade> jntrnr I'm surprised, I would have expected more
+12:04 < hjr3> i think it is key to remind people that they do not have to be super involved in Rust to take the survey
+12:04 < skade> with 1600 responses, I would have expected most of them being non-users
+12:05 < jntrnr> skade: right - I think if we make it very clear we want non-user opinions too we might get more
+12:06 < skade> Okay, great. I got a review by a friend for our pesky question (sadly late), but we forgot a thing: mental illness. We should note that down for next year.
+12:07 < skade> not much more on that
+12:07 <@erickt> skade: want to make a ticket for the 2017 survey?
+12:07 < skade> will do that
+12:07 <@erickt> I think there was another comment or two on reddit and huon on better wording of some questions
+12:07 <@erickt> thanks
+12:07 < jntrnr> speaking of survey, I don’t know if anyone else wants to jump in, but I’d be happy to help normalize the responses
+12:08 < steveklabnik> also some trolling
+12:08 < jntrnr> ie taking the free form text and pull out themes, etc
+12:08 <@erickt> jntrnr / aturon: how's the international response rate?
+12:08 <@erickt> I haven't dug through the replies yet
+12:09 < aturon> sorry, was offline for a second
+12:09 < jntrnr> erickt: lots of Berlin
+12:09 < jntrnr> :)
+12:09 < aturon> feels like a lot in Europe generally
+12:09 <@erickt> jntrnr: that'd be great on starting to normalize responses. Please make sure you do it in a separate table or doc though, and keep this survey responses raw
+12:09 < jntrnr> erickt: agreed
+12:10 < jntrnr> pcwalton also did a word cloud, which might be one way we could viz the data for the blog post
+12:10 < aturon> skade: erickt: a ticket for the 2017 edition is a great idea -- we should also put in the feedback from the reddit thread
+12:10 <@Manishearth> o/
+12:10 < aturon> as well as other observations we've had about unclear questions etc
+12:10 < skade> https://github.com/rust-community/team/issues/28
+12:10 <@erickt> jntrnr: how are we doing outside of Europe and America?
+12:10 <@erickt> skade: lol at your ticket
+12:11 < jntrnr> erickt: would need to normalize the location responses
+12:11 < jntrnr> at a glance it looks like we’re doing relatively okay
+12:11 < jntrnr> but will know better later
+12:12 < aturon> so for now, i think we should mainly focus on outreach/advertising on the survey, and do more normalization work etc as it draws to a close (unless it's fully
+                automated)
+12:12 < skade> anyone wnats to contact @tshepang_dev if he nows places to spread that? and maybe @hannelita?
+12:12 < skade> (Africa and South America)
+12:12 < aturon> steveklabnik: can you reach out to tshepang? i think you've worked most closely with them
+12:13 <@Manishearth> skade: I can take point on that, but I might do it much later today
+12:13 <@erickt> Manishearth: great!
+12:13 < skade> Manishearth we're open for _a month_ :D
+12:13 <@Manishearth> :)
+12:13 < skade> 15 minutes over
+12:14 <@erickt> :)
+12:14 < steveklabnik> aturon: i can try, but i don't really know how to contact him. with the @ i'm assuming he's active on twitter?
+12:14 <@erickt> anyone have any other thing for the survey?
+12:14 < aturon> steveklabnik: not sure -- maybe email address from github? let's figure it out offline
+12:15 < hjr3> he is pretty active on twitter
+12:15 <@Manishearth> steveklabnik: he tweets
+12:15 < steveklabnik> cool
+12:15 <@erickt> alright moving on, how about conferences?
+12:15 < frewsxcv> (tshepang has an email at http://tshepang.net/about-me.html)
+12:15 < skade> steveklabnik http://tshepang.net/
+12:15 <@Manishearth> actually, before that could we talk about a diversity thing?
+12:15 <@erickt> sure
+12:15 < aturon> yes please, was going to say, diversity efforts have been on the agenda for every meeting but we keep not getting to them
+12:15 <@erickt> on to diversity!
+12:16 <@Manishearth>  (johannh is typing .....)
+12:16 < aturon> (we may need to have some email threads or something else async)
+12:16 < johannh> so we were talking with larissas who is leading diversity at Mozilla yesterday
+12:16 < johannh> and she liked the idea of Mozilla Diversity providing resources for a sort of official Rust Diversity event like RailsBridge or Node Together or Rails Girls
+12:17 < johannh> resources = money, afaiu
+12:17 <@erickt> nice!
+12:17 < hjr3> that is great news
+12:17 < johannh> I sent her another email to confirm that
+12:17 < skade> I'm meeting with a person interested in running such a thing that used to run Geek Carrots and Rails Girls Warsaw
+12:17 < jntrnr> wow!
+12:17 < jntrnr> nice :D
+12:17 < skade> (wednesday)
+12:18 <@erickt> skade: cool!
+12:18 < bstrie> johannh: would anyone who has experience running such events be willing to lend a hand to organize them?
+12:18 < johannh> it would be great if we could prepare this so that we could start e.g. a few events all other the world
+12:18 < skade> I also have a meeting with Microsoft Community DE before the thing in Munich (with alex crichton) about their involvement in our rust communty
+12:18 < johannh> I guess you'd have to find local people to organize that
+12:18 < johannh> which should be easy in Berlin, for example ;)
+12:18 <@erickt> that would be great. johannh, did you get a sense if they'd be able to fund international events?
+12:18 < aturon> johannh: can you spell out a little bit what that would look like?
+12:18 <@Manishearth> erickt: yes
+12:19 -!- arielby [Ariel@moz-6n2c03.mh2d.1ibb.0101.2620.IP] has joined #rust-community
+12:19 <@erickt> \o/
+12:19 < skade> bstrie see my comment, we have a couple of these
+12:19 < aturon> johannh: in terms of: how are these events structured? how can people help?
+12:19 <@Manishearth> erickt: but volume of events might be an issue. 3-10 events works, 100 does not. etc
+12:19 < johannh> yeah, please keep that in mind, we're talking about just a few events for a start
+12:19 <@erickt> I'd happily take 3-10 when we have none right now :)
+12:19 <@Manishearth> So we basically have local coach volunteers
+12:19 <@Manishearth> erickt++
+12:19 -!- doener [doener@moz-qjbkeh.mtv2.mozilla.com] has joined #rust-community
+12:20 < skade> *Bridge events can usually self-fund
+12:20 <@Manishearth> skade: how? by folks paying for it?
+12:20 < aturon> the Mozilla Rust team is also open to helping pay for travel for mentors
+12:20 < skade> you need a room and catering
+12:20 < hjr3> i know my company would be willing to provide resources (money) if this program is official
+12:20 < skade> usually, you get a room for free at a university and a local company giving you 500 euros for a catering
+12:21 <@Manishearth> hjr3: location?
+12:21 < johannh> hjr3: +10
+12:21 <@erickt> I imagine it'd also help to have training materials
+12:21 < skade> Rails Girls is actually making a profit from sposnoring
+12:21 <@Manishearth> skade: ah, like that
+12:21 < johannh> I think that "official" is the key word here
+12:21 < aturon> johannh: can you walk through one example such event? is it a one day thing? hands-on tutorials? talks?
+12:21 < skade> the bigger problem is coursework material and general global infrastructure
+12:21 < hjr3> west coast. southern california / seattle
+12:21 <@Manishearth> erickt: yes, we would need to do that first. I am very fond of nmatsakis' training slides
+12:21 < skade> the thing is that events draw finding
+12:21 <@Manishearth> however they are intended for an audience with experience in C++ IIRC
+12:21 < johannh> aturon: yes, it's usually a one day thing with hands on tutorials
+12:21 <@erickt> Manishearth: me too, and yeah they're pretty technical
+12:21 <@Manishearth> we have a page somewhere with training materials consolidated
+12:22 < skade> so sponsor each and every event and make sure they don't have a problem when they can't find sponsors
+12:22 <@Manishearth>  we can work off that
+12:22 < johannh> there is a relatively clear separation between mentors and students, students don't need to have any experience
+12:22 < aturon> OK, great. various people have been hard at work creating such material, for a range of audiences. i don't remember to what extent the community team has already
+                started gathering this together, but we can step it up
+12:22 < johannh> usually not even programming experience
+12:22 < skade> insurance is probably much more important then money
+12:22 <@Manishearth> agreed
+12:22 <@erickt> steveklabnik: how much material have you produced so far? have you put together a one (or more) day event?
+12:22 < skade> I think the bigger problem for rust is that we can't have a "website in a day" course
+12:22 < johannh> yes we would need some sort of Rust team endorsement and branding, like a blog post and Rust in the name
+12:22 < johannh> also we need high quality material, as others said
+12:22 < skade> johannh that's already covered
+12:22 <@Manishearth> erickt: I think the oscon one is like that?
+12:23 < skade> and many people will come from many different avenues
+12:23 < steveklabnik> erickt: i have been mostly using nmatsakis's stuff from mozlando. i was gonna have to do more but then oscon got cancelled
+12:23 <@erickt> aturon: yeah, we just need to be organized about building these decks
+12:23 < skade> some with no experience, some with no systems programming expierence, etc.
+12:23 < johannh> yup, no matter if this is successful, having an organized set of lessons will really help our efforts going forward
+12:23 < skade> I'd contact the bridge foundry this week, if no one minds
+12:23 < steveklabnik> skade: i think you could do a website in a day
+12:23 < steveklabnik> something like pencil or nickel
+12:23 <@Manishearth> IMO it can be done in a day, but it will be p intense
+12:24 < aturon> it may be that, for Rust, a different kind of final product than "website" is better
+12:24 < nmatsakis> I'm pretty interested in working on improved training materials targeting less experience
+12:24 <@Manishearth> right
+12:24 < aturon> so i'm wondering if we can push this discussion in the direction of direct action items
+12:24 < johannh> so the timeline to get something together could be until London, and announce it afterwards
+12:24 < skade> steveklabnik well, but why? In Rails, it makes a lot of sense, but I don't think such workshops should be typecasted like that
+12:24 < carols10cents> a game in piston would be good
+12:24 < skade> carols10cents yes
+12:24 < hjr3> a game would be awesome
+12:24 < vladimir-sn> +1
+12:25 <@Manishearth> ooh nice
+12:25 <@Manishearth> though. graphics can be annoying
+12:25 <@erickt> carols10cents: like a pacman or snake clone might not be *that* hard
+12:25 < steveklabnik> oh, i think i missed your point. you said "we can't" and so i thought you were talking about possiblity, not if it's the best idea or not
+12:25 < aturon> johannh: in terms of official status, that's totally fine; the community and core teams should work closely together here, with community leading and core providing
+                support
+12:25 < skade> Manishearth yes, but e.g. graphics people can do that already
+12:25 < steveklabnik> skade: ^
+12:25 < jntrnr> sdl in rust is pretty tolerable if you give them a starting project
+12:25 <@erickt> Manishearth: could do it with on the commandline with "\r" to reset the cursor
+12:25 <@Manishearth> jntrnr: oh, nice
+12:25 < aturon> I suggest we leave off brainstorming on the details for another time
+12:25 < skade> yes, so, tl;dr: we should go spend the summer with people who want to do coursework, I have the RustBridge name
+12:25 < skade> let's source people actually good at the thing
+12:25 < aturon> (and focus on logistics)
+12:26 < aturon> johannh: do you have something specific in mind to get together for London? what's needed?
+12:26 <@erickt> ok so action items on training material. Someone want to reach out to the piston folks and see if they already have some tutorials on this?
+12:26 <@erickt> and the same to iron/nickel/pencil/etc for a website tutorial?
+12:26 < steveklabnik> what about the arcaders tutorial?
+12:26 < aturon> hmm, can i suggest that we form a dedicated group to try to drive this effort?
+12:26 < aturon> so we have a clear point of responsibility
+12:26 < skade> johannh aturon we have no confirmation for the oscon workshop in london
+12:26 < johannh> aturon: well we have a pretty big list of to-dos for this right now and it would be great to have a meeting in London to check on the status
+12:27 < skade> aturon the suggestion is still to form a RustBridge project that works from there ")
+12:27 < aturon> skade: hm, I was assuming that "London" was referring to the upcoming Mozilla work week there
+12:27 <@Manishearth> also, https://github.com/rust-community/team/issues/11#issuecomment-203500974
+12:27 <@Manishearth> forgot about Rurtle
+12:27 < skade> ah, that london
+12:27 < johannh> yeah I meant "that" London, sorry
+12:27 < skade> E_TOO_MUCH_LONDON
+12:27 <@Manishearth> though I prefer using LOGO-likes for younger students
+12:27 < skade> Manishearth ben has ideas, and he is an OpenTechSchool person
+12:27 < aturon> skade: OK, so the RustBridge project will encompass the people driving this; but who is involved? maybe we can put together a roster today
+12:28 <@Manishearth> ben?
+12:28 <@erickt> aturon: a dedicated group sounds good. if we don't have volunteers here, we can start a community urlo thread to gather them
+12:28 <@Manishearth> oh, Kampmann
+12:28 < skade> ligthyear is ben
+12:28 < carols10cents> E_TOO_MANY_BENS
+12:28 <@Manishearth> that^
+12:28 <@Manishearth> :)
+12:28 < vladimir-sn> i'm happy to volunteer - but probably best to start a thread anyway
+12:28 < skade> aturon I'll speak to @a_meba next week and @hannelita, they both have done things like that before
+12:28 < aturon> erickt: i'm happy to act as support, wearing both my core team hat (official signoff, advertisement, etc) and Mozilla management hat (financial/logistical support
+                where possible)
+12:28 < skade> and then grow a structure from there
+12:29 <@erickt> aturon: <3
+12:29 < johannh> even though these events can self-fund, I will still go ahead with Larissa because that would really make it easier for folks who can't organize self-funding
+12:29 < aturon> johannh: absolutely. let's get funding from everywhere we can
+12:29 <@erickt> ok so action items, skade will reach out to those folks (want to ask hannelita about the survey instead of Manishearth?)
+12:29 < skade> johannh some form of over-arching funding and support structure would be great and having funds for that would help a lot
+12:30 <@Manishearth> erickt: hm?
+12:30 <@erickt> we'll start a thread with Piston and Web community for getting training material
+12:30 < skade> erickt yes
+12:30 <@Manishearth> erickt: https://github.com/rust-community/team/issues/11 already exists btw
+12:30 < aturon> can we also start either a ticket or rust-community email thread dedicated to RustBridge?
+12:30 < skade> I'd prefer such a structure to be self-running, without mandatory involvement of the community team and core for less friction.
+12:30 < johannh> we have the Mozilla offices and catering there in any case, but it'd be cool if diversity would let us be more flexible
+12:30 <@erickt> Manishearth: you said you'd reach out to hannelita earlier, but if skade's also going to reach out to them then we probably shouldn't be too spammy
+12:30 <@Manishearth> erickt: I said I'd reach out to tshepang :)
+12:31 <@erickt> Manishearth: oops
+12:31 < skade> aturon yep, once I find time between all that
+12:31 < aturon> skade: +1, preliminary involvement should be helping bootstrap and structure
+12:31 <@Manishearth> erickt: I don't know hannelita, I believe skade does though
+12:31 < johannh> skade: +1, but involvement helps legitimize it in the beginning
+12:31 < johannh> like aturon said
+12:31 < skade> Manishearth She's part of Rust Sao Paolo
+12:31 <@Manishearth> skade: yes! but I'd like to kick it off with a nice support system
+12:31 < aturon> OK, so we have some reasonable next steps for a RustBridge project
+12:31 <@Manishearth> skade: I know, but I don't know her :)
+12:31 <@erickt> Manishearth: copied that ticket into the meeting notes
+12:32 < aturon> which we'll plan to launch in an official way
+12:32 < aturon> i'd like to talk about other efforts as well
+12:32 < skade> johannh yes, endorsement is great, I just want to make sure it is not impacted by people being distracted by other important things
+12:32 < skade> yes
+12:32 <@erickt> aturon: do you see the thread on RustBridge different from getting volunteers to drive diversity efforts?
+12:32 < aturon> erickt: i think we want a dedicated team focusing on getting RustBridge going
+12:32 < aturon> as opposed to diversity in general
+12:32 <@Manishearth> aturon: strike team?
+12:33 < aturon> exactly
+12:33 -!- DebuggingPanda [DebugginPan@moz-43dn8p.ewe-ip-backbone.de] has quit [Quit: Leaving]
+12:33 <@Manishearth> wfm
+12:33 < aturon> it's best if there is clear responsibility/ownership to help make sure we keep up momentum
+12:33 <@Manishearth> right
+12:33 < nmatsakis> more specific == better
+12:33 < aturon> OK, so thinking beyond RustBridge,
+12:33 <@erickt> fyi, here are the action items I'm noting down: https://public.etherpad-mozilla.org/p/rust-community
+12:34 < skade> nmatsakis ack
+12:34 <@erickt> shoulda sent that out earlier
+12:34 < aturon> nmatsakis, maybe you can mention some of your efforts and obstacles with your local meetup?
+12:34 < aturon> basically, there are several of us that really want to help on the diversity front, but don't know how/haven't had luck doing it effectively
+12:34 < nmatsakis> I don't know how exciting it is; just that I've been trying to reach out to lots of meetups locally, including diversity-focused ones, and haven't heard much
+                   back --
+12:34 < nmatsakis> though the one group that did get back to me
+12:34 <@Manishearth> erickt: I'm clearing etherpad colors, btw, white-on-maroon is hard to read in the morning :)
+12:34 < nmatsakis> was focused specifically on non-programmers
+12:34 < nmatsakis> so wokring on beginning training materials woudl really help
+12:34 <@erickt> Manishearth: :)
+12:34 -!- listochkin [textual@moz-8n6c6s.skif.com.ua] has quit [Quit: My Mac has gone to sleep. ZZZzzz…]
+12:35 <@Manishearth> aturon: we haven't had a concrete plan yet AFAICT. This is a good start though
+12:35 < nmatsakis> as for the others, I imagine I have to just ... persist
+12:35 < nmatsakis> and/or maybe go to some other meetups? hard to find the time
+12:35 < aturon> Manishearth: we haven't had something as broad as RustBridge. but we've been trying more local/specific things
+12:36 <@Manishearth> I am not sure how much time I'll have immediately after I join, but I can try to help out with materials
+12:36 < aturon> i'd love to hear from people with more experience here about what the most effective steps seem to be
+12:36 <@Manishearth> aturon: right
+12:36 < johannh> that would be skade
+12:36 <@Manishearth> aturon: skade has organized basically a rustbridge event in the past
+12:36 <@Manishearth> just not called that i guess
+12:36 < aturon> do we think that things like RustBridge are our best bet?
+12:36 < skade> it was an event together with WomenWhoCode
+12:37 < skade> hate to bring that up again, but I do get a lot of responses from local groups that they don't want to support the project currently, as it is pubically very
+               non-diverse
+12:37 <@erickt> can we partner with an organization, where we effectively do all the work, but do it under a *Bridge group
+12:37 < skade> the state that they don't want to spread mozilla job material isn't helping
+12:37 < johannh> skade: what project exactly?
+12:37 < skade> johannh the rust project
+12:37 < aturon> btw, one data point i was pointed at recently: see https://medium.com/@wifelette/emberconf-2016-the-morning-after-post-mortem-b37d195b916b#.ra9ge6jqm, specifically
+                "The Ladies"
+12:37 < nmatsakis> mozilla job material?
+12:37 < johannh> oh
+12:38 <@erickt> skade: what do you mean by they don't want to spread job material?
+12:38 < skade> erickt yes
+12:38 < skade> and we are under watch, I have met at least one person that knew how many job positions were filled and how
+12:39 < aturon> skade: not sure what that means? job positions where?
+12:39 < skade> aturon at mozilla, for servo and rustc
+12:39 < steveklabnik> to make it concrete, jntrnr being hired
+12:39 < steveklabnik> as one example, specifically
+12:40 < steveklabnik> there was a job open, it got filled, people see
+12:40 < aturon> hm ok
+12:40 < steveklabnik> (and it's not specifically about jntrnr, who is awesome. just that it's yet another white dude)
+12:40  * jntrnr understands
+12:40 < skade> yeah, it's not the individuals, but diversity-wise, team.html got worse then last year
+12:41 < carols10cents> hi
+12:41 < aturon> :)
+12:41 <@erickt> :)
+12:41 < jntrnr> it got better in some ways :)
+12:41 < skade> carols10cents :)
+12:41 <@erickt> but still, not good enough
+12:41 < jntrnr> but yeah, not good enough
+12:42 <@Manishearth> yep
+12:42 < skade> I'm going to keep my mouth shut publicly about that, but I'm on an event next week where someone will certainly ask me about the outcome of my complaint last year :)
+12:42 < skade> sadly, I haven't got much to give
+12:42 < skade> and that makes outreach hard
+12:43 < nmatsakis> so there are two questions I guess
+12:43 < jntrnr> fwiw - and I don’t know if this is important to bring up here, but there’s more to diversity than just “white dude”, no?
+12:43 < skade> So, to give that a positive spin: where's the way out of this.
+12:43 < steveklabnik> jntrnr: absolutely.
+12:43 < johannh> jntrnr: yes, absolutely
+12:43 <@Manishearth> jntrnr: well yeah. intersectionality etc
+12:43 < skade> jntrnr definitely, but "who gets the money" is an important topic at the moment
+12:43 <@brson> skade: how is team.html worse than last year? whate are the numbers?
+12:43 < nmatsakis> what we can do to bring in a larger audience, which I think we sort of *have* been talking about, in terms of RustBridge etc, but maybe there are other similar
+                   initiatives (that's sort of what I've been trying locally, if unsuccessfully)
+12:43 < johannh> jntrnr: it's just that this is a pretty obvious starting point to non-diversity
+12:43 <@Manishearth> jntrnr: also, I'm not a white dude, but I don't count as particularly diverse, since IIRC we're overrepresented in tech in the US
+12:44 < nmatsakis> and whether there is a way to do more in terms of cultivating existing people in our community
+12:44 < nmatsakis> one thing that aturon and I (and others) have discussed for eample
+12:44 < nmatsakis> is organizing bug hunt weeks
+12:44 < nmatsakis> specifically targeting bringing in new contributors
+12:44 < skade> brson there hasn't been much visible change, community team lost a member and gained a member, the teams in itself got bigger
+12:44 < johannh> jntrnr: we can't say "we're diverse in other things" if there are only white dudes on the page
+12:44 < nmatsakis> where we all take some time to focus on that, and try to drum up excitement etc
+12:44 < aturon> i've been sitting here trying to figure out how to comment on the hiring front. it's complicated. of course, we *did* hire edunham previously. and i'm hearing some
+                hopeful things about the reamining servo positions
+12:45 < johannh> (I know you were not saying that) :)
+12:45 < jntrnr> right - having strong, visible diversity is important.  Totally get it
+12:45 < jntrnr> just hard to talk about invisible minority type stuff as well
+12:45 < skade> aturon oh sure, but after last years fallout, noticeable improvements are not there.
+12:45 < vladimir-sn> you mean the CTO thing?
+12:45 < skade> which is okay, but we should step lightly there and we should address it
+12:46 < aturon> skade: i feel like we're mixing up hiring and the official rust teams
+12:46 <@Manishearth> vladimir-sn: no, see the subteam announcement
+12:46 < steveklabnik> they are intertwined, and people don't always draw the distinction either
+12:46 < skade> aturon outsiders don't make that much of a difference and the team page doesn't make clear who's from where
+12:47 < aturon> skade: sure. but the approach to improve things is quite different in the two cases :)
+12:47 < skade> aturon yes, 100% that
+12:47 < steveklabnik> also, things like "I know mozilla is in charge of this project, they had a job opening, who did they hire", it may not even be about the teams pages in cases
+12:47 < aturon> in terms of the official teams -- i hate to bring up the old "pipeline" problem, but at the moment, a key problem is simply a lack of candidates for many of the
+                subteams
+12:47 < skade> it also has a marketing component, it's a nasty field, because I'm sure no one would want to be handed around as a token :)
+12:47 < steveklabnik> and yes, mozilla is not TECHNICALLY 'in charge' due to the teams setup, but it's a perception
+12:47 < johannh> skade: should we add a "staff" badge to underline staff non-diversity? :P
+12:47 < aturon> so, what i've been thinking about there is two-fold:
+12:48 < skade> aturon yes, but that has been the argument last year :)
+12:48 < skade> johannh maybe :)
+12:48 < nmatsakis> I know it's a joke,
+12:48 < aturon> on the one hand, opening the front end of the pipeline, through efforts like RustBridge
+12:48 < nmatsakis> but I don't think "staff" makes any sense, since it implies a sort of owneship that I do not see
+12:48 < aturon> on the other hand, possibly setting up a formal mentoring system
+12:48 < skade> nmatsakis yep, I see that
+12:48 < aturon> that's specifically geared toward underrepresented groups
+12:48 < aturon> (see the link i sent earlier)
+12:48 < aturon> carols10cents: btw, i'd really love to hear your thoughts here...
+12:49 <@Manishearth> aturon: now that I've graduated I suspect I'll have time to re-bootstrap the mentoring program
+12:49 < skade> aturon yes, but for example, having a position in RGSoC or Gnome Outreach program would have been something and they have passed
+12:49 <@Manishearth> depends on how much work I have otherwise :)
+12:49 <@Manishearth> skade: there are two projects in rust iirc in rgsoc
+12:49 <@erickt> aturon: the emberconf link?
+12:49 < aturon> erickt: yes
+12:49 <@Manishearth> actually more than two?
+12:49 < carols10cents> hi so, yeah i put my name in for the mozilla rustlang position, and was honored to make it to the technical phone screen
+12:49 <@Manishearth> I would love to have help with the mentoring stuff though
+12:49 < skade> Manishearth could any of them be trained to move to compiler building?
+12:49 < aturon> i believe servo is also doing outreachy? i know we've not had a lot of success on that before
+12:50 <@Manishearth> and I should probably start mentoring triage and stuff
+12:50 < skade> oh yeah, it's outreachy now :)
+12:50 < carols10cents> but i am nowhere near as qualified as jntrnr !
+12:50 <@Manishearth> because that's important and useful and helpful and we need more people
+12:50 < jdm> servo had a great outreachy intern last quarter, fyi
+12:50 < aturon> hi jdm! also would love to get your thoughts here
+12:50 <@Manishearth> skade: IMO compiler building isn't hard, just slightly different and intimidating
+12:50 <@Manishearth> so yeah
+12:50 < skade> Manishearth so much this
+12:50 < skade> it's a huge project and without showing people around, it will be hard
+12:51 <@Manishearth> skade: my recurring advice for compiler building is "work on easy bugs in clippy". Because we have a shitton of those, and we let you muck with compiler
+                     internals without being exposed to the full compiler
+12:51 < skade> I see the problems of getting people on board with low time and constraints :/
+12:51 < nmatsakis> so I think one thing is that we've been working out best strategy for e.g. interns and outreachy and similar programs; servo (and specifically jdm) has been
+                   blazing some trails we should learn from
+12:51 <@Manishearth> it's a good step up
+12:51 <@Manishearth> and many of our contributors have had fun in rustc too
+12:51 <@Manishearth> nmatsakis: +1
+12:51 <@Manishearth> nmatsakis: I documented many of our tactics in that blog post
+12:52 < nmatsakis> yes, and aturon/I were just recently talkign to larsberg/jack about this point specifically
+12:52 <@erickt> Manishearth: can you add your blog post to https://public.etherpad-mozilla.org/p/rust-community
+12:52 <@Manishearth> skade: yeah :/ Rust doesn't take time to work on, really (pick your bugs carefully), but compile times are forever
+12:52 < nmatsakis> Manishearth: wait, which blog post? :)
+12:52 < nmatsakis> well, some bugs are easier than others :)
+12:52 <@Manishearth> nmatsakis: http://manishearth.github.io/blog/2016/01/03/making-your-open-source-project-newcomer-friendly/
+12:52 < skade> point being now; it's a thing that should be addressed in our blog post, possibly with a semi-committed timeframe
+12:52 < skade> timeframe being "next year", maybe?
+12:52 <@Manishearth> nmatsakis: there are also hard bugs that can be broken up into bite size thingies
+12:53 <@Manishearth> erickt: so lazy
+12:53 < aturon> ok, so: we got off on this discussion by skade raising the subteams etc. but to me, this isn't a problem we can solve directly -- it has to flow out of efforts like
+                RustBridge and mentoring
+12:53 <@erickt> Manishearth: fyi, illogiq said he hoped to make future community meetings when his schedule works out
+12:53 <@erickt> Manishearth: :p
+12:53 < carols10cents> skade: what's a thing that should be addressed with a timeframe?
+12:53 < aturon> so i'd prefer to continue focusing on what we can do to improve those efforts
+12:53 < nmatsakis> Manishearth: c (e.g. I've been trying with incremental to make efforts in this direction, seems to be working somewhat)
+12:53 <@Manishearth> erickt: yay. <3 llogiq
+12:53 < skade> carols10cents lack of team diversity
+12:53 < carols10cents> skade: rust teams or mozilla teams?
+12:53 < skade> rust teams
+12:53 <@Manishearth> aturon++
+12:53 <@erickt> alright folks, we're coming upon the hour
+12:54 <@erickt> any other action items for diversity?
+12:54 < nmatsakis> skade: what do you mean by "addressed" I guess is what I am unclear on; if what you mean is the sort of things aturon was saying? seems good?
+12:54 < johannh> ok Manishearth and I really got to get to our thing
+12:54  * nmatsakis oops
+12:54 < aturon> skade: i'm unsure about what a timeframe means here. again, it feels like the focus should be on the positive outreach efforts; and if we do well on those, the
+                subteams will naturally show it, no?
+12:54 <@erickt> nmatsakis: can you put on the https://public.etherpad-mozilla.org/p/rust-community what groups you've contacted and where you had success?
+12:54 < nmatsakis> erickt: I can
+12:54 <@erickt> thanks
+12:54 < skade> aturon no one shows up naturally
+12:55 <@Manishearth> cya!
+12:55 < aturon> skade: the start of that sentence was "outreach efforts" :)
+12:55 < aturon> basically, i'm trying to say: i don't think the subteams are something we can attack directly
+12:55 < carols10cents> it feels like a deadlock situation. we can't get people to come without having visible diversity on the teams page, we can't put visibly diverse people on
+                       the teams page if they're not around
+12:55 < aturon> we have to work on outreach an mentoring
+12:55 < steveklabnik> carols10cents: ++++
+12:55 < nmatsakis> carols10cents: (indeed)
+12:56 < skade> aturon sure we can, you can train up people, many orgs do that
+12:56 < aturon> skade: that's what i mean by mentoring :)
+12:56 < skade> in any case, strategy for this are out of scope for now, but, well... workshop?
+12:56 < arielby> I don't care as long as we don't get an affirmative action hire
+12:57 <@erickt> so in these last 4 minutes, are the from RustEurope here?
+12:57 < bstrie> carols10cents: "visible diversity" is a sticking point, I know plenty of women on github who really, really don't want their faces in their github avatars
+12:57 < aturon> skade: by "workshop", do you mean you want to set up a dedicated call on this?
+12:57 < skade> carols10cents yes, that's the catch22 that I complained about last year, we could have done that faster
+12:57 < carols10cents> bstrie: exactly
+12:57 < carols10cents> also a problem
+12:57 < skade> erickt we have a call with them in 4 minutes
+12:57 <@erickt> skade: great!
+12:57 <@erickt> I wanted to make sure I connected them with you :)
+12:57 < skade> carols10cents not wanting to raise that again too much, but it still exists
+12:58 -!- listochkin [textual@moz-b46g2p.equate.volia.net] has joined #rust-community
+12:58 < aturon> in terms of blog posts, what i'd more like to do is announce things like RustBridge and a dedicated mentoring program (if we can get such a thing off the ground)
+12:59 < carols10cents> aside from having my face on the page, i feel pretty helpless
+12:59 < bstrie> carols10cents: it's not your problem to solve :P
+12:59 < carols10cents> i'm here. i don't know why there aren't more women here.
+12:59 < carols10cents> bstrie: good ;)
+12:59 < aturon> should we set up a dedicated call on this topic?
+12:59 < skade> yes
+12:59 < aturon> we could potentially bring in people who've had success in other communities
+13:00 < aturon> e.g. Leah's mentoring program
+13:00 < nmatsakis> +1
+13:00 < bstrie> there are women here. I know of several in the rust community, but their nicks don't make it obvious
+13:00 < aturon> which AIUI was extremely successful
+13:00 < aturon> OK, erickt action item: get a call set up :)
+13:00 <@erickt> aturon: already on the list :)
+13:00 < aturon> sweet!
+13:00 < skade> yeah, I think there's not much _factual_ that excludes people
+13:01 < bstrie> which, again, is the sticking point of "visible" diversity. it would be utterly stupid of us to extend a team membership iff they're willing to out themselves as a
+                woman
+13:01 < aturon> yes, fortunately we're starting from a relatively good place in that respect
+13:01 <@erickt> aturon: maybe we can get leah to join the call, or attend a meeting
+13:01 < skade> I mean, go to a C++ conference, it's all dudes and some are really _frustrated_ and see Rust as better pastures (I had that last year)
+13:01 < aturon> erickt: yes. call is probably easiest
+13:01 < skade> on the other hand, we should avoid tokenism at all cost, it just burns you in the long run
+13:01 < skade> (been there, done that)
+13:02 < skade> ack to call
+13:02 < skade> it won't be fixed tomorrow, but eventually
+13:02 < aturon> FWIW, i agree with skade that we haven't done enough on this over the last year. but i don't think it helps to beat ourselves up too much about that. the community
+                team is in a much better place now, and we already have some plans in the works!
+13:02 < skade> carols10cents and thanks for being around *bows head*
+13:02 < aturon> so let's try to stay positive and focused on those efforts
+13:02 < bstrie> one thing we can do, somewhat related to diversity, is start finding people on other continents and empowering them to work on rust outreach in their local areas.
+                sow the seeds of world domination!
+13:02 <@erickt> +1
+13:03 < skade> aturon yeah, I just think having a stern and serious statement about that would be a good first step
+13:03 < bstrie> e.g., I'm sure we can find someone in the SK rust community who could use some organizational assistance
+13:03 <@erickt> bstrie: and now we got that survey we can hopefully start to understand our demographics better
+13:03 < bstrie> I haven't spoken to any rust users in brazil, but that's a huge market too
+13:04 < skade> doens't have to be large
+13:04 < aturon> skade: we can talk about it in the call, but i disagree; i think getting some efforts together, and have more positive announcements about how to get involved, are
+                likelier to build foward momentum here
+13:04 <@erickt> skade: I'd love some concrete steps too. It's far too easy to write up a post and not have that followthroug
+13:04 < aturon> in any case, we're over time and should cover this more in the dedicated call
+13:05 <@erickt> indeed
+13:05 <@Manishearth> bstrie: some of them have started using their full names on github though
+13:05 <@Manishearth> which is nice to see
+13:05 <@erickt> well, I have to run to work, would you all like to continue this discussion?
+13:05 < skade> aturon erickt i disagree strongly with that
+13:05 <@Manishearth> erickt: we can just gang up on you tomorrow and continue it
+13:05 <@erickt> if so, would someone want to post the meeting minutes
+13:05 < skade> a lot of people will interpret that at letting things drop under the table after one year
+13:05 <@erickt> Manishearth: :p
+13:06 < nmatsakis> skade: perhaps the distinction is just what "stern and serious" means
+13:06 < skade> and it sets good groundwork for followups
+13:06 < nmatsakis> I think admitting that we are not satisfied with our efforts, while also having things to show that it's not just a pointless apology but something we intend to
+                   improve, may be a good idea,
+13:06 < skade> doesn't have to be more then "work on the diversity side didn't improve the situation much and we will double our efforts"
+13:06 <@Manishearth> yes
+13:07 < aturon> skade: OK, *that* sounds fine
+13:07 < nmatsakis> yes
+13:07 < aturon> i just don't want to demoralize the people -- including many of us! -- who *have* been working on this over hte last year
+13:07 < skade> no need to put fingers in wounds or soething
+13:07 < nmatsakis> but at the same time no need to pretend everything is perfect
+13:07 <@Manishearth> I do feel things like johannh's RustBridge plan are a really good step forward though. It's visible, and should have a good impact
+13:07 <@Manishearth> aturon++
+13:07 < aturon> so, concretely:
+13:08 <@erickt> skade: that's fine, I just want to *also* have taken steps towards organizing events and other things
+13:08 <@erickt> so it's not *just* words
+13:08 < aturon> for the anniversary post, talking about where we are on diversity seems fine, but i'd *love* to mention that RustBridge is getting started
+13:08 < aturon> do you think it's too early to say the latter?
+13:08 < aturon> or at this point, do we feel confident enough that we'll get it off the ground?
+13:08 < aturon> if so, we can even point people toward a place to get involved
+13:08 < skade> aturon no, don't
+13:08 < skade> mention it 2 weeks later
+13:08 < nmatsakis> we could perhaps hedge as "we are working on events targeting programmers" or something?
+13:08 < skade> sell stuff in small doses
+13:08 < nmatsakis> a common strategy is
+13:09 < nmatsakis> announce your intentions, then announce when you do it
+13:09 < carols10cents> erickt: i'll get the transcript up when conversation dies down :)
+13:09 < aturon> yes, i don't see this as either/os
+13:09 < aturon> either/or*
+13:09 < aturon> that is, we can mention it briefly in the anniversary post (which will be talking about community in general),
+13:09 <@erickt> carols10cents: I'm trying not to pay attention, but it's too interesting...
+13:09 < aturon> and then have a dedicated announcement when it's launched
+13:09  * nmatsakis /kicks erickt
+13:09 <@erickt> haha
+13:09 < carols10cents> action item for erickt: quit job
+13:10 < aturon> skade: does that sound reasonable?
+13:10 <@erickt> aturon / carols10cents / skade: what if we get our "lets organize a subteam on diversity" htead out tonight
+13:10 < aturon> another opportunity here is when we announce the survey results
+13:10 < aturon> which are clearly going to be dismal on this front
+13:10 <@erickt> and mention it in the birthday party to help drive people to it?
+13:11 < skade> aturon let me talk to the bridge foundry first, if they are responsive,  we do
+13:11 < skade> otherwise, we do during the week
+13:11 < aturon> OK, sounds good
+13:11 <@Manishearth> we can also have a vague "coming soon: somehting!" blurb in the post
+13:11 < skade> let's agree on _very soon_
+13:11 <@erickt> (me steps away for real this time...)
+13:11 <@Manishearth> "We're working on events that <..>"
+13:11 <@erickt> Manishearth: haha
+13:12  * skade is in a call in parallel
+13:12 <@Manishearth> me too, technically
+13:12 <@Manishearth> town hall, more of
+13:12 < aturon> skade: i am agreed on _very soon_
+13:12 < nmatsakis> +1
+13:12 < aturon> Manishearth: yes, sounds like a good plan B
+13:13 < aturon> OK, sounds like we should close out this meeting for today?
+13:13 < skade> also, i'll try to talk everyone who runs a project into running a This week in $project :)
+13:13 <@Manishearth> yep!
+13:13 < skade> ah, yeah, rustfest announcement will be before or on the birthday
+13:13 <@Manishearth> skade: rough idea of what very soon means? I'm unsure if we can produce such a thing in a month unless we restrict to a single location
+13:13 <@erickt> (carols10cents: back!)
+13:14 < aturon> skade: OK -- for the official blog post, i'd like to say something, can you let me know what you want me to say?
+13:14 -!- listochkin [textual@moz-b46g2p.equate.volia.net] has quit [Quit: Textual IRC Client: www.textualapp.com]
+13:14 <@Manishearth> skade: TWI* is becoming something really hip, apparently. I've heard that both moz and nonmoz people want to do it for their own teams
+13:14 < aturon> don't want to steal your thunder, but also want the visibility/official stamp of the main blog post
+13:14 < skade> Manishearth we can announce that we have the structure, workshops can be out for a few month if we want
+13:14 < skade> aturon yeah :)
+13:14 <@Manishearth> skade: oh, that way. wfm
+13:14 <@Manishearth> erickt: y u no job?
+13:14 < skade> aturon sure, do that
+13:14 < aturon> skade: OK. would be great to have details by Friday if possible
+13:15 < skade> yeah, we're currently working around the clock...
+13:15 < skade> rustfest.eu/home.html is the page by the way
+13:15 < skade> (moving to index once we are "live")
+13:15 < aturon> awesome!
+13:16 < skade> also: microsoft might want to be a front-and-center sponsor
+13:16 < bstrie> oh wow
+13:16 <@erickt> skade: +1
+13:16 <@Manishearth> skade: niiice
+13:16 <@Manishearth> skade: are they doing anything with rs?
+13:17 < aturon> ok, gotta go. this was a great meeting, though; i'm so excited about RustBridge!
+13:17 < nmatsakis> me too
+13:20 < jntrnr> this is news to me :)
+13:20 < jntrnr> I’m also interested to hear what MS is doing with Rust
+13:22 < skade> they're mostly interested in casting a wide net in FOSS communities
+13:23 <@Manishearth> jntrnr: I asked last year (a month after 1.0), and the feel I got about it was that it might be used for experiments, but it would need to be proven stable and
+                     supported to be used
+13:23 < jntrnr> Manishearth: that’s what I’d expect to
+
+13:23 < jntrnr> I’ve had MS friends reach out to me who were doing it in their free time
+13:23 < jntrnr> but nothing serious yet
+13:23 <@Manishearth> I didn't ask people who actually would make this decision, btw, didn't know where to find them -- just asked random employees who I knew
+13:23 <@Manishearth> makes sense
