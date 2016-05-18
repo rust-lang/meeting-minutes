@@ -1,0 +1,188 @@
+12:00  * Manishearth bangs gavel
+12:00 <@Manishearth> It is I, erickt, commencing the meeting
+12:00  * carols10cents sits up straight, definitely wasn't sleeping
+12:00 < jntrnr> haha
+12:01 <@Manishearth> :)
+12:01 <@Manishearth> First item,
+12:01 <@Manishearth> > we forgot to ask if we could contact people with offers in the survey (e.g. selected a conference place where we actually run a conference)
+12:01 <@Manishearth> I guess he meant that the survey could have had more fine grained contact requests?
+12:02 < jntrnr> for people that gave us email, I'm assuming it was for us to reach back out to them
+12:02 <@Manishearth> yeah
+12:02 <@Manishearth> oh, he's saying we haven't reached out yet
+12:02 <@Manishearth> true
+12:02 < carols10cents> yeah, we also didn't ask if we could put people in the same location interested in meetups in contact with each other
+12:02 < jntrnr> yes, maybe we should wait until after the survey has ended?
+12:02 < jntrnr> though I'm sorely tempted to start collecting data now :p
+12:02 <@Manishearth> We should list up all our survey thingies in an issue for next year
+12:03 < jntrnr> Manishearth: https://github.com/rust-community/team/issues/28?
+12:03 < carols10cents> like this issue? https://github.com/rust-community/team/issues/28
+12:03 < carols10cents> ;)
+12:03 < jntrnr> yay teamwork! ;)
+12:03 <@Manishearth> I totally knew that exister
+12:03 <@Manishearth> *d
+12:03 <@Manishearth> :p
+12:03 <@Manishearth> Alright, I'll add these issues to the bug after the meeting
+12:04 <@Manishearth> > I reopened a contact with someone doing embedded development with Rust. Would a core team phone call about embedded be worthwhile again?
+12:04 <@Manishearth> I think this ^ would be valuable, depending on how much time core has -- steveklabnik ?
+12:04 <@Manishearth> Last year's meeting was mostly about issues that have since been fixed
+12:05 < jntrnr> you know... for these call-outs
+12:05 < jntrnr> would it be possible to get multiple people/groups with the same interest together on the same call?
+12:05 <@Manishearth> the whole "how do I even std?" stuff is basically working now with cargo-in-rustc and rustup.rs
+12:05 <@Manishearth> jntrnr: yes, we have done this before
+12:05 < jntrnr> for large groups that might be hectic, but if it's mostly individuals, it might be nice to create a space to share
+12:06 <@Manishearth> we had a string of meetings with like 9 people each (mix of core, community, and people of similar interests)
+12:06 <@Manishearth> in the embedded call I recall tessel being there
+12:07 <@Manishearth> jntrnr: https://internals.rust-lang.org/t/production-user-research-summary/2530
+12:07 < jntrnr> Cool
+12:07 <@Manishearth> This time around we may not be able to address everything in a single week of calls
+12:08 <@Manishearth> since there are a lot more prod users now
+12:08 <@Manishearth> might be better to hold one call a month, with a random group?
+12:08  * aturon is here now
+12:08 <@Manishearth> anyway, probably should wait for aturon or steveklabnik to comment on the possibility of more calls
+12:09 <@Manishearth> oh, that worked out nicely :)
+12:09 < aturon> we're definitely open to more calls
+12:09 < aturon> but for something topical like that, i agree with jntrnr
+12:09 < aturon> (grouping is good)
+12:09 <@Manishearth> yep
+12:09 < steveklabnik> Manishearth: i mean, i'm always interested in hearing from people
+12:09 <@Manishearth> I know, but I don't know how busy y'all are
+12:10 < aturon> basically, i think skade should put the contact in touch and we can take it from there
+12:10 <@Manishearth> cool
+12:10 < aturon> though it might be good to also think about another round of prod user calls at some point, which the community team could help organize
+12:10 <@Manishearth> yes
+12:10 <@Manishearth> I was thinking of doing a group call
+12:10 < aturon> i don't feel a *ton* of urgency there, given that we have the survey to digest at the moment
+12:10 <@Manishearth> aturon: instead of a "round" of prod calls, it might be better to have periodical calls each with a topic
+12:11 <@Manishearth> so one call a month, each month a different topic
+12:11 <@Manishearth> I'm not sure if we can accomodate everyone in a single "round" of calls like last time
+12:11 <@Manishearth> right
+12:11 < aturon> yep, makes sense!
+12:11 <@Manishearth> I'll file an issue for further discussion
+12:11 < aturon> maybe we should open a community team issue for discussing the best structure
+12:11 < steveklabnik> with regards to being busy
+12:11 < aturon> ha
+12:11 <@Manishearth> like you say, not much urgency
+12:11 < steveklabnik> it is true that we're all busy
+12:11 < steveklabnik> but helping out with stuff like this is one of the best ways to spend our time, imho
+12:11 <@Manishearth> right
+12:12 < steveklabnik> we gotta bootstrap this production usage
+12:12 <@Manishearth> there are also a lot of us so we can fragment
+12:12 < jntrnr> agreed
+12:12 <@Manishearth> alright, another aturon question
+12:12 <@Manishearth> > RustBridge: we have 5 people continents interested in running something. Relationship to Mozilla should be clarified fast.
+12:13 < aturon> right, so i wasn't entirely sure what skade meant by that
+12:13 < aturon> likely in reference to the funding we discussed last time?
+12:13 <@Manishearth> I think the idea was that Mozilla helps fund through larissa/geroter, which johannh is confident of getting
+12:14 <@Manishearth> but no direct involvement otherwise? (not counting core's involvement)
+12:14 < carols10cents> and probably are these "official" events or not, and what does "official" mean
+12:14 < aturon> Manishearth: re: "direct" involvement, it definitely shouldn't be a Mozilla project
+12:14 < aturon> but rather something run by the Rust community with Mozilla sponsorship -- much like Rust itself :)
+12:14 <@Manishearth> aturon: right
+12:15 <@Manishearth> I've held events like this in the past, which were organized by me but funded (through Reps) by mozilla. Mostly rust ones
+12:15 <@Manishearth> Usually for these things Mozilla avoids having involvement because they don't have the bandwidth for it
+12:15 <@Manishearth> from waht johannh said I think this is the same situation?
+12:15 < aturon> that's my understanding, yeah
+12:16 < aturon> so i guess it's just a question of pushing on the funding quickly
+12:16 <@Manishearth> how much involvement would core have? I guess doing the same things as community?
+12:16 <@Manishearth> right
+12:16 < aturon> ok, so in terms of official status and core involvement -- in general, this is exactly the kind of initiative the community team was created to lead
+12:17 <@Manishearth> right
+12:18 < aturon> the role of the core team is to (1) support the work in whatever material ways we can (giving talks, helping produce materials, etc) and (2) help ensure alignment with overall Rust vision
+12:18 < aturon> vision/core values
+12:18 < vladimir-sn> erickt: sorry just saw this - does the thursday (16th) work for you?
+12:18 < aturon> that's how i see things playing out, anyway
+12:18 < vladimir-sn> we're still looking for our venue but hopefully should be able to sort that out
+12:19  * steveklabnik nods
+12:19 < steveklabnik> vladimir-sn: erickt might take a bit to get back to you; he had to go do stuff for his job, and isn't around right now
+12:19 < aturon> that's fairly abstract, though; are there concrete questions here we should try to tackle?
+12:20 <@Manishearth> I think for rustbridge there aren't many vision issues?
+12:20 < aturon> we had some action items last week in terms of launching an email thread or some other place for conversation, but i haven't seen that (maybe i wasn't cc'ed though?)
+12:20 <@Manishearth> in general I think community should have a better idea of the vision/core values, but specifically for rustbridge I think everyone is on the same page
+12:21 < johannh> I'm still waiting for Larissa to reply, I'll ping her again
+12:21 < johannh> I think getting people and workshop material is much more important at this point, money will be solvable
+12:22 < aturon> yeah, that seems right
+12:23 <@Manishearth> yes
+12:23 < aturon> i feel like this project needs a clear, small group of people sort of "driving" it -- not sure to what extent that's the case yet?
+12:23 <@Manishearth> that brings us to
+12:23 <@Manishearth> > RustBridge 2: will a RustBridge team be a seperate team listed on the rust site?
+12:23 <@Manishearth> I do think a dedicated team would help
+12:24 < steveklabnik> RustBridge 2: electric boogaloo
+12:24 <@Manishearth> sounds like another application for the strike team concept?
+12:24 <@Manishearth> haha
+12:24 < aturon> i imagine as it scales up, having a separate call-out of the people involved will help. but for right now, seems like just putting together a group informally and getting things going is the place to start (from my perspective)
+12:24 <@Manishearth> yes
+12:25 < aturon> have there been any threads or issues for driving RustBridge so far?
+12:25 < aturon> if not, that seems like step 1 :)
+12:25 < johannh> Well we need a group of people centrally organizing some things and a group of people in each city
+12:25 <@Manishearth> right
+12:26 <@Manishearth> skade mentioned that we have 5 locations, does anyone know what these locations are and who is offering to run in each?
+12:26 < johannh> Huh, no idea
+12:26 < johannh> I can definitely help getting Berlin going
+12:27 < aturon> let's pick a place for coordination. i suggest either https://github.com/rust-community/team/, or perhaps a dedicated repo under the rust-community org (in anticipation of scale)
+12:27 < steveklabnik> i know one person volunteered for NYC
+12:28 <@Manishearth>  /team with a label seems okay to me for now?
+12:28 < aturon> SGTM
+12:28 < johannh> Yes let's make a repo there to have some action items like website and locations
+12:28 < johannh> Or /team :D
+12:29 <@Manishearth> okay
+12:29 < aturon> anybody else have preferences?
+12:29 < johannh> There was a thread on workshop material in the team repo I think
+12:30 < aturon> yes, but it was more general
+12:30 < aturon> hmm, the more i think about it, the more a separate repo makes sense to me
+12:30 < aturon> since this is ultimately going to involve a group quite a bit larger than the community team
+12:31 <@Manishearth> right
+12:31 < johannh> Assuming we make a website we could also host the gh-pages there
+12:31 < aturon> +1
+12:31 < carols10cents> https://github.com/rust-community/rustbridge
+12:31 < aturon> sweet
+12:32 < steveklabnik> :D
+12:32 < steveklabnik> oh
+12:32 < steveklabnik> also
+12:32 < steveklabnik> i own the rust-bridge github org
+12:32 < steveklabnik> i am not using it anymore
+12:32 < steveklabnik> if it's useful to this thing, we could use it
+12:32 < aturon> let's make sure to get it populated with some admins and at least one startup issue for discussion, cc'ing stakeholders
+12:32 < steveklabnik> absolutely
+12:33 <@Manishearth> the last point was
+12:33 <@Manishearth> > RustBridge 3: will RustBridge live on rustbridge.tld or bridge.rust-lang.org (latter making clear the endorsement, but how do we manage the setup?)
+12:33 < aturon> steveklabnik: i'm thinking for now, living under community makes sense, and it can move out as it becomes its own brand
+12:33 <@Manishearth> I guess bridge.rlo is good?
+12:33 < aturon> yeah, if we're going to put our full weight behind this, let's do it
+12:33 < aturon> but again, this feels like far ahead of the game :)
+12:33 <@Manishearth> right
+12:34 < steveklabnik> aturon: absoutely, i don't think it should be used right now, just making note ofr the future :)
+12:34 < aturon> yep yep
+12:37 <@Manishearth> anything else?
+12:37 <@Manishearth> I guess the rustbridge stuff can be further discussed in the issues
+12:37 < aturon> yep, i think that needs to be driven offline for broad coordination and faster progress
+12:37 <@Manishearth> yeah
+12:38 < aturon> do we have a clear roster of people who will be leading the effort?
+12:39 <@Manishearth> skade and johannh at least?
+12:39 <@Manishearth> I plan to help out with materials
+12:40 < johannh> Yes
+12:40 < aturon> OK, sounds like a good starting point
+12:41 < carols10cents> johannh: is johannh your github username?
+12:41 < johannh> carols10cents: nope, johannhof
+12:41 <@Manishearth> carols10cents: https://github.com/johannhof
+12:42 < johannh> I'm on PTO until next week, so don't expect much interaction from me until then
+12:44 < carols10cents> ok, i added skade, Manishearth, and johannhof to the rustbridge team that has access to the rust-community/rustbridge repo. anyone else want to be on that team?
+12:45 < aturon> i suspect erickt will want to be
+12:46 < carols10cents> done
+12:46 <@Manishearth> I believe everyone already has access, fwiw
+12:46 < carols10cents> Manishearth: github said default read permissions?
+12:46 < carols10cents> and i think i'm giving the team more permissions than read, maybe?
+12:47 < carols10cents> idk, github's permissions confuse me
+12:47 <@Manishearth> idk :)
+12:47 <@Manishearth> they keep changing it
+12:48 <@Manishearth> I guess that's it for the meeting?
+12:48 <@Manishearth> ANything else folks want to discuss?
+12:49 < aturon> any thoughts on birthday celebrations and whatnot? from my perspective things went well
+12:49 < jntrnr> we got a fair bit of love from social media I noticed
+12:49 < jntrnr> a lot of "woah, it's only been a year?  feels like five!"
+12:50 < aturon> :D
+12:50 <@Manishearth> yeah :D
+12:50 < steveklabnik> What a beautiful, wonderful language. Many don’t recognize it now but Rust will be remembered in programming history.
+12:50 < steveklabnik> a thing i just read
+12:51 < steveklabnik> yeah, i agree generally
+12:55 <@Manishearth> Wrapping up then; thanks for showing up, everyone!
+12:56 < steveklabnik> ::D
