@@ -1,0 +1,703 @@
+8:59 AM 
+<•erickt> Erick Tryzelaar 
+T-1 minute!
+8:59 AM bstrie: wake up again!
+9:00 AM who else is here?
+9:00 AM cuz it's nearly party time
+
+9:00 AM 
+<aturon> 
+o/
+
+9:00 AM 
+<•erickt> Erick Tryzelaar 
+oh hey it's party time!
+
+9:00 AM 
+<bstrie> 
+erickt: let's party
+
+9:00 AM 
+<steveklabnik> 
+:)
+
+9:00 AM 
+<•erickt> Erick Tryzelaar 
+and a good morning to you all!
+9:00 AM or whatever timezone you're in
+9:00 AM thanks again, and welcome to another fabulous meeting
+9:01 AM so we have an agenda: https://github.com/rust-community/team/issues/42
+
+9:01 AM 
+<•Manishearth> 
+'allo
+
+9:01 AM 
+<•erickt> Erick Tryzelaar 
+bstrie and aturon, want to start off on https://github.com/rust-community/team/issues/42#issuecomment-227936517
+
+9:01 AM 
+<bstrie> 
+I'll start
+9:02 AM aturon: have you read that comment there that i left on the agenda issue? I've heard some rumblings that you've been working on something to this regard
+
+9:02 AM 
+<aturon> 
+yes, i read it
+9:02 AM i'd be happy to talk about some of the stuff i and others have been thinking about along these lines
+
+9:02 AM 
+<bstrie> 
+mostly it just feels like the mozilla devs have been somewhat detached for a while now. I don't even know what went down for the last two company-wide mozilla gatherings, for example
+9:03 AM I do like that we've gotten some official blog posts this year, but having more frequent check-ins helps people feel more informed about the process of language development
+
+9:03 AM 
+<aturon> 
+definitely
+
+9:03 AM 
+<•erickt> Erick Tryzelaar 
+bstrie: that's a good point, we should be writing up a blog post summarizing these work weeks
+
+9:04 AM 
+<aturon> 
+so i agree that overall there's been a lack of communication and clarity on what's in the pipeline, etc
+
+9:04 AM 
+<bstrie> 
+and it doesn't help that there's a dozen things in the air at any given time with varying priorities, e.g. I have no idea what the status on rustbuild has been for the past year
+
+9:04 AM 
+<aturon> 
+i don't want to view this as primarily a *Mozilla* thing, though -- lots of people are doing important work that should be communicated
+9:05 AM bstrie: so, some of the examples you're giving are interesting -- rustbuild has a dedicated tracking issue which acrichto has been keeping up to date
+
+9:05 AM 
+<bstrie> 
+aturon: for non-mozilla folks, I feel like the "what are you doing this week" threads on urlo and reddit, as well as TWiR, serve that purpose
+
+9:05 AM 
+<aturon> 
+similarly, with MIR we now have a milestone
+
+9:05 AM 
+<•brson> 
+i'm interested in doing some work to collect all these subprojects into a single roadmap
+
+9:05 AM 
+<aturon> 
+bstrie: i strongly disagree with framing this as Mozilla vs non-Mozilla :)
+9:06 AM it's about project leadership, and active development
+
+9:06 AM 
+<bstrie> 
+aturon: I suppose it's an unavoidable distinction, e.g. I *know* that you folks are doing rust stuff and I know that I don't know what the details are, but if e.g. erickt doesn't talk about rust stuff then I just presume he's busy with work :P
+
+9:06 AM 
+<aturon> 
+neither of which is (or should be) tied strictly to Mozilla
+9:06 AM hah, that's fair
+9:07 AM anyway, don't want to get too fixated on that point
+9:07 AM so let me mention a few of the things some of us have been talking about recently
+9:07 AM and, i'm in the process of writing these up in a blog post/proposal
+9:07 AM the most immediately relevant bit, as brson mentioned, is the idea of a visible roadmap
+9:08 AM which is established on some consistent cadence (say, every 3 months or 6 months)
+9:08 AM and basically tracks the major initiatives where people are committed to actively working,
+9:08 AM each of which has a dedicated status page, points of contact, links, and ways to get involved
+
+9:08 AM 
+<•erickt> Erick Tryzelaar 
+bstrie: my heart weeps every time I have to do real work without rust ;_;
+
+9:09 AM 
+<bstrie> 
+that we be nice, yes, and goes well with the idea of quarterly mozilla goals
+9:09 AM s/we/would
+
+9:09 AM 
+<aturon> 
+so the roadmap would have things like MIR-trans, Trans-level incremental compilation, rustbuild rollout, etc
+
+9:10 AM 
+<•erickt> Erick Tryzelaar 
+aturon: along these lines, can we re-encourage the subteams to restart tracking minutes in https://github.com/rust-lang/meeting-minutes?
+
+9:10 AM 
+<aturon> 
+whatever the cadence is, we'd have a process for establishing the roadmap
+9:10 AM that was open to everybody
+9:10 AM (possibly RFC, possibly something more lightweight)
+9:10 AM anyway, you get the basic idea
+9:10 AM ⇐ jedahan quit (jedahan@moz-bjd.84k.0.216.IP) Quit: My Mac has gone to sleep. ZZZzzz…
+
+9:10 AM 
+<aturon> 
+re: meetings,
+9:10 AM that's another thing we've been talking about shifting, for a few reasons
+9:11 AM in principle, everything that goes into a decision should be laid out publicly, on the relevant threads
+9:11 AM we work pretty hard to do this, BUT,
+9:12 AM if we're making these decisions in video meetings, it's extra work to capture these arguments
+9:12 AM transcripts are one possible route, but it's very difficult to keep the quality/readability up
+
+9:12 AM 
+<•Manishearth> 
+you just need to capture the gist of it, right?
+
+9:13 AM 
+<aturon> 
+i think for important decisions, it's better to have a clearly-written rationale
+9:13 AM which we try to provide after the fact
+
+9:13 AM 
+<•Manishearth> 
+right
+
+9:13 AM 
+<aturon> 
+where i'm headed is,
+
+9:13 AM 
+<carols10cents> 
+this is totally carol's law https://twitter.com/Carols10cents/status/746359338634182656
+
+9:13 AM 
+<•Manishearth> 
+aturon: are these decisions being made in mozilla-only vidyo?
+
+9:13 AM 
+<aturon> 
+haha
+
+9:13 AM 
+<•erickt> Erick Tryzelaar 
+lol
+
+9:13 AM 
+<•Manishearth> 
+or is this subtaem vidyo we are talking about?
+
+9:13 AM 
+<aturon> 
+subteams
+
+9:13 AM 
+<•Manishearth> 
+ah ok
+9:13 AM hm
+
+9:13 AM 
+<steveklabnik> 
+carols10cents: zomg
+
+9:14 AM 
+<•brson> 
+almost no decisions are made mozilla only
+
+9:14 AM 
+<•Manishearth> 
+thought so :)
+
+9:14 AM 
+<•brson> 
+pretty much only hr related
+
+9:14 AM 
+<•Manishearth> 
+just wanted to check
+
+9:14 AM 
+<aturon> 
+the only mozilla-only thing that exists is a short bi-weekly meeting where we talk about pure mozilla business (interns, hiring, etc)
+
+9:14 AM 
+<•Manishearth> 
+brson: YOU HIRED jntrnr WHY WASNT I CONSULTED
+
+9:14 AM 
+<aturon> 
+what brson said :)
+
+9:14 AM 
+<•erickt> Erick Tryzelaar 
+aturon: one of the challenges though is that it takes some time to actually write up those well-written rationales
+
+9:14 AM 
+<aturon> 
+anyway, so one possibility we've been thinking about is
+
+9:14 AM 
+<•Manishearth> 
+:)
+
+9:14 AM 
+<aturon> 
+to move decision-making away from meetings altogether
+9:14 AM in many ways, meetings are not the ideal place anyway
+9:15 AM for one, there's limited time, so if we don't get to something in a given meeting, it often gets delayed -- sometimes repeatedly
+
+9:15 AM 
+<•Manishearth> 
+aturon: use github issues like we do?
+
+9:15 AM 
+<aturon> 
+for another, it's often the case that not everyone has had a chance to fully read up prior to a meeting
+
+9:15 AM 
+<•Manishearth> 
+except, for most subteams, you don't need a new repo
+
+9:15 AM 
+<aturon> 
+well, so we already have forums for this
+9:15 AM the RFC PRs
+
+9:15 AM 
+<•Manishearth> 
+right
+
+9:15 AM 
+<aturon> 
+so, there are a *lot* of details in making this work well
+
+9:16 AM 
+<•Manishearth> 
+okay I gtg, but will catch up on the logs later 
+9:16 AM yeah, I understand that :)
+
+9:16 AM 
+<aturon> 
+for example, one useful thing the meetings do provide is a regular "habit" where we make sure decisions are being made on some cadence
+9:16 AM so to make this work, we need automation and a dashboard to help subteam members track these obligations
+9:16 AM and we need to keep the obligation list short enough that people actually get them done
+9:17 AM one nice thing about this --
+9:17 AM in the meetings, the various subteam members have built up a set of shared values,
+9:17 AM but these aren't necessarily well communicated to the whole community
+9:18 AM making it the default that all of the evaluation happens on github threads would help, i think
+9:18 AM sidenote: of course, meetings are valuable because they are high bandwidth. we don't want to axe them altogether
+9:18 AM but we could reorient them toward more focused discussion on particular topics -- e.g. brainstorming or analyzing a given issue or RFC -- without being tied to a decision point
+9:19 AM and can consider opening that up beyond the subteam -- or at least recording as a google hangout or whatnot
+
+9:19 AM 
+<•erickt> Erick Tryzelaar 
+aturon: I think bstrie is talking about a slightly different issue. You're approaching this more from how to make the meetings and the subteams more efficient
+9:19 AM but bstrie (I think) is talking about visibility into the process from the external teams
+9:19 AM err, external community
+
+9:19 AM 
+<aturon> 
+i disagree; i'm actually worried that what i'm saying will make things *less* efficient :)
+
+9:20 AM 
+<•erickt> Erick Tryzelaar 
+heh
+
+9:20 AM 
+<steveklabnik> 
+and they're also connected; if more decisions are going down in written from
+9:20 AM form
+9:20 AM then, other people can see into the process, because it's written down, not in a meeting
+
+9:20 AM 
+<aturon> 
+right
+9:20 AM so basically, there's visibility at a number of levels
+9:20 AM the roadmap idea gives big-picture visibility at a coarse grain
+9:21 AM the meeting change gives small-picture visibility at a fine grain 
+9:21 AM there are some other connected changes, but they're perhaps getting too far off topic -- and as i said, i'm in the process of writing all this up right now
+
+9:22 AM 
+<•erickt> Erick Tryzelaar 
+can we also have an even bigger picture where we get subteam updates in https://this-week-in-rust.org?
+
+9:22 AM 
+<aturon> 
+erickt: what kind of updates?
+9:22 AM e.g. right now, we have weekly subteam reports
+9:22 AM is there information that's missing?
+9:22 AM → jedahan joined (jedahan@moz-bjd.84k.0.216.IP)
+
+9:23 AM 
+<•erickt> Erick Tryzelaar 
+hm
+9:24 AM well we could at least have a link in twir to the relevant report in https://internals.rust-lang.org/c/announcements
+
+9:24 AM 
+<aturon> 
+btw, one thought about the roadmap -- so each initiative in the roadmap would have its own status page, and i imagine that could be updated by a wider range of people than just the subteam members
+
+9:24 AM 
+<•erickt> Erick Tryzelaar 
+that might help to flow people to that that don't know about irlo
+
+9:24 AM 
+<aturon> 
+(i.e. we can have something like "shepherd" status)
+9:24 AM that way, FAQs about initiatives can actually get recorded in one place
+9:25 AM erickt: sure, link sounds good. (we currently post them to discuss)
+9:25 AM this conversation is a bit difficult, because there are problems we might want to solve at many different levels
+9:26 AM personally, i'm most concerned with clarity around big initiatives the community is working toward, and engagement of the subteams directly on RFC threads
+
+9:26 AM 
+<•erickt> Erick Tryzelaar 
+yeah. I think one challenge we're having is that even a year ago it was much easier to passively follow what's going on in our community, but now we're so much bigger
+
+9:26 AM 
+<aturon> 
+but i also think that the roadmap idea gives us space to communicate fine-grained status information
+9:26 AM right
+
+9:27 AM 
+<carols10cents> 
+yeah, like, questions like this should be easily answerable https://www.reddit.com/r/rust/comments/4o7en3/how_about_mir_translation_now/
+
+9:27 AM 
+<aturon> 
+carols10cents: yep
+
+9:27 AM 
+<bstrie> 
+you can get as ambitious as you want with the roadmap, but let's not let the perfect be the enemy of the good :P I just want to make sure people are informed about the development process
+
+9:27 AM 
+<aturon> 
+and, in some sense it is -- we now have a github milestone for MIR! -- but figuring that out isn't easy
+
+9:27 AM 
+<carols10cents> 
+right!
+9:27 AM like it should be known where to get the answer
+
+9:28 AM 
+<aturon> 
+bstrie: i don't think the roadmap is necessarily so ambitious -- i think it's main promise is a *single point of truth*
+9:28 AM basically what carols10cents is getting at
+9:28 AM put differently, you could say part of the problem right now is too much information, and what we need is clearer organization/centralization on the big stuff
+
+9:29 AM 
+<•erickt> Erick Tryzelaar 
+well to fill in for skade here, we're getting to 30 minutes on this topic
+
+9:29 AM 
+<aturon> 
+yep
+9:29 AM TLDR from my point of view: the core team is aware of and concerned about communication issues at multiple levels,
+9:29 AM and various proposals will be coming down the pike shortly
+
+9:30 AM 
+<•erickt> Erick Tryzelaar 
+alright next agenda item: https://github.com/rust-community/team/issues/43
+9:31 AM it's great people are excited about the survey, but we need to be careful about posting things here that aren't public :)
+
+9:31 AM 
+<•Manishearth> 
+bstrie: part of the solution to the problem might just be having one person *not* on the subteams sifting through the meeting notes and picking out things the community might find interesting
+9:31 AM (not on the subteams because when on a subteam everything is interesting to you :p )
+9:31 AM and including this condensed thing in twir
+9:31 AM 
+— jntrnr rolls in late after doing errands
+9:31 AM 
+— •erickt waves
+
+9:31 AM 
+<aturon> 
+erickt: i'm a bit skeptical of the proposed rule -- i think a safer alternative is to use access rights to protect things you're not ready to go public
+
+9:32 AM 
+<carols10cents> 
+👍
+
+9:32 AM 
+<aturon> 
+after all, the channel is publicly logged
+9:32 AM it is, as far as i'm concerned, public period :)
+9:32 AM ⇐ jdm quit (jdm@moz-4vu.06r.98.75.IP)
+
+9:32 AM 
+<•erickt> Erick Tryzelaar 
+aturon: me too. I think we just need to be proactive about us posting links and things
+
+9:32 AM 
+<carols10cents> 
+like, it shouldn't be *possible* to leak something
+9:32 AM because if it's private, it should be in a private google doc or a private github repo
+
+9:32 AM 
+<jntrnr> 
+yes, please
+9:32 AM 
+— jntrnr still feels sheepish about latest leak
+9:33 AM 
+— carols10cents hugs jntrnr
+
+9:33 AM 
+<•erickt> Erick Tryzelaar 
+and watch for each other if we leak something by accident so we can pull it offline
+
+9:33 AM 
+<jntrnr> 
+awww :D
+
+9:33 AM 
+<•erickt> Erick Tryzelaar 
+not your fault jntrnr! you're awesomeness just couldn't be contained
+
+9:34 AM 
+<jntrnr> 
++1 on private google doc or github repo
+9:34 AM I switched to the former just to be extra careful
+
+9:35 AM 
+<•erickt> Erick Tryzelaar 
+so in summary, I don't think we need to take drastic measures, just be a bit more aware of things
+
+9:35 AM 
+<jntrnr> 
+agreed.  don't post link unless they're public
+9:35 AM ditto for mailing list I assume?
+
+9:35 AM 
+<•erickt> Erick Tryzelaar 
+the community-team mailing list is private
+
+9:35 AM 
+<bstrie> 
+or unless they have access controls
+
+9:36 AM 
+<•erickt> Erick Tryzelaar 
+bstrie: yeah
+9:36 AM can someone summarize this in https://github.com/rust-community/team/issues/43 and close it?
+
+9:36 AM 
+<carols10cents> 
+unless particular mailing list threads have others CCed
+
+9:36 AM 
+<•erickt> Erick Tryzelaar 
+carols10cents: right!
+9:37 AM next topic, so skade brought up MozFest in https://github.com/rust-community/team/issues/44
+9:37 AM I don't know anything about it, and skade's not here :)
+9:38 AM does anyone know if we're going to have a presence there?
+
+9:38 AM 
+<bstrie> 
+I don't even know what mozfest is
+
+9:38 AM 
+<•erickt> Erick Tryzelaar 
+bstrie: https://wiki.mozilla.org/Mozfest/2016
+9:38 AM (i was just looking it up too :) )
+9:38 AM or https://mozillafestival.org/
+
+9:38 AM 
+<aturon> 
+i don't really know anything about it either :)
+9:39 AM ← aepsil0n left (eduard@moz-cuotk1.dyn.telefonica.de)
+
+9:39 AM 
+<•erickt> Erick Tryzelaar 
+booyaa: this is happening in london, fyi
+9:39 AM johannh: it's slightly closer to you too :)
+
+9:39 AM 
+<steveklabnik> 
+mozfest is more of a mofo thing than a moco thing
+9:39 AM in a sense
+
+9:39 AM 
+<aturon> 
+(that's "foundation" vs "corporation" for those following at home)
+
+9:39 AM 
+<•erickt> Erick Tryzelaar 
+hehe
+
+9:40 AM 
+<steveklabnik> 
+yeah sorry heh
+
+9:41 AM 
+<•erickt> Erick Tryzelaar 
+so it doesn't sound like there's much we have to talk about this :)
+
+9:41 AM 
+<booyaa> 
+erickt: ooooo :)
+
+9:41 AM 
+<•erickt> Erick Tryzelaar 
+alright next item
+9:42 AM secret agenda item (because I forgot to put it on the agenda)
+
+9:42 AM 
+<jntrnr> 
+ooooh
+
+9:42 AM 
+<•erickt> Erick Tryzelaar 
+so our split meeting schedule last week still didn't manage to get new people to attend
+
+9:42 AM 
+<jntrnr> 
+I *knew* there was a secret agenda :p
+9:42 AM 
+— •erickt dons a trench coat
+
+9:43 AM 
+<jntrnr> 
+are the people that asked for the alternate time present?
+
+9:43 AM 
+<•erickt> Erick Tryzelaar 
+so the people who were around last week and I decided it'd be simplest if we just shift back to meeting this time
+9:43 AM huon was the one that brought it up but he's been busy with work
+
+9:44 AM 
+<bstrie> 
+isn't huon in california now?
+
+9:44 AM 
+<•erickt> Erick Tryzelaar 
+and also moved to ^
+
+9:44 AM 
+<jntrnr> 
+I'll be in NZ at some point, so I might complain
+9:44 AM but it's maybe fine to keep just one time slot for the time being?
+
+9:44 AM 
+<•erickt> Erick Tryzelaar 
+so I'm thinking we can have a semi-official meeting at the 2am UTC
+
+9:44 AM 
+<carols10cents> 
+i'm going to be skade and say we should be doing outreach, esp if we're adding community team members,
+9:44 AM to add people in asia
+
+9:44 AM 
+<bstrie> 
+personally I feel like the purpose of this meeting is to get us in the community team off our butts, and the fact that community members can participate is just a nice side effect
+
+9:45 AM 
+<carols10cents> 
+as team members
+
+9:45 AM 
+<•erickt> Erick Tryzelaar 
+bstrie: yep! but I want to also keep up our funnel of getting more people off their butts :)
+
+9:45 AM 
+<carols10cents> 
+but of course we can't add people we don't know, so we should be trying to get to know people in the rust china/australia/nz/etc communities
+
+9:45 AM 
+<bstrie> 
+we're always going to be leaving someone out, so let's defer broader community involvement to asynchronous media like the issue tracker until someone explicitly asks for us to shift the schedule
+
+9:45 AM 
+<carols10cents> 
+but that takes time :)
+
+9:46 AM 
+<•erickt> Erick Tryzelaar 
+bstrie: you know, we probably should flesh out the readme on https://github.com/rust-community/team to mention
+9:46 AM "hey, open a ticket if you want to participate but the meeting time doesn't work for you!"
+9:47 AM and other stuff. it's a bit bare
+9:47 AM any volunteers?
+9:48 AM to improve the readme?
+
+9:48 AM 
+<booyaa> 
+i think it's a good idea keeping this as an open channel (not in the irc sense) for people in other countries, means people can field questions and get answers asynchronously
+
+9:49 AM 
+<•erickt> Erick Tryzelaar 
++1
+9:49 AM we ought to make it more obvious how approachable we are :)
+9:50 AM I guess no one volunteers, so I'll at least try to do something
+9:50 AM and it'll be so horrible, someone will have to fix it ;)
+9:51 AM alright, any other last minute things?
+9:51 AM last (9) minutes?
+9:52 AM i guess not!
+9:52 AM well then I release you
+
+9:52 AM 
+<bstrie> 
+erickt: are we perhaps at last to the point where we should start having meetings based only on the presence of an agenda, rather than simply having one every week? :P
+
+9:52 AM 
+<•erickt> Erick Tryzelaar 
+you are now free to run and play
+
+9:53 AM 
+<carols10cents> 
+sometimes stuff doesnt get added to the agenda until just before the meeting :-/
+
+9:53 AM 
+<•erickt> Erick Tryzelaar 
+heh that's my fault
+
+9:53 AM 
+<carols10cents> 
+like the meeting occurring causes an agenda to appear
+9:53 AM ⇐ •brson quit (brson@moz-u3dg2t.sfo1.mozilla.com) Quit: leaving
+
+9:53 AM 
+<carols10cents> 
+it's all of our faults!
+
+9:53 AM 
+<•erickt> Erick Tryzelaar 
+I always forget to pull together items until the morning of
+
+9:53 AM 
+<booyaa> 
+erickt: i'll pick up the team repo if you want
+
+9:53 AM 
+<•erickt> Erick Tryzelaar 
+<3
+
+9:54 AM 
+<steveklabnik> 
+:)
+
+9:54 AM 
+<booyaa> 
+flesh out the readme.md right? when we meet, the irc channel and where agendas are created?
+
+9:54 AM 
+<•erickt> Erick Tryzelaar 
+yeah
+
+9:55 AM 
+<booyaa> 
+k
+
+9:56 AM 
+<•erickt> Erick Tryzelaar 
+bstrie: surprisingly to me, I think we actually tend to have a decent agenda each week
+9:58 AM ⇐ •niconii quit (nicole@moz-6u4e0g.midco.net) Quit: leaving
+
+10:06 AM 
+<booyaa> 
+oo-er gone deadly quiet, netsplit?
+
+10:08 AM 
+<jntrnr> 
+booyaa: I think the meeting ended
+10:09 AM → jdm joined (jdm@moz-ajm.ffr.139.72.IP)
+
+10:09 AM 
+<booyaa> 
+looks like it
+10:09 AM can i do the ----meeting ended--- mark?
+
+10:09 AM 
+<jntrnr> 
+booyaa: I think you just did :)
+
+10:10 AM 
+<booyaa> 
+woot *high kick*
