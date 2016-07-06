@@ -1,0 +1,241 @@
+[2016-07-06 08:56:39] <erickt> T-4 minutes! just enough time for https://www.youtube.com/watch?v=9jK-NcRmVcw
+[2016-07-06 08:57:29] <erickt> bstrie: wake up!
+[2016-07-06 08:57:33] <carols10cents> OOPS
+[2016-07-06 08:57:36] <erickt> heh
+[2016-07-06 08:58:04] — jntrnr starts youtube playing
+[2016-07-06 08:58:12] <erickt> \m/
+[2016-07-06 08:59:18] <erickt> so who's here?
+[2016-07-06 08:59:30] <jntrnr> o/
+[2016-07-06 08:59:42] <locks> \o
+[2016-07-06 08:59:56] <carols10cents> hi
+[2016-07-06 08:59:59] <erickt> skade / brson / booyaa / hjr3 / Manishearth: ping!
+[2016-07-06 09:00:12] <erickt> steveklabnik: ^
+[2016-07-06 09:00:18] <steveklabnik> i am around
+[2016-07-06 09:00:18] <erickt> oh hey it's time
+[2016-07-06 09:00:20] <bstrie> I'm here!
+[2016-07-06 09:00:20] <steveklabnik> though writing release notes
+[2016-07-06 09:00:25] <locks> 😁
+[2016-07-06 09:00:26] <steveklabnik> so i'm checking in every few minutes
+[2016-07-06 09:00:32] <carols10cents> YAY bstrie !
+[2016-07-06 09:00:40] <erickt> hello everyone! and a good morning to bstrie!
+[2016-07-06 09:00:59] <erickt> agenda for today: https://github.com/rust-community/team/issues/45
+[2016-07-06 09:01:22] <erickt> please add anything if you want it for the schedule
+[2016-07-06 09:01:32] <erickt> thanks everyone for coming!
+[2016-07-06 09:01:54] → nathanhammond joined (nathanhammo@moz-an88iv.res.rr.com)
+[2016-07-06 09:01:58] <erickt> we got some special guests today, locks and frewsxcv
+[2016-07-06 09:02:24] <erickt> coming over from this whole bors-as-a-service initiative
+[2016-07-06 09:02:48] <locks> nathanhammond is representing Ember as well
+[2016-07-06 09:02:58] <erickt> wonderful!
+[2016-07-06 09:02:58] <jntrnr> welcome!
+[2016-07-06 09:03:00] — nathanhammond waves
+[2016-07-06 09:03:22] <brson> erickt: pong
+[2016-07-06 09:03:26] <erickt> so first thing I want talk about is the rust community representation on this project
+[2016-07-06 09:03:49] <bstrie> which project?
+[2016-07-06 09:03:52] <erickt> it needs a shepherd to help rally our community
+[2016-07-06 09:03:55] <erickt> bors-as-a-service
+[2016-07-06 09:04:10] <erickt> since homu.io is offline
+[2016-07-06 09:04:19] <erickt> bstrie: https://github.com/rust-community/team/issues/41
+[2016-07-06 09:04:42] <erickt> the ember folks, who also use homu are interested in helping to build a new version of it
+[2016-07-06 09:04:48] <nathanhammond> (Online again as of a day or two ago, but intermittent downtime isn't a good story for something we rely on so heavily.)
+[2016-07-06 09:05:23] <erickt> yeah. so there's a lot of interest and talent in getting it up and running
+[2016-07-06 09:05:52] <erickt> so I'm looking to y'all. anyone want to help to get this initiative done?
+[2016-07-06 09:06:25] <erickt> I'm getting spread pretty thin
+[2016-07-06 09:06:30] <bstrie> first, can we clarify the role of a shepherd?
+[2016-07-06 09:06:40] <erickt> well that's a wonderful question!
+[2016-07-06 09:07:20] <erickt> fundamentally I see it as just helping to make sure progress is being made
+[2016-07-06 09:07:32] <erickt> but not necessarily doing it
+[2016-07-06 09:08:03] <nathanhammond> Are y'all comfortable with a person inside of the Ember community playing that role?
+[2016-07-06 09:08:45] <erickt> I certainly am
+[2016-07-06 09:09:05] <steveklabnik> i am as well
+[2016-07-06 09:09:13] <jntrnr> yup
+[2016-07-06 09:09:23] <erickt> I'm not quite sure what the tech stack is for bors, but it'd be nice if we could also have someone on our side to help build it
+[2016-07-06 09:09:46] <jntrnr> though fwiw, #rust-tools probably also cares about this
+[2016-07-06 09:09:48] <erickt> after we get something basic up, I could see it nice for our community to build the backend in rust
+[2016-07-06 09:10:01] <jntrnr> so we might want to reach out to acrichto and others
+[2016-07-06 09:10:02] <erickt> oh?
+[2016-07-06 09:10:08] <nathanhammond> That wasn't me volunteering, by the way. :P But more checking how people felt about community ownership vs. project ownership.
+[2016-07-06 09:10:14] <erickt> :)
+[2016-07-06 09:10:18] <jntrnr> they do a lot of infra for other parts of the rust project
+[2016-07-06 09:10:37] — frewsxcv wavews
+[2016-07-06 09:10:48] <jntrnr> oh right :D
+[2016-07-06 09:10:55] <erickt> the other aspect of shepherding is also coming here and giving status updates to make sure the bors project isn't blocked
+[2016-07-06 09:10:56] → deith joined (deith@moz-gga1db.adsl.inetia.pl)
+[2016-07-06 09:11:10] <locks> I can volunteer, I'm already dealing with some of the Ember infra
+[2016-07-06 09:11:40] <erickt> <3
+[2016-07-06 09:11:45] — frewsxcv can help with some of the infra
+[2016-07-06 09:11:52] <erickt> great!
+[2016-07-06 09:11:56] <locks> if there's interest in rewriting in Rust, I'm in too
+[2016-07-06 09:12:09] <nathanhammond> Okay, so next step is to build a team so that it's not just y'all two.
+[2016-07-06 09:12:11] — frewsxcv is fine contributing with Rust or Python
+[2016-07-06 09:12:29] <brson> locks: acrichto and I were just saying that if it were in Rust it would be a good 'halo' project
+[2016-07-06 09:12:38] <steveklabnik> yessss
+[2016-07-06 09:12:42] <erickt> nathanhammond: +1
+[2016-07-06 09:12:47] <carols10cents> locks! locks! locks! locks!
+[2016-07-06 09:12:57] <nathanhammond> V1 I propose that we avoid the rewrite and keep moving forward instead of trying to ad more water to boil?
+[2016-07-06 09:13:05] <brson> nathanhammond: yes please
+[2016-07-06 09:13:08] <erickt> I did talk to reem on possibly using iron, and he said he could help contribute, but didn't have time to run it
+[2016-07-06 09:13:38] <dikaiosune> (normally lurking) if the little experience with iron + diesel i have from rusty-dash is useful, i'd be interested in helping
+[2016-07-06 09:13:46] <nathanhammond> But, I want to defer this to the team we set up around the project.
+[2016-07-06 09:13:50] <locks> badboy is running a homu instance
+[2016-07-06 09:13:54] <erickt> badboy also mentioned having 
+[2016-07-06 09:13:55] <erickt> ^
+[2016-07-06 09:13:56] — frewsxcv thinks Rust backend would be great, but in the short term, hacking around the Python should suffice
+[2016-07-06 09:14:10] <erickt> so we could just set that up somewhere so we get V1 up soon
+[2016-07-06 09:14:20] <nathanhammond> I agree with frewsxcv
+[2016-07-06 09:14:29] <erickt> +1
+[2016-07-06 09:14:36] <erickt> dikaiosune: great!
+[2016-07-06 09:14:38] <locks> I agree with keeping on with Python, the rewrite is a long term idea to possibly bring in more rust peeps
+[2016-07-06 09:15:21] <frewsxcv> Do we have an infra story? Is there someone supporting financially?
+[2016-07-06 09:15:38] <erickt> well, I'm happy to help chip in with some initial hosting 
+[2016-07-06 09:15:41] <frewsxcv> Maybe this is a question for #bors
+[2016-07-06 09:16:00] <bstrie> isn't the python part of homu *all of buildbot*? that seems like a lot to rewrite :P
+[2016-07-06 09:16:02] <frewsxcv> Which, btw, is the IRC channel regarding this topic
+[2016-07-06 09:16:03] <erickt> edunham (I think) mentioned we *might* be able to use some of the rust team budget
+[2016-07-06 09:16:13] <erickt> frewsxcv: that'd be #bors
+[2016-07-06 09:16:39] <nathanhammond> If dollars are an issue you can bill me and I can shake a few money trees.
+[2016-07-06 09:17:03] <frewsxcv> Well, if no one else has any ideas in mind, I don't mind using my own AWS account
+[2016-07-06 09:17:11] <frewsxcv> Or <insert cloud service provider here>
+[2016-07-06 09:17:17] <erickt> I've forked homu to https://github.com/rust-community/homu
+[2016-07-06 09:17:50] <erickt> I'll add y'all to a team for it
+[2016-07-06 09:17:50] <nathanhammond> Opposed to it being an existing personal account and instead setting up an account for this effort specifically as it will have lots of permissions on lots of peoples' projects.
+[2016-07-06 09:18:12] <erickt> nathanhammond: yeah, I can help with the actual infra hardening
+[2016-07-06 09:18:18] <erickt> that's my day job :)
+[2016-07-06 09:18:38] <nathanhammond> K, running summary of discussion:
+[2016-07-06 09:19:12] <erickt> nathanhammond / locks / dikaiosune: what' your github account names?
+[2016-07-06 09:19:21] <nathanhammond> nathanhammond
+[2016-07-06 09:19:21] <dikaiosune> <-
+[2016-07-06 09:19:49] <locks> <-
+[2016-07-06 09:19:49] <erickt> y'all have been invited to the team, thanks!
+[2016-07-06 09:20:11] <erickt> nathanhammond: were you summarizing, or asking for a summary?
+[2016-07-06 09:20:30] <nathanhammond> I was summarizing, shift+enter failed me. :P
+[2016-07-06 09:20:34] <nathanhammond> (Have to bail on y'all, will leave this open and catch up later.)
+[2016-07-06 09:20:34] <erickt> :)
+[2016-07-06 09:21:28] <erickt> locks: the other thing as a shepherd, you should set up a regular meeting
+[2016-07-06 09:21:58] <erickt> I can help with that
+[2016-07-06 09:22:12] <locks> thanks :)
+[2016-07-06 09:22:26] <erickt> anything else on bors?
+[2016-07-06 09:22:58] <nathanhammond> - locks and frewsxv are stepping in as current stewards.
+[2016-07-06 09:22:58] <nathanhammond> - Stick with Python for now.
+[2016-07-06 09:23:00] <nathanhammond> - Set up as a separate AWS account.
+[2016-07-06 09:23:01] <nathanhammond> - Can bill @nathanhammond for now and he'll figure out money.
+[2016-07-06 09:23:02] <nathanhammond> - Meetings will be set up weekly.
+[2016-07-06 09:23:03] <nathanhammond> - Initial team members will be an invitation to basically anybody who has forked homu in the past plus stewardship from Rust and Ember communities.
+[2016-07-06 09:23:03] — frewsxcv raises his hand
+[2016-07-06 09:23:26] <frewsxcv> Is this planning to replace rust-lang/rust bors as well?
+[2016-07-06 09:23:33] <nathanhammond> (Some of those are additions to things we already kinda discussed.)
+[2016-07-06 09:23:41] — erickt also volunteers Manishearth to the team since here's not here to say no
+[2016-07-06 09:24:06] <erickt> frewsxcv: yes, I think so
+[2016-07-06 09:24:13] <nathanhammond> frewsxcv: That would be a decision for the rust team to make, but I believe that the answer is yes.
+[2016-07-06 09:24:24] <erickt> but I would want to develop this such that if anyone wants to run their own fork, they can
+[2016-07-06 09:24:55] <erickt> okay so moving on
+[2016-07-06 09:24:56] <nathanhammond> This means that we can't get too rust/mozilla workflow focused which is a tradeoff, but note that the Ember and Rust communities have a LOT of similar patterns.
+[2016-07-06 09:25:09] <carols10cents> \me notes to attend all meetings in the future to avoid getting volunteered for stuff
+[2016-07-06 09:25:13] <carols10cents> dammit
+[2016-07-06 09:25:13] <erickt> nathanhammond: that's good and bad
+[2016-07-06 09:25:19] — carols10cents can't slash
+[2016-07-06 09:25:21] <erickt> hehe
+[2016-07-06 09:26:02] <erickt> so agenda item two, we *also* need a shepherd to help rustbridge get along.
+[2016-07-06 09:26:12] — nathanhammond disappears.
+[2016-07-06 09:26:17] <jntrnr> thanks nathanhammond 
+[2016-07-06 09:26:18] <erickt> thanks nathanhammond 
+[2016-07-06 09:27:01] <erickt> skade mentioned he's going to be a bit busy for a bit with the europe foundation, and didn't think he'd get as much time for rustbridge as he'd like
+[2016-07-06 09:27:35] <bstrie> we need more community team members :P
+[2016-07-06 09:27:36] <erickt> he was hoping they'd self-organize, but so far it hasn't quite happened yet
+[2016-07-06 09:27:49] <erickt> bstrie: agreed!
+[2016-07-06 09:28:31] <erickt> so would any of you be interested in helping them get started?
+[2016-07-06 09:29:47] <bstrie> do we know who "them" is yet?
+[2016-07-06 09:30:01] <bstrie> curious how far along this initiative is
+[2016-07-06 09:30:01] <erickt> bstrie: https://github.com/orgs/rust-community/teams/rustbridge
+[2016-07-06 09:30:15] <bstrie> oh, thought we were still on homu :P
+[2016-07-06 09:30:29] <erickt> oh, no, I shifted topics :)
+[2016-07-06 09:30:34] <bstrie> sneaky sneaky
+[2016-07-06 09:30:41] <erickt> I'm like that
+[2016-07-06 09:30:52] <carols10cents> so sneaky to say the word rustbridge
+[2016-07-06 09:31:01] <erickt> I really hid it in there, didn't i
+[2016-07-06 09:32:10] <carols10cents> :)
+[2016-07-06 09:32:13] <erickt> so, anyway, any takers? primary responsibility would be to help get them on a regular meeting schedule
+[2016-07-06 09:32:38] <erickt> then you can transition off of it if you'd like
+[2016-07-06 09:32:44] <bstrie> do we want to try to batch up all the weekly meetings so that they're adjacent?
+[2016-07-06 09:32:57] <bstrie> might help with participation
+[2016-07-06 09:33:39] <booyaa> hello!
+[2016-07-06 09:33:41] <erickt> bstrie: we could, but I couldn't. I'm able to poach an hour from work here and there, but I can't pull off multiple hours
+[2016-07-06 09:33:44] <erickt> hello booyaa!
+[2016-07-06 09:34:06] <carols10cents> bstrie: https://github.com/rust-community/rustbridge/issues/8
+[2016-07-06 09:35:28] <erickt> well, it seems no one is up for it yet ;_;
+[2016-07-06 09:35:38] <erickt> moving on
+[2016-07-06 09:36:05] <erickt> brson: you wanted to talk about "Embedding Rust evangelists in other communities"
+[2016-07-06 09:36:09] <erickt> I think
+[2016-07-06 09:36:18] <erickt> I have it in my notes, but I can't remember where I got it from :)
+[2016-07-06 09:38:10] <erickt> hm. it seems brson is not around at the moment
+[2016-07-06 09:38:11] <jntrnr> lol, that sounds... spy-like :)
+[2016-07-06 09:38:42] <booyaa> heh i'm attending a go meetup tonight does that count?
+[2016-07-06 09:38:53] <jntrnr> :)
+[2016-07-06 09:38:55] <carols10cents> yup!!
+[2016-07-06 09:38:59] <erickt> jntrnr: I can't possibly know what you're talking about
+[2016-07-06 09:39:19] <erickt> booyaa: great! are you talking about rust, or just attending?
+[2016-07-06 09:39:40] <booyaa> ah just attending, nice to take a break
+[2016-07-06 09:39:45] <erickt> heh
+[2016-07-06 09:40:03] <brson> erickt: oh sorry
+[2016-07-06 09:40:13] <bstrie> I think "embedding" sounds too nefarious :P
+[2016-07-06 09:40:16] <booyaa> would these evangelists promote things like writing dl in rust rather than c for python, ruby extensions?
+[2016-07-06 09:41:26] ⇐ nathanhammond quit (nathanhammo@moz-an88iv.res.rr.com): Client exited
+[2016-07-06 09:41:27] <carols10cents> RIIR
+[2016-07-06 09:41:38] <brson> erickt: i don't know if i have much to say about it really. just that it would be great to be promoting rust in places to target new demographics, e.g. having a rust advocate in machine learning communities
+[2016-07-06 09:41:40] <carols10cents> is clearly what we're all about these days
+[2016-07-06 09:42:21] <steveklabnik> lolsob
+[2016-07-06 09:42:37] <erickt> carols10cents: :) I love the enthusiasm of RIIR, I just don't want our community to get too pushy
+[2016-07-06 09:43:06] <booyaa> what's RIIR?
+[2016-07-06 09:43:24] <erickt> booyaa: http://transitiontech.ca/random/RIIR
+[2016-07-06 09:43:38] <carols10cents> and https://www.reddit.com/r/rust/comments/4ri2gn/riir_rewrite_it_in_rust/
+[2016-07-06 09:43:50] <erickt> brson: we ought to come up with some way to encourage speakers to give their rust talks in other communities
+[2016-07-06 09:44:04] <jntrnr> a lollipop?
+[2016-07-06 09:44:07] <erickt> like the RustyMachine talk at SF, they should give that at other meetups
+[2016-07-06 09:44:14] <carols10cents> a sticker?
+[2016-07-06 09:44:30] <booyaa> ty
+[2016-07-06 09:44:53] <badboy> missed most of the meeting, damn
+[2016-07-06 09:45:00] — erickt waves
+[2016-07-06 09:45:42] <erickt> badboy: lotsa good bors talk earlier you can see in the scrollback :)
+[2016-07-06 09:46:00] <badboy> will read up on it. now: cologne meetup
+[2016-07-06 09:46:24] <carols10cents> 14 minutes left!
+[2016-07-06 09:46:24] <erickt> so anyone want to reach out to the worldwide meetup organizers (or start a urlo thread) on seeding the rust meetup talks outside our community?
+[2016-07-06 09:46:57] → anowell joined (uid81535@moz-64klnd.tooting.irccloud.com)
+[2016-07-06 09:48:00] <brson> :)
+[2016-07-06 09:48:21] <booyaa> i don't know if this is related, but one of my meetup regulars asked if someone from the meetup group could show his linux group how to setup rust.
+[2016-07-06 09:48:48] <erickt> booyaa: that's definitely related and in the right spirit!
+[2016-07-06 09:48:50] <booyaa> i've messed around with rustup enough now that i'd prolly be happy to do the talk, obviously my editor choice would be opinionated
+[2016-07-06 09:49:12] <erickt> booyaa: vim, right?
+[2016-07-06 09:49:16] <booyaa> totes
+[2016-07-06 09:49:20] <erickt> word
+[2016-07-06 09:49:23] <booyaa> but the other editors are cool
+[2016-07-06 09:49:28] <erickt> I suppose
+[2016-07-06 09:49:31] <booyaa> heh
+[2016-07-06 09:49:49] <booyaa> also this is a fledging project i'll be watching for performance and fuzzability https://github.com/tagua-vm/tagua-vm
+[2016-07-06 09:50:04] <erickt> well I'll mail my past speakers to encourage them to reach out to other meetup groups
+[2016-07-06 09:50:05] <booyaa> php vm i assume it's up against hvvm and php7 performance wise
+[2016-07-06 09:50:15] <erickt> can you and the other organizers here do the same thing?
+[2016-07-06 09:50:25] <booyaa> sure
+[2016-07-06 09:50:28] <erickt> wunderbar
+[2016-07-06 09:50:37] <erickt> so that's all I had
+[2016-07-06 09:50:52] <erickt> anyone else have anything they want to add in?
+[2016-07-06 09:51:08] <booyaa> i'll mention about the riir thing just so don't cause more harm than good heh
+[2016-07-06 09:51:21] <erickt> :)
+[2016-07-06 09:52:10] <erickt> carols10cents: anything for your con?
+[2016-07-06 09:52:32] <carols10cents> we have a sponsorship prospectus!
+[2016-07-06 09:52:47] <carols10cents> http://www.rust-belt-rust.com/rust-belt-rust-sponsor-prospectus.pdf
+[2016-07-06 09:52:51] <carols10cents> anyone want to sponsor? :)
+[2016-07-06 09:53:00] <erickt> aturon: ^
+[2016-07-06 09:53:07] <erickt> :)
+[2016-07-06 09:53:38] <erickt> carols10cents: your logo conveys the bad old days of pittsburgh, not it's glorious robot overload future!
+[2016-07-06 09:53:51] <carols10cents> erickt: the smoke is turning into code!!!
+[2016-07-06 09:54:15] <erickt> noted! clean, code burning factories
+[2016-07-06 09:54:48] <carols10cents> yup!
+[2016-07-06 09:55:01] <erickt> carols10cents: let us know if you need help hunting down sponsors
+[2016-07-06 09:55:40] <erickt> carols10cents: have you reached out to the https://www.rust-lang.org/friends.html?
+[2016-07-06 09:56:19] <carols10cents> erickt: not yet, but it's on my to-do list this week :)
+[2016-07-06 09:56:26] <erickt> great, and good luck!
+[2016-07-06 09:56:35] <carols10cents> thanks!
+[2016-07-06 09:56:40] <erickt> anything else?
+[2016-07-06 09:56:44] <erickt> going once...
+[2016-07-06 09:57:14] <erickt> twice
+[2016-07-06 09:57:34] <erickt> and closed! https://media.giphy.com/media/3orieOPmJGswsJ7Ily/giphy.gif
+[2016-07-06 09:57:40] <erickt> thank you everyone for attending
