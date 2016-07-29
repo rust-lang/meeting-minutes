@@ -1,0 +1,400 @@
+•erickt> Erick Tryzelaar 
+7:00 PM T-0!
+7:00 PM it's meeting time dance!
+7:00 PM dance dance
+
+7:00 PM H<hjr3> 
+woo
+7:00 PM J— jntrnr waves arms like muppet
+
+7:00 PM E<•erickt> Erick Tryzelaar 
+that's the spirit
+7:00 PM 10 community points to jntnr
+
+7:00 PM J<jntrnr> 
+lol
+7:01 PM → brson_ joined (brson@moz-0ob.j2m.56.172.IP)
+
+7:01 PM E<•erickt> Erick Tryzelaar 
+well hello everyone
+
+7:01 PM B<brson_> 
+hi erickt!
+
+7:01 PM E<•erickt> Erick Tryzelaar 
+so here's our agenda: https://github.com/rust-community/team/issues/39
+7:02 PM so I think  lets start out and say with this meeting time I still don't think we recruited anyone new
+
+7:02 PM J<jntrnr> 
+seems like it
+
+7:02 PM H<hjr3> 
+doesn't appear so
+
+7:03 PM E<•erickt> Erick Tryzelaar 
+so I want to propose an idea. how about we shift back to our 4pm UTC meeting, but we hang out at this time in case people show up
+7:03 PM which will allow for more participation
+
+7:03 PM J<jntrnr> 
+I'm game
+
+7:03 PM H<hjr3> 
+what does "hang out" entail?
+7:03 PM ⇐ •brson quit (brson@moz-hde.j2m.56.172.IP) Ping timeout: 121 seconds
+
+7:04 PM E<•erickt> Erick Tryzelaar 
+well, I'll at least be present in this meeting
+7:04 PM err at this time
+
+7:04 PM H<hjr3> 
+oh sure
+
+7:04 PM E<•erickt> Erick Tryzelaar 
+in case we get anyone to attend
+7:04 PM but it won't necessarily be the official meeting time
+7:05 PM sound good? make sense to everyone?
+
+7:05 PM H<hjr3> 
+i think that is a good plan. i will certainly try to be available
+
+7:05 PM E<•erickt> Erick Tryzelaar 
+cool
+7:05 PM ok next topic
+7:05 PM survey
+7:05 PM F— frewsxcv waves
+
+7:05 PM E<•erickt> Erick Tryzelaar 
+jntrnr: you're up, how's the document?
+7:06 PM E— •erickt waves at frewsxcv
+
+7:06 PM J<jntrnr> 
+good - I have a draft up here: https://docs.google.com/document/d/1F6oELZcO_ejX2oVk20hmiBWd4lQugfFahn7OOOOyKsw/edit?usp=sharing
+
+7:06 PM H<hjr3> 
+oh nice
+
+7:06 PM J<jntrnr> 
+so definitely give a read, send comments/thoughts/etc
+
+7:07 PM E<•erickt> Erick Tryzelaar 
+great! when do you need comments by?
+
+7:07 PM J<jntrnr> 
+I was chatting a bit with aturon earlier today.  It sounds like the core team is also interested in putting it (or something like it) on the main Rust blog
+
+7:07 PM E<•erickt> Erick Tryzelaar 
++1
+
+7:07 PM J<jntrnr> 
+they want to use the data to help kick off some other blog posts
+7:08 PM erickt: soonish?  say by Friday would be great
+
+7:08 PM E<•erickt> Erick Tryzelaar 
+ok. want to file a ticket asking for comments, and add a `cc @rust-community/team`? that should get everyone
+
+7:09 PM J<jntrnr> 
+can do - the only thing is that we were trying to be slightly careful with the draft
+7:09 PM though I don't think it's particularly damning in the current form :p
+
+7:09 PM E<•erickt> Erick Tryzelaar 
+ah, well then send a mail to community-team@rust-lang.org
+
+7:09 PM J<jntrnr> 
+we will probably just want to massage it a bit before it goes a bit broader
+7:09 PM k, will do
+
+7:10 PM E<•erickt> Erick Tryzelaar 
+jntrnr: anything in particular you are looking for comments on?
+
+7:10 PM J<jntrnr> 
+the main things I'm interested in for the post are a) major structural problems with the post.  If I need to cut whole sections or rethink the approach, knowing that sooner is helpful
+7:11 PM also b) if it feels like there are areas that I need to go into more detail or just are generally confusing, also good to know about
+
+7:11 PM E<•erickt> Erick Tryzelaar 
+by the way, thank you so much for doing all this
+
+7:12 PM H<hjr3> 
+this is great jntrnr
+7:12 PM B— brson_ detraining
+
+7:12 PM J<jntrnr> 
+hjr3: thx :)
+7:12 PM ⇐ brson_ quit (brson@moz-0ob.j2m.56.172.IP) Quit: leaving
+
+7:12 PM J<jntrnr> 
+brson_: detraining sounds painful
+
+7:12 PM E<•erickt> Erick Tryzelaar 
+hehe
+7:13 PM I'm imagining brson punching caltrain off the tracks
+7:13 PM Also on the survey, I believe skade's partner may now be doing some deeper analysis on the survey
+7:14 PM unfortunately he's probably asleep at the moment, so we won't hear about that until the next meetin
+7:14 PM jntrnr: anything else on your end?
+7:14 PM or anyone else?
+
+7:14 PM J<jntrnr> 
+that's it.  I'll put together an email for the community team for feedback
+
+7:15 PM E<•erickt> Erick Tryzelaar 
+great
+7:15 PM next up, just a status update on RustBridge
+7:15 PM we had our inaugural meeting earlier today that went pretty well
+
+7:15 PM H<hjr3> 
+awesome
+
+7:16 PM E<•erickt> Erick Tryzelaar 
+the main highlights were starting to pick out a regular meeting time, which we didn't quite settle on
+7:16 PM and starting to think through what we should build for workshop tutorials
+
+7:16 PM M<•Manishearth> 
+i am here now
+7:16 PM sorry about the delay
+
+7:17 PM E<•erickt> Erick Tryzelaar 
+bridge meeting agenda is here: https://github.com/rust-community/rustbridge/issues/7
+7:17 PM and minutes here: https://github.com/rust-community/team/issues/39
+7:17 PM E— •erickt waves at Manishearth
+
+7:17 PM E<•erickt> Erick Tryzelaar 
+so first off, if any of you want to join in the bridge talks
+7:18 PM please chime in here for helping to pick the day: https://github.com/rust-community/rustbridge/issues/8
+
+7:18 PM M<•Manishearth> 
+i might
+
+7:18 PM E<•erickt> Erick Tryzelaar 
+and time to meet next
+
+7:18 PM M<•Manishearth> 
+but right niw swamped-ish
+
+7:18 PM E<•erickt> Erick Tryzelaar 
+I invited them to use #rust-community in between meeting times
+7:18 PM so we may see more activity here :)
+7:18 PM (fingers crossed :) )
+
+7:19 PM H<hjr3> 
+yes, more discussion
+
+7:19 PM E<•erickt> Erick Tryzelaar 
+one of the main things to consider with the workshops is that we expect that folks will want to actually build something at the end of the day
+7:19 PM rather than want to just do the more traditional tutorial a la this is an iterator, and this is borrow checking
+7:20 PM so like build a website or a game
+
+7:20 PM H<hjr3> 
+ya i think that is a great idea
+
+7:20 PM E<•erickt> Erick Tryzelaar 
+but there's concern about tutorials being broken if dependencies break
+
+7:20 PM H<hjr3> 
+happy to see what the workshop idea is
+
+7:21 PM E<•erickt> Erick Tryzelaar 
+or that it might end up requiring too high level knowledge. like "so you want to build a simple web page, first you need to understand sql"
+7:21 PM hjr3: https://github.com/rust-community/rustbridge/issues/2 is tracking workshop content
+
+7:21 PM H<hjr3> 
+ya i posted there, per your recommendation ;)
+
+7:22 PM E<•erickt> Erick Tryzelaar 
+oh hey so you did
+7:22 PM anyway I'm not sure if there's anything else I had, but happy to answer any other questions
+
+7:23 PM H<hjr3> 
+thanks for the update. glad it is moving along
+
+7:23 PM E<•erickt> Erick Tryzelaar 
+if not, next topic: 2017 rustconf planning: https://github.com/rust-community/team/issues/40
+7:24 PM the 2016 rustconf hasn't happened yet, but we've already made some mistakes, so aturon asked me to start a ticket tracking what we could do better
+7:24 PM so if you have any ideas or suggestions, please feel free to add them in here
+7:24 PM we should do the same for rust belt rust and rustfest.eu
+7:25 PM so please add anything else we could do better
+7:25 PM one thing for us I tried to get us some official time for community organization, but it was too late to actually get us room in the schedule :(
+
+7:26 PM H<hjr3> 
+doh
+7:26 PM J— jntrnr disappears into a puff of sleepy smoke
+
+7:26 PM E<•erickt> Erick Tryzelaar 
+so we can do some unofficial stuff
+7:26 PM bye jntrnr !
+7:27 PM but next time we should try to have some more dedicated time
+7:27 PM hm. so anything else on this subject?
+
+7:28 PM H<hjr3> 
+not from me atm
+
+7:28 PM E<•erickt> Erick Tryzelaar 
+alright so next up...
+7:28 PM rust forge: https://github.com/rust-community/team/issues/38
+7:29 PM this might need to bump to the next meeting because it's from skade
+7:29 PM but frankly i didn't even know https://forge.rust-lang.org/ existed
+7:29 PM so we have an advertising problem :)
+
+7:30 PM H<hjr3> 
+it is out of site, out of mind
+
+7:30 PM E<•erickt> Erick Tryzelaar 
+so this might be one place where we can start aggregating tutorials
+7:31 PM but I think also edunham was working towards getting a planet-esque page for rust
+7:31 PM a la https://planet.mozilla.org/
+7:31 PM to aggregate blog posts
+7:32 PM hm. seems like we don't have critical mass to talk about forge
+
+7:32 PM H<hjr3> 
+ya ; / 
+7:32 PM does edunham know about forge?
+
+7:32 PM E<•erickt> Erick Tryzelaar 
+so we can bump to next time
+
+7:32 PM H<hjr3> 
+i will be seeing her at codeconf next week
+7:32 PM she has her talk right after mine
+
+7:32 PM E<•erickt> Erick Tryzelaar 
+great!
+7:33 PM ok next up
+7:33 PM oh, homu. so homu.io seems to be in a half dead state :(
+7:34 PM I've reached out to barosl, the owner a few weeks ago and haven't heard back yet
+7:34 PM so I'm starting the process of potentially building a clone of that service
+
+7:35 PM H<hjr3> 
+oh nice
+
+7:35 PM E<•erickt> Erick Tryzelaar 
+I've gotten as far as buying bors.io :)
+7:35 PM but I'm looking for help to actually build bors-as-a-service
+7:35 PM so if anyone wants to help out, please comment on
+7:35 PM err
+7:36 PM oh I don't have a ticket
+
+7:36 PM H<hjr3> 
+so my meetup is winding down on the stockfigher sdk
+7:36 PM maybe we can switch to bors.io
+7:36 PM ill bring it up
+
+7:36 PM E<edunham> 
+hjr3: I'm aware of forge, but haven't been pushing as much docs to it as i ought lately
+7:37 PM looks like someone's squatting on bors.io
+
+7:37 PM E<•erickt> Erick Tryzelaar 
+edunham: that's me :)
+7:37 PM bought it earlier today
+
+7:37 PM E<edunham> 
+erickt: awesome!
+7:37 PM envisioning a Rust-hosted homu that isn't gated on poor barosl?
+
+7:38 PM E<•erickt> Erick Tryzelaar 
+bors-as-a-service: https://github.com/rust-community/team/issues/41
+
+7:38 PM E<edunham> 
+aha!
+
+7:39 PM E<•erickt> Erick Tryzelaar 
+edunham: unfortunately barosl appears to have not responded to github notifications for a couple months :(
+7:39 PM I'd much rather help him get homu.io back into a good state, but there's not much we can do with him being offline :(
+
+7:40 PM H<hjr3> 
+there is no other way to get a hold of him?
+
+7:40 PM E<•erickt> Erick Tryzelaar 
+I'd love ideas, but everyone I've tried doesn't have a direct route to him
+
+7:41 PM H<hjr3> 
+k
+
+7:41 PM E<•erickt> Erick Tryzelaar 
+wycats also thought the ember community might be up for contributing to a homu replacement, so there's a chance we could get a bunch of contributors for it
+
+7:42 PM H<hjr3> 
+i believe cargo.io is built on ember too, right?
+
+7:42 PM E<•erickt> Erick Tryzelaar 
+yep
+
+7:42 PM H<hjr3> 
+sorry, crates.io
+
+7:43 PM E<•erickt> Erick Tryzelaar 
+built by wycats and acrichto
+7:43 PM maybe we could convince one of the web dev projects to build it :)
+7:44 PM anyone want to reach out to them?
+
+7:45 PM H<hjr3> 
+i barely know wycats. steveklabnik might make an intro on our collective behalf?
+
+7:45 PM E<•erickt> Erick Tryzelaar 
+oh I know wycats, I'm more speaking about the rust web framework folks
+
+7:45 PM H<hjr3> 
+oh, i see
+
+7:45 PM E<•erickt> Erick Tryzelaar 
+like iron or nickel
+7:46 PM I can start poking them
+7:46 PM that's all I got for my agenda
+7:46 PM anyone else have anything else?
+
+7:46 PM B<bstrie> 
+I just remembered there was a meeting!
+7:46 PM I have a thing to talk about!!!
+
+7:46 PM E<•erickt> Erick Tryzelaar 
+bstrie!
+7:46 PM hello!
+
+7:47 PM B<bstrie> 
+is aturon around, by chance?
+
+7:47 PM E<•erickt> Erick Tryzelaar 
+I haven't heard from him for a while
+
+7:47 PM B<bstrie> 
+because my vague agenda item is working on returning some of the transparency around the mozilla devs' doing that we seem to have lost over the past year or so
+7:48 PM it seems like a lot of people in the community are relatively in the dark regarding what acrichto et al are working on day-to-day
+7:48 PM I personally used to catch up by reading the minutes of the weekly meetings, but I don't even know if they have those anymore
+7:48 PM maybe this is something we should put on the agenda for next week, and see if aturon can show up for that
+
+7:48 PM E<•erickt> Erick Tryzelaar 
+oh! so I know aturon has been working on trying to come up with some better way to do meetings and etc
+7:48 PM yeah
+
+7:49 PM E<edunham> 
+erickt, hjr3 it's become pretty clear to the Servo community that baosl's circumstances take him fully offline for 2-3 month stretches on a regular basis, so it's best for everybody to avoid setting up anything that requires consistent rapid responses
+
+7:49 PM E<•erickt> Erick Tryzelaar 
+bstrie: want to add it to https://github.com/rust-community/team/issues/42
+
+7:50 PM H<hjr3> 
+edunham i was just thinking he could add erickt as a collaborator so we didn't have to start from scratch. i want to respect his time away though
+
+7:50 PM E<•erickt> Erick Tryzelaar 
+edunham: yeah. bors.io is not ideal
+7:52 PM anyone have anything else for the agenda?
+
+7:52 PM H<hjr3> 
+not i
+7:53 PM thank you erickt !
+
+7:53 PM E<edunham> 
+regarding the planet, I've got individual +1's from most of the mod team that they're cool with it, but no formal "we as the mod team say yes"
+
+7:54 PM E<•erickt> Erick Tryzelaar 
+great!
+
+7:54 PM B<bstrie> 
+erickt: comment left
+
+7:55 PM E<•erickt> Erick Tryzelaar 
+great!
+7:55 PM alright well I'm going to officially gavel this meeting closed
+
+7:55 PM H<hjr3> 
+byeall
+
+7:57 PM E<•erickt> Erick Tryzelaar 
+thanks everyone!

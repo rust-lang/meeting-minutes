@@ -1,0 +1,40 @@
+* Bridge foundry: recommended that we follow the tutorials on their website
+* Goal for RustBridge team is to operate independently of the other teams
+* Find a regular meeting time- hannelita started work on this here: https://github.com/rust-community/rustbridge/issues/7#issuecomment-227253901
+* decide on what workshops we should create
+* would anyone like to take the lead on organizing
+* H: in the past, community teams self select
+* Fine to join the #rust-community channel for communicating between meetings
+* aepsil0n volunteered to organize the next meeting
+* should be treated as an independent organization, so we don't have too many loops in communication decision making
+* how to get ahold of us
+* community-team@rust-lang.org
+
+# Start the bridge tutorial
+
+* Carefully checked to make sure that the tutorial of yesterday compiles today. compiler is stable, but not all the libraries. Finding a topic that's immune to that would be helpful.
+* people come in from very different backgrounds, having multiple tutorials
+* RailsGirls is mainly about building a website (but RailsBridge does have multiple tutorials for different levels, on different subjects, frontend vs backend, etc http://docs.railsbridge.org/docs/)
+* How a computer works may be easier on the Rust side
+* Maybe implementing a tutorial or two
+* for railsbridge, tutorials are about 4-5 hours
+* Training for RustConf http://rustconf.com/training.html
+* Text adventure game: https://github.com/tildeio/learning-rust
+* Make tutorials executable, and wire into travis to give us notification if things break
+* game ecosystem is pretty unstable, which might not be great foundation for a tutorial at the moment
+* could start with with csv or basic calculation
+* could implement a very little window api that based on something simple. implement 3 to 4 things
+* move rectangle from A to B
+* another option would be to use ARM arduino if you want to
+* piston has a tendency to break backwards compatibility
+* implement a simple networking api
+* what are our personas?
+* everyone has accessed one website, that's a safe intro
+* scape content of a website
+ * everyone creates a wishlist in amazon
+ * sorted list of items. send data to friends
+ * match books that we both want
+* https://diversitytickets.org/
+ * verbally agreed to donate some amount of money from mozilla
+* http://opensourcebridge.org/
+* Denote when is a good meeting time in https://docs.google.com/spreadsheets/d/1JJbkASQS4JxP5WDHLbnun4odlDpLA-a_z6F_s5Jpup8/edit?usp=sharing

@@ -1,0 +1,249 @@
+9:01 AM <•erickt> so lets get this meeting started! who else is here today that hasn't chimed in yet?
+9:02 AM <•erickt> I guess that's it!
+9:02 AM <jntrnr> :)
+9:02 AM <jntrnr> I need to go at 12:30, but would love to talk survey
+9:03 AM <•erickt> sure, we can start there
+9:03 AM <bstrie> I've stickied a link to the survey on reddit
+9:03 AM <•erickt> we're in our final week of the survey
+9:03 AM <•erickt> thanks bstrie
+9:03 AM ⇐ bjz_ quit (bjz@moz-0s9.as2.222.104.IP) Quit: My Mac has gone to sleep. ZZZzzz…
+9:03 AM — •erickt pulls up the survey
+9:03 AM <jntrnr> unless we get a huge influx, I think our numbers have settled
+9:03 AM → bjz joined (bjz@moz-0s9.as2.222.104.IP)
+9:04 AM <•erickt> we're at 2909 replies at the moment
+9:04 AM <jntrnr> congrats to Berlin for trouncing everywhere else ;)
+9:04 AM <•erickt> +1
+9:04 AM <jntrnr> I mentioned before - I'd be happy to help sort through all the data
+9:04 AM <jntrnr> and help write up a blog post
+9:04 AM <•erickt> jntrnr: we're actually still getting a bunch of replies
+9:05 AM <skade> jntrnr I don't understand?
+9:05 AM <jntrnr> skade: Berlin is the top area for Rust interest at the moment, it seems
+9:05 AM <skade> so, in any case, who wants to do the statistics and the summing?
+9:05 AM <•erickt> jntrnr: we got 37 comments today
+9:05 AM <skade> *blushes*
+9:05 AM <bstrie> I'm terrible st statistics :P
+9:05 AM <jntrnr> erickt: yeah, they're still coming in, for sure
+9:05 AM <jntrnr> let's keep it open
+9:05 AM <•erickt> huon also said he might be able to help out 
+9:06 AM <jntrnr> just saying statistically I think our averages have settled down
+9:06 AM <•erickt> ah ok
+9:06 AM jdm → jdm|f00ding
+9:07 AM <hjr3> hiall
+9:07 AM <jntrnr> yeah - just cleaning the data, getting it collated and ready, etc etc
+9:07 AM <jntrnr> so much good stuff in there
+9:07 AM <•erickt> I can also help doing the ETL-ing of all this data. extracting stuff from the free-form text will probably be pretty manual
+9:08 AM <jntrnr> sweet, that's the part I don't have experience with
+9:08 AM <•Manishearth> erickt: ETL?
+9:08 AM <jntrnr> patrick did a word cloud which I thought was cool
+9:08 AM <•erickt> we could start a repo and a python project to start pulling apart the data
+9:08 AM <skade> if someone wants to get their hands dirty and knows R, here's a good option: http://shiny.rstudio.com/
+9:08 AM <carols10cents> extract transform load :)
+9:08 AM <carols10cents> datawarehouse jargon
+9:08 AM <•Manishearth> erickt: I probably have a bunch of https://xkcd.com/303/ time tomorrow to spare if it doesn't go into reviewing
+9:08 AM <•erickt> I think we could do that without exposing personally identifiable information
+9:09 AM <•erickt> Manishearth: lol
+9:09 AM <•Manishearth> What do you envision the actual blog post to be like?
+9:09 AM <jntrnr> the PII question is a good one
+9:09 AM <skade> the text parts, we should probably read through individually and extract stuff we find interesting before discussing
+9:09 AM <jntrnr> I don't have enough experience with differential privacy to know how much to mess with the data before it goes public
+9:09 AM <jntrnr> obviously taking off the email addresses is a good start :p
+9:09 AM <•Manishearth> right
+9:09 AM <•erickt> skade: I don't know R, but I do python. I also work with a bunch of data scientists I might be able to get help from
+9:10 AM <•Manishearth> I can help extract quotes
+9:10 AM <jntrnr> maybe we can work out of a private repo?
+9:10 AM <jntrnr> until we get things to where they're safe to share
+9:10 AM <•erickt> yeah that'd probably be best
+9:10 AM <hjr3> we definitely want to err on the side of removing too much identifying information
+9:11 AM <jntrnr> hjr3: agreed.  
+9:11 AM <jntrnr> we might just want to scrub out any textual comments
+9:11 AM <carols10cents> yeah maybe aggregate things like location, language separately from the other questions?
+9:11 AM <jntrnr> then extract those as quotes where interesting
+9:11 AM <•erickt> jntrnr: we also might be able to get frankmcsherry's help on differential privacy. I believe that's one of his research areas
+9:11 AM <jntrnr> erickt: aweseome!
+9:11 AM <jntrnr> carols10cents: yeah, that's a good idea
+9:12 AM <jntrnr> I can take point on setting up the private repo
+9:12 AM <•erickt> jntrnr: wonderful
+9:12 AM <skade> okay, I'll see if I play around with an extraction of the data on the train on saturday
+9:12 AM <•erickt> jntrnr: want to make it under the github.com/rust-community repo?
+9:12 AM <skade> would anyone mind?
+9:13 AM <jntrnr> skade: as long as it's all private, hack away
+9:13 AM <jntrnr> if you come up with cool ways to extract data, great
+9:13 AM <jntrnr> we can get an csv download I saw
+9:13 AM <•erickt> jntrnr: yeah
+9:13 AM <skade> jntrnr well, I think it's more about how we want to present the result
+9:14 AM <jntrnr> I was thinking about checking that in to the repo, then doing PRs to remove duplicates, bad data, etc
+9:14 AM <skade> (that's why I've thrown shiny in there, it does a lot of the presentation part)
+9:14 AM <jntrnr> shiny is good
+9:14 AM <•erickt> skade: as in making graphs and stuff?
+9:14 AM <skade> erickt yep
+9:14 AM <skade> deployment effort, though :)
+9:14 AM <•erickt> cool
+9:15 AM <•erickt> how do you think you'd make your graphs?
+9:15 AM <jntrnr> erickt: yeah, I can put under rust-community, can we already do private repos there?
+9:15 AM <•erickt> jntrnr: lets do github.com/rust-community. I can give you access to it
+9:16 AM <•erickt> jntrnr: eek, it'd cost us $205 to do it...
+9:16 AM <•Manishearth> erickt: make a personal private repo and add folks as collaborators
+9:16 AM <jntrnr> erickt: I think mozilla can do it, I could ask aturon
+9:16 AM <•Manishearth> jntrnr: I can make a private repo on mozilla if you want
+9:17 AM <•Manishearth> but just a personal private repo should work really
+9:17 AM <jntrnr> I'll look into it
+9:18 AM <•erickt> jntrnr / Manishearth: we might be able to do https://gitlab.com, which does free private repos
+9:18 AM <•Manishearth> erickt: no need
+9:18 AM <•Manishearth> erickt: personal private repos on github are free, and can have collaborators
+9:18 AM <skade> erickt that would mean for any of us to get a gitlab account :)
+9:19 AM <•Manishearth> additionally, I can make private repos on github.com/mozilla and add y'all as collaborators
+9:19 AM <skade> I also have a personal account with 10 repos
+9:19 AM <•Manishearth> if we stick to github you have to re-add the community team but not create new accounts
+9:19 AM <skade> | Great repository names are short and memorable. Need inspiration? How about improved-fortnight. |
+9:19 AM <skade> improved-fortnight is best
+9:19 AM <•erickt> heh
+9:20 AM <badboy> skade: boooring. https://tmp.fnordig.de/scr/eaa0f443c0.png
+9:20 AM <•erickt> Manishearth: who has access to github.com/mozilla repos?
+9:20 AM <jntrnr> is there an advantage to doing person repo over just doing a github.com/mozilla one?
+9:20 AM <•Manishearth> erickt: moi
+9:20 AM <skade> jntrnr no, none at all
+9:20 AM <•erickt> we don't want to expose the survey to general mozilla staff
+9:20 AM <•Manishearth> erickt: oh, that's fine, the private repos are team-private
+9:20 AM <jntrnr> Manishearth: cool, let's put it there then, and then give rust-community access?
+9:21 AM <•Manishearth> jntrnr: you can't give rust-community access, but we can give individual people access
+9:21 AM <•erickt> yeah, then we don't have to burn one of skade's private repo count :)
+9:21 AM <jntrnr> that works too
+9:21 AM <•Manishearth> erickt: everyone in https://github.com/orgs/mozilla/teams/servo would be able to see it
+9:21 AM <jntrnr> hmmm
+9:21 AM <•Manishearth> which has some non-mozilla staff too
+9:21 AM <•Manishearth> a personal private repo is better
+9:21 AM <•erickt> Manishearth: hm. well yeah
+9:21 AM <jntrnr> since there is PII in there, I'm all about limiting it
+9:21 AM <•erickt> skade it is :)
+9:21 AM <•Manishearth> I'll make one, but I need to log out soon
+9:22 AM <•Manishearth> or skade
+9:22 AM <•Manishearth> anyway, cya
+9:22 AM <•erickt> if that's alright skade
+9:22 AM <•erickt> thanks Manishearth!
+9:22 AM <skade> I'll just do it
+9:22 AM <•Manishearth> ping me here with any analysis work you think I should do
+9:22 AM <jntrnr> thanks Manishearth 
+9:22 AM <skade> jntrnr GH username
+9:22 AM <skade> ?
+9:23 AM <jntrnr> skade: jonathandturner
+9:23 AM <•erickt> so tech choice on doing this work. does anyone have a strong preference? I lean to the ipython / pandas stack, but I'm open
+9:24 AM <jntrnr> erickt: hehe, I guess that might be up to the people that know how to do that stuff
+9:24 AM <carols10cents> is there any harm in everyone trying what they know?
+9:24 AM <jntrnr> I was going to go old school :)
+9:24 AM <•erickt> that works too!
+9:25 AM <skade> I don't think we need anything, fancy, too
+9:25 AM ⇐ annodomini quit (lambda@moz-qdd.8su.114.73.IP) Client exited
+9:25 AM <skade> it will mostly be sums and charts, and probably, display will end up being javascript anyways
+9:25 AM <•erickt> btw, did everyone see that we do get some analysis from google for free?
+9:25 AM <jntrnr> erickt: yeah I was going to say for simple stuff we could use that
+9:26 AM <•erickt> they pre-build some charting for some of the replies
+9:26 AM <jntrnr> for the full text reasoning, we might want something else
+9:26 AM <skade> okay, I suggest we discuss that on the project and move on to another topic?
+9:26 AM <jntrnr> sounds good
+9:27 AM <•erickt> yeah, skade, just let us know when you got that repo made
+9:27 AM <skade> erickt that's already done, check your invites
+9:27 AM <•erickt> <3
+9:27 AM <skade> 🚲🏠 -> repos
+9:27 AM <•erickt> next topic, what's the latest on RustBridge?
+9:28 AM <•erickt> there's been a few tutorials that have floated by on /r/rust that I've been meaning on appropriating :)
+9:28 AM <skade> emails back and forth, as we weren't able to find a phone date
+9:28 AM <skade> i suggest we move on with planning and page and discuss the rest with them later
+9:28 AM <•erickt> skade: is that with the Bridge Foundry folks?
+9:28 AM <skade> erickt yes
+9:29 AM <skade> so, carols10cents was so nice to set up a team and we got a couple of people to build a page
+9:29 AM <skade> and do planning
+9:29 AM <•erickt> beyond https://github.com/rust-community/rustbridge?
+9:30 AM <•erickt> carols10cents opened https://github.com/rust-community/rustbridge/issues/1, but I didn't see any traffic on that ticket yet
+9:30 AM <skade> https://github.com/rust-community/rustbridge/issues/3
+9:31 AM <skade> @sonjaheinen is currently unemployed and would like to spend some time on the project
+9:31 AM <skade> so we have the chance that someone even has some time to spend
+9:31 AM <carols10cents> "got a couple of people to build a page" - has the page been built yet? or have the people just volunteered to do so in the future?
+9:31 AM <skade> carols10cents hasn't been built yet
+9:31 AM <carols10cents> erickt: ^^ is that your confusion?
+9:32 AM <•erickt> carols10cents: yeah, I wasn't sure if work already started on the page
+9:32 AM <skade> okay, can we write down what should be on such a page over the weekend/until the next meeting?
+9:33 AM <skade> it's mainly "what/where/materials", if i see right?
+9:33 AM <•erickt> yeah. who's available to help out with that? I think I got some time on sunday, but my saturday is booked. or the other way around
+9:33 AM <bstrie> skade: is sonjaheinen someone that you know personally? I think we should be careful granting access to the raw data, for privacy reasons
+9:34 AM <skade> bstrie yes, I know her personally
+9:34 AM <skade> but which raw data do you mean?
+9:34 AM <carols10cents> bstrie: i think skade is talking about rustbridge, not the survey data
+9:35 AM <carols10cents> we've switched topics :)
+9:35 AM <bstrie> ah ok :P
+9:36 AM <•erickt> anyone else have some time this weekend to start framing out the website?
+9:36 AM <skade> I have some
+9:37 AM <•erickt> great
+9:37 AM <skade> I could also do some on the conference tomorrow, not going to listen to most of the talks anyways.
+9:37 AM <•erickt> I can also start contacting people about turning their tutorial blogs into presentations
+9:38 AM <hjr3> erickt did we decide on a topic yet?
+9:38 AM <skade> no, but I think that should be a job of the new project team :)
+9:39 AM <•erickt> hjr3: for the tutorials? no I don't think so, but having some material on the whole "so you want to build a website" might be a good start
+9:40 AM <•erickt> the other thing I want us to start thinking about is when do we want to have our first rustbridge event, in order to give us some time pressure to get things done
+9:40 AM <hjr3> got it. i am working on post 3 of my series on building a webservice. i am happy to share, modify, etc those if it is useful. not quite a website though
+9:40 AM <bstrie> good idea
+9:40 AM <•erickt> hjr3: great! can you post a link to it in https://github.com/rust-community/rustbridge/issues/2
+9:41 AM <hjr3> @erickt will do
+9:42 AM <skade> erickt around the conference sounds worthwhile
+9:42 AM <•erickt> anyone think we should try to tie our bridge event into a conference, or should we do it independently?
+9:42 AM <•erickt> hehe
+9:42 AM <skade> we are definitely planning one for berlin, maybe with a trial run before
+9:42 AM <skade> in any case, I think we should announce the formation of the team, another week has passed
+9:42 AM <skade> https://github.com/rust-community/rustbridge/issues/3#issuecomment-223349713
+9:43 AM <•erickt> skade: that sounds good to me.
+9:43 AM jdm|f00ding → jdm
+9:44 AM <•erickt> we should also setup the first meeting for it
+9:44 AM <carols10cents> i havent decided yet if i'm going to feel up to adding a rustbridge onto rust belt rust, or if i can delegate that to someone
+9:44 AM <carols10cents> i haven't ruled it out yet though.
+9:44 AM <skade> carols10cents I would suggest delegating
+9:45 AM <carols10cents> yeah, just gotta find someone willing :) delegating is my favorite
+9:45 AM <skade> it makes sure the team working on it is not distracted
+9:45 AM <•erickt> does anyone want to take ownership over organizing said meeting, or shall I do it?
+9:45 AM <skade> you can ask hanneli if she wants to set it up
+9:47 AM <•erickt> ok. speaking of which, did anyone volunteer to lead the rustbridge team and drive the agenda? This past month has been a blur, and I can't remember
+9:49 AM <•erickt> I guess not :)
+9:49 AM <skade> erickt I was intending to have one of the people we searched to do that
+9:49 AM <skade> I'd prefer to not be involved as a community team to much, except supervision, as we already have a lot of stuff on our plates.
+9:49 AM <skade> we should try to have some people join meetings regularly
+9:50 AM <•erickt> skade: yeah. I'll just make a ticket and have the picking of the lead as part of the agenda
+9:51 AM <•erickt> hopefully we can get the meeting scheduled for next week
+9:52 AM <skade> that would be great
+9:52 AM <skade> can we talk about meeting planning?
+9:52 AM <skade> anyways, because of timezones?
+9:53 AM <•erickt> for the community team, or the rustbridge?
+9:53 AM <skade> community team
+9:53 AM <•erickt> sure! i wanted to talk about that next anyway
+9:54 AM <•erickt> so huon requested that we try to have meetings so it'd be easier for people in Asia to participate
+9:55 AM <•erickt> I sent out a doodle to try to figure out when you all were available to meet: http://doodle.com/poll/nwempau5bpbnndymw6w5eqa4/admin#table
+9:55 AM <•erickt> but our stupid earth is round, and there isn't a way for all of us to be awake at the same time
+9:55 AM <carols10cents> http://24.media.tumblr.com/tumblr_lu1zyqrIaO1qe43aro1_500.gif
+9:56 AM <•erickt> it's a number wang!
+9:56 AM <skade> well, I'd see no problem with switching the time biweekly
+9:56 AM <skade> (that's an improved-fortnight, then)
+9:56 AM <•erickt> hehe
+9:57 AM <bstrie> carols10cents: if only we were using slack, then we wouldn't have to click that link manually!
+9:57 AM <skade> also, my schedule is easing up a little, as I'm switching jobs in june to one that is more forgiving to my personal schedule
+9:57 AM <bstrie> #1970sprotocolproblems
+9:57 AM <skade> so, I'm basically fine with most, if I'm not asleep. Also fine with dropping out from time to time if it ensures others can join
+9:59 AM <skade> the rustconf.com page is inappropriate (says my hotel wireless)
+9:59 AM <•erickt> I'd also be happy to have it scheduled so the europeans and asians were up, while I'm asleep
+9:59 AM <hjr3> @erickt i assumed those times on the doodle are UTC?
+10:00 AM <•erickt> hjr3: I think you can pick your timezone
+10:00 AM <hjr3> oh
+10:00 AM <hjr3> you are correct, i did not see that. thank you
+10:00 AM <johannh> huh, did my messages arrive for you folks?
+10:01 AM <carols10cents> johannh: in irc? i haven't seen you say anything recently
+10:01 AM <johannh> ok, damn
+10:01 AM <johannh> thanks
+10:01 AM <•erickt> alright well, for next week, how about we aim for an Asia-friendly meeting time?
+10:02 AM <carols10cents> johannh: what did you say?
+10:02 AM <johannh> what I was saying is that larissas is cool with billing RustBridge events in Mozilla offices directly to Diversity
+10:02 AM <•erickt> or we could try running two meetings in a week
+10:02 AM <johannh> also we talked about an initial sponsorship from Mozilla
+10:02 AM <•erickt> and see if we can draw a crowd for the Asia-friendly meeting time
+10:02 AM <johannh> but we stopped at "we would need a concrete number to talk more about this"
+10:03 AM <skade> erickt I'd be fine with that, as long as we have logs to refer to,
+10:03 AM <johannh> but they seem to be flexible about money if we have good ideas
+10:03 AM <•erickt> johannh: that's great!
+10:04 AM <•erickt> oh hey look at the time
+10:04 AM <skade> okay, I have a dinner appointment
+10:04 AM <•erickt> I also need to run. thanks everyone!

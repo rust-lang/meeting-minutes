@@ -1,0 +1,920 @@
+it's time!
+5:00 PM oh it's happy meeting time
+
+5:00 PM 
+<booyaa> 
+yay!
+
+5:00 PM 
+<•erickt> Erick Tryzelaar 
+that's the spirit
+5:00 PM hello everyone! it's time for your favorite meeting time
+5:01 PM here's our agenda: https://github.com/rust-community/team/issues/37
+5:01 PM we got a few things on our schedule.
+5:01 PM skade / skade_: you in yet?
+
+5:01 PM 
+<skade> 
+hello!
+
+5:01 PM 
+<•erickt> Erick Tryzelaar 
+great!
+
+5:01 PM 
+<skade> 
+yep, I'm here
+
+5:02 PM 
+<•erickt> Erick Tryzelaar 
+so lets start off with the survey data
+
+5:02 PM 
+<hjr3> 
+hi everyone
+
+5:02 PM 
+<•erickt> Erick Tryzelaar 
+skade has a data scientist friend that wants to help out with the survey
+5:03 PM I'm fine with this, and trust skade's opinion, but I'm realizing we probably should have been a bit more official with tracking who outside of the core and community team has access to it
+5:04 PM so what do you all think about us having a little email form that just says that the person getting access promises not to:
+5:04 PM err
+
+5:04 PM 
+<•skade_> 
+Yeah, the trust part is pretty simple (it's my partner), but I agree with erickt that we should have tracking about that and maybe not export all details of it, just an opaque ID for most of it
+
+5:05 PM 
+<•erickt> Erick Tryzelaar 
+1) not share raw results  and 2) checks with us first before sharing anything they produce
+5:05 PM +1
+
+5:05 PM 
+<booyaa> 
+sounds good
+
+5:05 PM 
+<•erickt> Erick Tryzelaar 
+the idea was we just do this through an email, and they send a reply saying they agree. are there any other requirements we ought to have?
+
+5:05 PM 
+<•Manishearth> 
++1
+
+5:06 PM 
+<skade> 
+yeah, that sounds reasonable
+
+5:07 PM 
+<•erickt> Erick Tryzelaar 
+great. I'll draft up something and send it out, unless someone wants to do that now
+5:07 PM the second thing, which skade touched upon, is that we got some personally identifiable information (PII)
+
+5:07 PM 
+<bstrie> 
+yes, let's be controlled about this and have a paper trail
+
+5:08 PM 
+<•erickt> Erick Tryzelaar 
+like email addresses that we should filter out
+5:08 PM before handing off our dataset
+
+5:09 PM 
+<skade> 
+yeah, also, they are not very interesting for the data analysis part anyways
+
+5:09 PM 
+<•erickt> Erick Tryzelaar 
+then we have some sensitive demographic info that could potentially be useful to help identify interesting topics for rustbridge talks
+5:09 PM but it's quite sensitive
+5:10 PM when you correlate that with regions, and the freetext that people have entered in, it might still be possible to identify an entry
+5:10 PM so should we also filter out this info, and just do that analysis ourselves?
+5:11 PM or should we trust experts that might have better experience with this data?
+5:11 PM and to be responsible about not leaking information?
+
+5:12 PM 
+<bstrie> 
+erickt: what proportion of the survey is freeform text?
+
+5:12 PM 
+<skade> 
+Well, people already handed that in to an org without any legal structure, so I'd assume they are okay with "in trust"
+
+5:12 PM 
+<•erickt> Erick Tryzelaar 
+bstrie: so much freeform text
+5:13 PM skade: that's true. I think I'd be okay sharing this info as long as we anonymize the email
+
+5:14 PM 
+<skade> 
+yeah, no use in sending around a spam list
+5:14 PM we still should get a written agreement from people getting access to the dataset
+
+5:14 PM 
+<•erickt> Erick Tryzelaar 
+think an email agreement would be sufficient?
+
+5:15 PM 
+<hjr3> 
+is the written agreement is to set expectations? is there is any enforcement to this agreement?
+
+5:15 PM 
+<skade> 
+hjr3 who would enforce it?
+
+5:15 PM 
+<•erickt> Erick Tryzelaar 
+hjr3: to be honest I'm not sure. we could ban a bad actor from the community
+
+5:15 PM 
+<skade> 
+there's no legal entity owning the data :)
+
+5:16 PM 
+<hjr3> 
+right, i am trying to understand what we are hoping to get from the agreement
+
+5:16 PM 
+<skade> 
+well, writing things down makes sure everyone knows what the agreement was
+
+5:16 PM 
+<•erickt> Erick Tryzelaar 
+hjr3: in my opinion, it's mainly to make sure we can make sure anyone accessing the data knows what we don't want them to do with it
+5:17 PM so preventing accidental, rather than malicious use of the data
+
+5:18 PM 
+<hjr3> 
+that makes sense to me. as this agreement is to make sure we are all clear, i think we should definitely anonymize email address
+
+5:18 PM 
+<•erickt> Erick Tryzelaar 
+do we think we need to anonymize regional information?
+5:19 PM like genericizing "San Francisco" into "United States"?
+
+5:19 PM 
+<skade> 
+I don't think so
+5:19 PM → carols10cents joined (carols10cen@moz-8ag.hiq.28.4.IP)
+5:19 PM 
+— •erickt waves at carols10cents
+
+5:19 PM 
+<skade> 
+we could, if we wanted to, but it's a rabbit hole
+5:19 PM 
+— carols10cents waves
+
+5:19 PM 
+<carols10cents> 
+sorry i'm late, i was seeing rust* in a parade!!
+
+5:19 PM 
+<hjr3> 
+i agree with skade. i think it is fine to keep in
+
+5:20 PM 
+<carols10cents> 
+*the hockey player
+
+5:20 PM 
+<skade> 
+we could chop it off, i don't see many queries of the kind "how many people haven't tried rust in philly"?
+
+5:20 PM 
+<•erickt> Erick Tryzelaar 
+I've scanned through the entries, and it seems to be just as specific as the city
+5:20 PM carols10cents: hehe
+5:21 PM I can't think of any other fields we should expect PII
+5:21 PM but I haven't scanned through the freetext
+5:22 PM jntrnr: did, and I don't think he said he saw anything
+
+5:22 PM 
+<booyaa> 
+PII?
+
+5:22 PM 
+<•erickt> Erick Tryzelaar 
+personally identifiable information
+
+5:22 PM 
+<booyaa> 
+ah thanks
+
+5:22 PM 
+<carols10cents> 
+i think we should chop off demographic information
+5:22 PM and analyze it separately from freetext/other answers
+
+5:23 PM 
+<•erickt> Erick Tryzelaar 
+like email, or sufficiently precise info that we could identify someone
+
+5:23 PM 
+<carols10cents> 
+like, disassociate the rows
+5:23 PM location, language, gender, race/ethnicity
+
+5:23 PM 
+<•erickt> Erick Tryzelaar 
+ah, languages that people speak is also one
+
+5:23 PM 
+<carols10cents> 
+ya
+
+5:23 PM 
+<bstrie> 
+is there a typical protocol for anonymizing these sorts of things
+
+5:24 PM 
+<•erickt> Erick Tryzelaar 
+bstrie: HIPAA has extensive rules about this for medical info
+5:24 PM it might be a tad extreme here
+5:24 PM huon: you awake?
+
+5:24 PM 
+<dikaiosune> 
+(lurking, here are the identifiers HIPAA asks to remove) https://med.stanford.edu/irt/security/hipaa.html
+
+5:24 PM 
+<skade> 
+bstrie I used to research that for a project tracking ebola sickness data on the african continent
+
+5:24 PM 
+<carols10cents> 
+yeah i dont think we need anything super formal
+
+5:25 PM 
+<skade> 
+we wanted to anonymise a dataset for public release and asked an expert and he was just like "don't" :)
+
+5:25 PM 
+<•erickt> Erick Tryzelaar 
+dikaiosune: thanks!
+
+5:25 PM 
+<skade> 
+full disassociation is the only thing he suggested as being halfway safe
+
+5:25 PM 
+<carols10cents> 
+but if i was trying to identify a particular person, or any particular person's answers, i'd want the demographics associated with them
+
+5:25 PM 
+<skade> 
+well, we still have the table to look up in the and
+
+5:26 PM 
+<carols10cents> 
+but unless someone put in their free text answers "i'm the largest contributor to x library" it'd be tough to identify anyone without them
+
+5:26 PM 
+<dikaiosune> 
+(or rather, the identifiers that stanford lawyers have said is enough to anonymize, it's what we use here)
+
+5:26 PM 
+<carols10cents> 
+i guess this would all be moot though if we're only publicly releasing graphs of aggregates, not any raw data though?
+
+5:27 PM 
+<•erickt> Erick Tryzelaar 
+carols10cents: well the ultimate risk is I believe it only takes 33 bits of info to uniquely identify a person: https://33bits.org/
+
+5:27 PM 
+<skade> 
+yes, public release should be the aggregates only
+
+5:27 PM 
+<•erickt> Erick Tryzelaar 
++1
+
+5:27 PM 
+<carols10cents> 
+ok then!
+
+5:27 PM 
+<•erickt> Erick Tryzelaar 
+this is more about what we clean up before giving skade's partner access.
+
+5:28 PM 
+<hjr3> 
+right
+5:28 PM i think we are extending some trust to skade's partner
+
+5:28 PM 
+<skade> 
+yeah, still, she's not part of the org and I'm no fan of exceptions, either :)
+5:29 PM okay, 30 minutes in
+
+5:29 PM 
+<•erickt> Erick Tryzelaar 
+:) ok is everyone okay if we just strip emails and get an agreement?
+
+5:29 PM 
+<carols10cents> 
++1
+
+5:29 PM 
+<booyaa> 
++1
+
+5:29 PM 
+<skade> 
++1
+
+5:29 PM 
+<•brson> 
++1
+
+5:29 PM 
+<•erickt> Erick Tryzelaar 
+great
+5:30 PM for pratical implementation, we can give your partner access to the github info, but we've leaked the actual dataset in the repo
+5:30 PM so we can clean up the repo and git history before giving them access
+
+5:30 PM 
+<hjr3> 
++
+5:30 PM +1
+
+5:30 PM 
+<bstrie> 
+sure
+
+5:31 PM 
+<skade> 
+jep, these are old extracts anyways
+
+5:31 PM 
+<•erickt> Erick Tryzelaar 
+ok next topic
+5:31 PM we had our staggered meeting last week, and we didn't have much turnout at all :(
+
+5:32 PM 
+<•brson> 
+i just keep forgetting about meetings that i don't have gcal invites too
+5:32 PM *to
+5:32 PM sorry :(
+
+5:32 PM 
+<carols10cents> 
+would an email the... day before? an hour before? help us get used to it?
+
+5:32 PM 
+<hjr3> 
+i think we need an extra reminder for the new time
+
+5:32 PM 
+<skade> 
+Yeah, I also realised to late that there was Rust Berlin happening and we ha team members in town :/
+
+5:32 PM 
+<carols10cents> 
+brson: they're on the community calendar, and then you can copy it to your own calendar
+
+5:32 PM 
+<hjr3> 
+and maybe another "marketing" email? that is how i started joining
+
+5:33 PM 
+<•erickt> Erick Tryzelaar 
+but that's just part of the problem, we also need to recruit people in the pacific timezone to attend
+
+5:33 PM 
+<skade> 
+I think some form of reminder would help
+
+5:33 PM 
+<carols10cents> 
+yeah we should get steveklabnik to tweet about it the day before too
+5:33 PM and say we'd like people on that side of the world to join
+
+5:33 PM 
+<•brson> 
+carols10cents: i'm setting up a recurring mtng on my own cal
+
+5:33 PM 
+<bstrie> 
+yes, I was unclear what time the meeting was going to be at
+
+5:33 PM 
+<skade> 
+do we have a social media suite for all that stuff? tweetdeck etc?
+
+5:33 PM 
+<carols10cents> 
+bstrie: it's 10pm wednesday for us
+
+5:33 PM 
+<•erickt> Erick Tryzelaar 
+and we can explicitly mail the meetup organizers
+5:34 PM skade: I don't think so, but I think steveklabnik is physically wired into twitter
+
+5:34 PM 
+<carols10cents> 
+bstrie: i can send you a reminder text for that too ;)
+
+5:34 PM 
+<•erickt> Erick Tryzelaar 
+and just thinks his tweets
+
+5:34 PM 
+<booyaa> 
+that'd be a good idea, it's a shame you can't do a rsvp in the mail too. so you can get an idea of attendance
+
+5:34 PM 
+<skade> 
+It's nice that steveklabnik does it all, but I worry about the scalability. Also sure about the wiring :)
+
+5:35 PM 
+<•erickt> Erick Tryzelaar 
+:) we could consider trying to scale up the rust twitter account to the rest of the team
+
+5:35 PM 
+<carols10cents> 
+can we table that to discuss with steveklabnik ?
+
+5:35 PM 
+<•erickt> Erick Tryzelaar 
+yeah
+
+5:35 PM 
+<skade> 
+yep
+5:35 PM nothing to sort out in a hurry
+
+5:36 PM 
+<bstrie> 
+carols10cents: at some point I'm just going to hire you as my secretary :P
+
+5:36 PM 
+<•erickt> Erick Tryzelaar 
+ok so agenda, we'll ask steve to help tweet our meetings, and mail the meetup organizers, and maybe start posting meeting reminders to urlo
+
+5:36 PM 
+<bstrie> 
+or maybe you can have a site of your own, carols10cents-as-a-service
+
+5:36 PM 
+<•erickt> Erick Tryzelaar 
+lol
+
+5:36 PM 
+<carols10cents> 
+bstrie: can i put that on my resume? ;)
+5:36 PM maybe i'll hire you a virtual assistant and outsource myself
+
+5:37 PM 
+<•erickt> Erick Tryzelaar 
+carols10cents: I think this bstrie person I know might be available for that
+
+5:37 PM 
+<bstrie> 
+anyway, yes, let's have a central resource where we can remind ourselves of meeting dates
+
+5:37 PM 
+<carols10cents> 
+oooooooooo i smell an overengineered twillio service i couldu write
+
+5:37 PM 
+<•erickt> Erick Tryzelaar 
+bstrie: I think I get reminders from google though
+5:37 PM I think you can set it up to send you a notification
+5:37 PM at least I could on my phone
+
+5:38 PM 
+<bstrie> 
+erickt: google calendar? do we have a central one that we could all subscribe to?
+
+5:38 PM 
+<•erickt> Erick Tryzelaar 
+but anyway we can work on that after the meeting
+5:38 PM bstrie: its' on teh community calendar
+5:38 PM bstrie: https://www.google.com/calendar/embed?src=apd9vmbc22egenmtu5l6c5jbfc@group.calendar.google.com
+5:38 PM anyway next topic
+
+5:38 PM 
+<carols10cents> 
+bstrie: you might have to copy the invite to your own calendar
+
+5:38 PM 
+<•erickt> Erick Tryzelaar 
+any updates on rustbridge?
+
+5:39 PM 
+<hjr3> 
+(stepping out - thanks everyone!)
+
+5:39 PM 
+<skade> 
+I do love pushover by the way: https://pushover.net/ if someone wants to overengineer a solution
+
+5:39 PM 
+<•erickt> Erick Tryzelaar 
+thanks hjr3!
+
+5:39 PM 
+<steveklabnik> 
+hi
+
+5:39 PM 
+<skade> 
+bye hjr3!
+5:39 PM soo, rustbridge
+5:40 PM I assume you have seen the emails, which were basically "go ahead, follow the tutorial".
+
+5:40 PM 
+<steveklabnik> 
+i am just walking in, sorry
+
+5:40 PM 
+<•erickt> Erick Tryzelaar 
+skade: I did!
+
+5:40 PM 
+<carols10cents> 
+hi steveklabnik i just gave you an action item https://github.com/rust-community/team/issues/37#issuecomment-226245767
+
+5:40 PM 
+<steveklabnik> 
+sweeeeeeet
+
+5:40 PM 
+<booyaa> 
+i didn't, where do we subscribe to see the email?
+
+5:40 PM 
+<skade> 
+we had a discussion a couple of people in person at Rust Berlin last week, also including Julia Evans
+
+5:41 PM 
+<•erickt> Erick Tryzelaar 
+nice! julia is great
+
+5:41 PM 
+<skade> 
+booyaa rust-community@rust-lang.org mailing list, someone should add you if you want.
+5:41 PM (just on an advisory role)
+5:41 PM (Julia)
+
+5:41 PM 
+<booyaa> 
+ah yes please ms@booyaa.org
+
+5:42 PM 
+<skade> 
+So, I think we are rather set, we should make sure people start working on some stuff. Would anyone like to take point there? Otherwise, I'd try.
+5:42 PM also, johannh will try to catch larissa at the mozilla workweek to find out what parts mozilla can fund
+5:43 PM also, I added a small document on what the website needs (not much)
+
+5:44 PM 
+<•erickt> Erick Tryzelaar 
+skade: I'm not confident on my free time yet (but it's getting better!) so do you want to take ownership on that and I'll try to second you?
+
+5:45 PM 
+<skade> 
+I can, but I have a couple of other teams to manage :D
+
+5:45 PM 
+<bstrie> 
+erickt: I just added a notification to the community team meeting event on google calendar so that it will ping me before meetings, please go through and make sure that I didn't somehow make that happen for literally everyone subscribed to the calendar
+
+5:45 PM 
+<skade> 
+my favourite way would be to find one of the rustbridge people to do that themselves *couch* :)
+
+5:45 PM 
+<•erickt> Erick Tryzelaar 
+heh. well anyone else want to take a lead on this?
+5:45 PM hehe
+5:46 PM bstrie: I don't see anything in the calendar
+5:46 PM so you should be good
+
+5:46 PM 
+<bstrie> 
+erickt: as long as I don't have editing rights to the calendar, which I hope I don't have :P
+5:47 PM also I'm too busy to take point on any more initiatives at the moment
+
+5:47 PM 
+<•erickt> Erick Tryzelaar 
+bstrie: I think you and the rest of the community team have access :p
+
+5:47 PM 
+<bstrie> 
+oh god, the responsibility
+
+5:47 PM 
+<johannh> 
+we really need to start doing the workshops
+
+5:47 PM 
+<•erickt> Erick Tryzelaar 
++1
+
+5:47 PM 
+<skade> 
+Okay, as we don't have any other option, I'll try to meet people and get something rolling
+
+5:47 PM 
+<johannh> 
+I think people have a lot of good ideas but they're all very sophisticated
+
+5:48 PM 
+<•erickt> Erick Tryzelaar 
+carols10cents mentioned having a bridge-ish event at rust belt rust
+
+5:48 PM 
+<carols10cents> 
+yep. working on a space... so october
+
+5:48 PM 
+<skade> 
+yeah, same for rustfest, ist rustconf planning something there?
+
+5:48 PM 
+<•erickt> Erick Tryzelaar 
+and I think we can try to advertise the rustconf tutorial as part of this workshop
+5:48 PM the rustconf is having a day for tutorials
+5:49 PM 1/2 day on beginner, then a 1/2 for advanced topics
+
+5:49 PM 
+<johannh> 
+erickt: do you have workshop material yet?
+
+5:49 PM 
+<•erickt> Erick Tryzelaar 
+or intermediate topics
+5:49 PM johannh: we have tutorial materials
+
+5:49 PM 
+<johannh> 
+and who is it aimed at? people who can program already?
+
+5:49 PM 
+<•erickt> Erick Tryzelaar 
+I think it does assume some programming experience
+5:49 PM niko's tutorials, that is
+
+5:50 PM 
+<johannh> 
+I think that's what we're struggling most with, correct me if I'm wrong, when we talked about it we said it would be ideal if we had a track that enabled people with no or not much prior experience to participate
+
+5:50 PM 
+<•erickt> Erick Tryzelaar 
+are the *bridge workshops usually oriented to brand new programmers?
+
+5:50 PM 
+<carols10cents> 
+usually
+
+5:50 PM 
+<skade> 
+erickt yes
+
+5:50 PM 
+<carols10cents> 
+the email mentioned clojurebridge though
+
+5:50 PM 
+<skade> 
+maybe some very little experience.
+
+5:51 PM 
+<•erickt> Erick Tryzelaar 
+steveklabnik: do you have any materials appropriate for this?
+
+5:51 PM 
+<carols10cents> 
+and that it's aimed at people with some programming language, but people without any experience have attended and done okay
+
+5:51 PM 
+<•erickt> Erick Tryzelaar 
+or is everything you've done require some technical experience?
+
+5:52 PM 
+<steveklabnik> 
+erickt: not specifically
+5:52 PM i have been focused on existing programmers
+5:52 PM and hasn't given me time to do a "new to programming" tutorial
+
+5:52 PM 
+<skade> 
+see https://github.com/rust-community/rustbridge/issues/6 for a deeper discussion of this
+5:53 PM Well, I think it scales better if we find _other_ people to do that, it also gets them up to speed with doc-writing
+5:53 PM 
+— johannh still favors a small game tutorial
+
+5:53 PM 
+<steveklabnik> 
+yes
+
+5:53 PM 
+<•erickt> Erick Tryzelaar 
+yeah, steveklabnik can't write all our docs :)
+
+5:53 PM 
+<steveklabnik> 
+"steve doesn't scale :p"
+
+5:54 PM 
+<carols10cents> 
+game += 1
+
+5:54 PM 
+<•erickt> Erick Tryzelaar 
+carols10cents: do you already have a workshop tutorial in mind?
+
+5:54 PM 
+<•Manishearth> 
+game++
+
+5:54 PM 
+<carols10cents> 
+and i would love to help writing these, but i dont want to commit to leading it :-/
+
+5:54 PM 
+<skade> 
+johannh i like that, but does someone have a good (custom) framework at hand that runs on all mayor platforms?
+
+5:54 PM 
+<•erickt> Erick Tryzelaar 
+oh! so wycats actually has been working on a text-adventure tutorial
+5:54 PM we could turn that into a workshop
+5:54 PM 
+— johannh runs away crying
+
+5:55 PM 
+<•erickt> Erick Tryzelaar 
+i'll talk to him about his timeline for it
+
+5:55 PM 
+<booyaa> 
+pretty certain i've seen a terminal based interacive fiction crate
+
+5:55 PM 
+<carols10cents> 
+considering i kinda started that like last feb and have made very little progress since then https://github.com/carols10cents/game-dev
+5:55 PM skade: piston?
+
+5:55 PM 
+<bstrie> 
+piston is a bit complex for a first project
+
+5:55 PM 
+<•erickt> Erick Tryzelaar 
+https://github.com/tildeio/learning-rust
+
+5:55 PM 
+<bstrie> 
+my experience with it has not been particularly beginner-friendly
+
+5:55 PM 
+<•erickt> Erick Tryzelaar 
+^ what wycats has been working on
+
+5:55 PM 
+<skade> 
+well, we could write a wrapper around piston
+
+5:56 PM 
+<carols10cents> 
+bstrie: can we talk about this on an issue
+
+5:56 PM 
+<johannh> 
+yes text-based is nice but we want to show off what rust can potentially do really well as a systems language
+
+5:56 PM 
+<•erickt> Erick Tryzelaar 
+we're nearly done with our time. has rustbridge scheduled the next meeting?
+
+5:56 PM 
+<carols10cents> 
+like https://github.com/rust-community/rustbridge/issues/2
+5:56 PM → llogiq joined (andre@moz-ara68n.hsi14.unitymediagroup.de)
+
+5:57 PM 
+<llogiq> 
+Hi folks. Sorry for being so latr
+5:57 PM late.
+
+5:57 PM 
+<•Manishearth> 
+o/ llogiq 
+
+5:57 PM 
+<•erickt> Erick Tryzelaar 
+:)
+
+5:57 PM 
+<llogiq> 
+My train was delayed. :-/
+
+5:57 PM 
+<skade> 
+hi o/
+
+5:57 PM 
+<•erickt> Erick Tryzelaar 
+how about the bridge meeting takes place next wednesday at this time, at 4pm UTC?
+
+5:57 PM 
+<llogiq> 
+Hi Slade, Manish, erickt
+
+5:57 PM 
+<•erickt> Erick Tryzelaar 
+since I know this slot will be free then :)
+5:58 PM alright well I'll organize that then :)
+5:59 PM anything else? booyaa do you want to talk about mentoring?
+
+5:59 PM 
+<•Manishearth> 
+oh yes mentoring
+
+5:59 PM 
+<skade> 
+well, I can try :)
+
+5:59 PM 
+<•Manishearth> 
+so I had a plan before to make the community mentor more
+6:00 PM explicitly provide a place where you can offer to mentor and ask to be mentored
+
+6:00 PM 
+<booyaa> 
+erickt: yes please
+
+6:00 PM 
+<•Manishearth> 
+or list people willing to mentor
+6:00 PM but not many potential mentors signed up. this might change now
+
+6:00 PM 
+<johannh> 
+mentoring in what sense?
+
+6:00 PM 
+<booyaa> 
+thanks skade saw your link about will do some investigation https://rorganize.it
+6:01 PM i added an item about pair coding
+
+6:01 PM 
+<•erickt> Erick Tryzelaar 
+rustbridge meeting: https://github.com/rust-community/rustbridge/issues/7
+
+6:02 PM 
+<steveklabnik> 
+i gotta run
+6:02 PM <3 all
+
+6:02 PM 
+<•erickt> Erick Tryzelaar 
+Manishearth: you could start a thread on urlo
+
+6:02 PM 
+<•Manishearth> 
+johannh: any type
+6:03 PM johannh: contributing to $library, learning rust, etc
+
+6:03 PM 
+<•erickt> Erick Tryzelaar 
+who wants to attend the rustbridge meeting? I added florian and carol, who else do we need to cc?
+6:04 PM → malayaleecoder joined (uid139674@moz-k1ar3t.brockwell.irccloud.com)
+
+6:04 PM 
+<booyaa> 
+me please
+
+6:04 PM 
+<skade> 
+@erickt the whole team under rustbridge
+
+6:04 PM 
+<booyaa> 
+when do you meet?
+
+6:04 PM 
+<•Manishearth> 
+booyaa: I might write up a thing about mentoring
+6:04 PM for community, and we can iterate on that
+
+6:05 PM 
+<booyaa> 
+Manishearth: thank you
+
+6:05 PM 
+<•erickt> Erick Tryzelaar 
+skade: ok
+
+6:05 PM 
+<johannh> 
+Manishearth: it definitely sounds like a good plan :)
+
+6:05 PM 
+<•erickt> Erick Tryzelaar 
+ack, google won't let me modify the invite
+6:06 PM well I need to get running
+6:06 PM thank you all so much!
+6:06 PM <3
